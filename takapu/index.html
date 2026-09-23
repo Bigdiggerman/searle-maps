@@ -1,0 +1,1579 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tākapu Forest</title>
+<style>.leaflet-image-layer,.leaflet-layer,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-pane,.leaflet-pane>canvas,.leaflet-pane>svg,.leaflet-tile,.leaflet-tile-container,.leaflet-zoom-box{position:absolute;left:0;top:0}.leaflet-container{overflow:hidden}.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile{-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-user-drag:none}.leaflet-tile::selection{background:0 0}.leaflet-safari .leaflet-tile{image-rendering:-webkit-optimize-contrast}.leaflet-safari .leaflet-tile-container{width:1600px;height:1600px;-webkit-transform-origin:0 0}.leaflet-marker-icon,.leaflet-marker-shadow{display:block}.leaflet-container .leaflet-overlay-pane svg{max-width:none!important;max-height:none!important}.leaflet-container .leaflet-marker-pane img,.leaflet-container .leaflet-shadow-pane img,.leaflet-container .leaflet-tile,.leaflet-container .leaflet-tile-pane img,.leaflet-container img.leaflet-image-layer{max-width:none!important;max-height:none!important;width:auto;padding:0}.leaflet-container img.leaflet-tile{mix-blend-mode:plus-lighter}.leaflet-container.leaflet-touch-zoom{-ms-touch-action:pan-x pan-y;touch-action:pan-x pan-y}.leaflet-container.leaflet-touch-drag{-ms-touch-action:pinch-zoom;touch-action:none;touch-action:pinch-zoom}.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom{-ms-touch-action:none;touch-action:none}.leaflet-container{-webkit-tap-highlight-color:transparent}.leaflet-container a{-webkit-tap-highlight-color:rgba(51,181,229,.4)}.leaflet-tile{filter:inherit;visibility:hidden}.leaflet-tile-loaded{visibility:inherit}.leaflet-zoom-box{width:0;height:0;-moz-box-sizing:border-box;box-sizing:border-box;z-index:800}.leaflet-overlay-pane svg{-moz-user-select:none}.leaflet-pane{z-index:400}.leaflet-tile-pane{z-index:200}.leaflet-overlay-pane{z-index:400}.leaflet-shadow-pane{z-index:500}.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}.leaflet-popup-pane{z-index:700}.leaflet-map-pane canvas{z-index:100}.leaflet-map-pane svg{z-index:200}.leaflet-vml-shape{width:1px;height:1px}.lvml{behavior:url(#default#VML);display:inline-block;position:absolute}.leaflet-control{position:relative;z-index:800;pointer-events:visiblePainted;pointer-events:auto}.leaflet-bottom,.leaflet-top{position:absolute;z-index:1000;pointer-events:none}.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}.leaflet-control{float:left;clear:both}.leaflet-right .leaflet-control{float:right}.leaflet-top .leaflet-control{margin-top:10px}.leaflet-bottom .leaflet-control{margin-bottom:10px}.leaflet-left .leaflet-control{margin-left:10px}.leaflet-right .leaflet-control{margin-right:10px}.leaflet-fade-anim .leaflet-popup{opacity:0;-webkit-transition:opacity .2s linear;-moz-transition:opacity .2s linear;transition:opacity .2s linear}.leaflet-fade-anim .leaflet-map-pane .leaflet-popup{opacity:1}.leaflet-zoom-animated{-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0}svg.leaflet-zoom-animated{will-change:transform}.leaflet-zoom-anim .leaflet-zoom-animated{-webkit-transition:-webkit-transform .25s cubic-bezier(0,0,.25,1);-moz-transition:-moz-transform .25s cubic-bezier(0,0,.25,1);transition:transform .25s cubic-bezier(0,0,.25,1)}.leaflet-pan-anim .leaflet-tile,.leaflet-zoom-anim .leaflet-tile{-webkit-transition:none;-moz-transition:none;transition:none}.leaflet-zoom-anim .leaflet-zoom-hide{visibility:hidden}.leaflet-interactive{cursor:pointer}.leaflet-grab{cursor:-webkit-grab;cursor:-moz-grab;cursor:grab}.leaflet-crosshair,.leaflet-crosshair .leaflet-interactive{cursor:crosshair}.leaflet-control,.leaflet-popup-pane{cursor:auto}.leaflet-dragging .leaflet-grab,.leaflet-dragging .leaflet-grab .leaflet-interactive,.leaflet-dragging .leaflet-marker-draggable{cursor:move;cursor:-webkit-grabbing;cursor:-moz-grabbing;cursor:grabbing}.leaflet-image-layer,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-pane>svg path,.leaflet-tile-container{pointer-events:none}.leaflet-image-layer.leaflet-interactive,.leaflet-marker-icon.leaflet-interactive,.leaflet-pane>svg path.leaflet-interactive,svg.leaflet-image-layer.leaflet-interactive path{pointer-events:visiblePainted;pointer-events:auto}.leaflet-container{background:#ddd;outline-offset:1px}.leaflet-container a{color:#0078a8}.leaflet-zoom-box{border:2px dotted #38f;background:rgba(255,255,255,.5)}.leaflet-container{font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;font-size:12px;font-size:.75rem;line-height:1.5}.leaflet-bar{box-shadow:0 1px 5px rgba(0,0,0,.65);border-radius:4px}.leaflet-bar a{background-color:#fff;border-bottom:1px solid #ccc;width:26px;height:26px;line-height:26px;display:block;text-align:center;text-decoration:none;color:#000}.leaflet-bar a,.leaflet-control-layers-toggle{background-position:50% 50%;background-repeat:no-repeat;display:block}.leaflet-bar a:focus,.leaflet-bar a:hover{background-color:#f4f4f4}.leaflet-bar a:first-child{border-top-left-radius:4px;border-top-right-radius:4px}.leaflet-bar a:last-child{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom:none}.leaflet-bar a.leaflet-disabled{cursor:default;background-color:#f4f4f4;color:#bbb}.leaflet-touch .leaflet-bar a{width:30px;height:30px;line-height:30px}.leaflet-touch .leaflet-bar a:first-child{border-top-left-radius:2px;border-top-right-radius:2px}.leaflet-touch .leaflet-bar a:last-child{border-bottom-left-radius:2px;border-bottom-right-radius:2px}.leaflet-control-zoom-in,.leaflet-control-zoom-out{font:bold 18px 'Lucida Console',Monaco,monospace;text-indent:1px}.leaflet-touch .leaflet-control-zoom-in,.leaflet-touch .leaflet-control-zoom-out{font-size:22px}.leaflet-control-layers{box-shadow:0 1px 5px rgba(0,0,0,.4);background:#fff;border-radius:5px}.leaflet-control-layers-toggle{background-image:url(images/layers.png);width:36px;height:36px}.leaflet-retina .leaflet-control-layers-toggle{background-image:url(images/layers-2x.png);background-size:26px 26px}.leaflet-touch .leaflet-control-layers-toggle{width:44px;height:44px}.leaflet-control-layers .leaflet-control-layers-list,.leaflet-control-layers-expanded .leaflet-control-layers-toggle{display:none}.leaflet-control-layers-expanded .leaflet-control-layers-list{display:block;position:relative}.leaflet-control-layers-expanded{padding:6px 10px 6px 6px;color:#333;background:#fff}.leaflet-control-layers-scrollbar{overflow-y:scroll;overflow-x:hidden;padding-right:5px}.leaflet-control-layers-selector{margin-top:2px;position:relative;top:1px}.leaflet-control-layers label{display:block;font-size:13px;font-size:1.08333em}.leaflet-control-layers-separator{height:0;border-top:1px solid #ddd;margin:5px -10px 5px -6px}.leaflet-default-icon-path{background-image:url(images/marker-icon.png)}.leaflet-container .leaflet-control-attribution{background:#fff;background:rgba(255,255,255,.8);margin:0}.leaflet-control-attribution,.leaflet-control-scale-line{padding:0 5px;color:#333;line-height:1.4}.leaflet-control-attribution a{text-decoration:none}.leaflet-control-attribution a:focus,.leaflet-control-attribution a:hover{text-decoration:underline}.leaflet-attribution-flag{display:inline!important;vertical-align:baseline!important;width:1em;height:.6669em}.leaflet-left .leaflet-control-scale{margin-left:5px}.leaflet-bottom .leaflet-control-scale{margin-bottom:5px}.leaflet-control-scale-line{border:2px solid #777;border-top:none;line-height:1.1;padding:2px 5px 1px;white-space:nowrap;-moz-box-sizing:border-box;box-sizing:border-box;background:rgba(255,255,255,.8);text-shadow:1px 1px #fff}.leaflet-control-scale-line:not(:first-child){border-top:2px solid #777;border-bottom:none;margin-top:-2px}.leaflet-control-scale-line:not(:first-child):not(:last-child){border-bottom:2px solid #777}.leaflet-touch .leaflet-bar,.leaflet-touch .leaflet-control-attribution,.leaflet-touch .leaflet-control-layers{box-shadow:none}.leaflet-touch .leaflet-bar,.leaflet-touch .leaflet-control-layers{border:2px solid rgba(0,0,0,.2);background-clip:padding-box}.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}.leaflet-popup-content-wrapper{padding:1px;text-align:left;border-radius:12px}.leaflet-popup-content{margin:13px 24px 13px 20px;line-height:1.3;font-size:13px;font-size:1.08333em;min-height:1px}.leaflet-popup-content p{margin:17px 0;margin:1.3em 0}.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-top:-1px;margin-left:-20px;overflow:hidden;pointer-events:none}.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;pointer-events:auto;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#fff;color:#333;box-shadow:0 3px 14px rgba(0,0,0,.4)}.leaflet-container a.leaflet-popup-close-button{position:absolute;top:0;right:0;border:none;text-align:center;width:24px;height:24px;font:16px/24px Tahoma,Verdana,sans-serif;color:#757575;text-decoration:none;background:0 0}.leaflet-container a.leaflet-popup-close-button:focus,.leaflet-container a.leaflet-popup-close-button:hover{color:#585858}.leaflet-popup-scrolled{overflow:auto}.leaflet-oldie .leaflet-popup-content-wrapper{-ms-zoom:1}.leaflet-oldie .leaflet-popup-tip{width:24px;margin:0 auto}.leaflet-oldie .leaflet-control-layers,.leaflet-oldie .leaflet-control-zoom,.leaflet-oldie .leaflet-popup-content-wrapper,.leaflet-oldie .leaflet-popup-tip{border:1px solid #999}.leaflet-div-icon{background:#fff;border:1px solid #666}.leaflet-tooltip{position:absolute;padding:6px;background-color:#fff;border:1px solid #fff;border-radius:3px;color:#222;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:none;box-shadow:0 1px 3px rgba(0,0,0,.4)}.leaflet-tooltip.leaflet-interactive{cursor:pointer;pointer-events:auto}.leaflet-tooltip-bottom:before,.leaflet-tooltip-left:before,.leaflet-tooltip-right:before,.leaflet-tooltip-top:before{position:absolute;pointer-events:none;border:6px solid transparent;background:0 0;content:""}.leaflet-tooltip-bottom{margin-top:6px}.leaflet-tooltip-top{margin-top:-6px}.leaflet-tooltip-bottom:before,.leaflet-tooltip-top:before{left:50%;margin-left:-6px}.leaflet-tooltip-top:before{bottom:0;margin-bottom:-12px;border-top-color:#fff}.leaflet-tooltip-bottom:before{top:0;margin-top:-12px;margin-left:-6px;border-bottom-color:#fff}.leaflet-tooltip-left{margin-left:-6px}.leaflet-tooltip-right{margin-left:6px}.leaflet-tooltip-left:before,.leaflet-tooltip-right:before{top:50%;margin-top:-6px}.leaflet-tooltip-left:before{right:0;margin-right:-12px;border-left-color:#fff}.leaflet-tooltip-right:before{left:0;margin-left:-12px;border-right-color:#fff}@media print{.leaflet-control{-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+/* Searle Forestry palette: sage #6f7c4a, deep forest #344414.
+   UI chrome is brand-led; map feature colours stay tuned for legibility
+   over aerial imagery, which is a functional requirement, not a brand one. */
+:root{
+  --bg:#0f120c; --panel:#171c12; --panel2:#1f2618; --line:#333d28;
+  --ink:#eef1e6; --ink2:#a8b394; --ink3:#7b8768;
+  --accent:#9aad6b; --sage:#6f7c4a; --forest:#344414;
+  --boundary:#ffcc33;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  font:13px/1.5 "Segoe UI",system-ui,-apple-system,sans-serif;
+  background:var(--bg); color:var(--ink); overflow:hidden;
+}
+
+/* ---------- shell ---------- */
+#shell{display:flex;flex-direction:column;height:100vh}
+header{
+  display:flex;align-items:center;gap:20px;flex-wrap:nowrap;
+  padding:13px 20px;flex:0 0 auto;
+  background:linear-gradient(180deg,#1b2116 0%,var(--panel) 100%);
+  border-bottom:2px solid var(--sage);
+}
+#brand{height:42px;width:auto;display:block;flex:0 0 auto}
+.rule{width:1px;height:40px;background:var(--line);flex:0 0 auto}
+.titleblock{display:flex;flex-direction:column;gap:1px;min-width:0}
+header h1{
+  font:400 30px/1.05 Georgia,"Times New Roman",serif;
+  margin:0;letter-spacing:1.2px;text-transform:uppercase;color:var(--ink);
+}
+header h1 span{color:var(--accent);font-weight:400}
+.sub{color:var(--ink2);font-size:12px;letter-spacing:.2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+header h1{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.titleblock{flex:0 0 auto;max-width:34vw}
+.sub b{color:var(--accent);font-weight:600}
+.spacer{flex:1}
+@media (max-width:1100px){
+  header h1{font-size:22px}
+  #brand{height:32px}
+  .sub{font-size:11px}
+}
+#brandfoot{
+  flex:0 0 auto;border-top:2px solid var(--sage);padding:12px 14px;
+  display:flex;align-items:center;gap:11px;
+  background:linear-gradient(180deg,var(--panel) 0%,#1b2116 100%);
+}
+#brandfoot img{height:30px;opacity:1}
+#brandfoot span{font-size:10.5px;color:var(--ink2);line-height:1.4}
+#brandfoot b{color:var(--accent);font-size:11.5px;letter-spacing:.3px}
+.basebar{display:flex;gap:4px;background:var(--panel2);padding:3px;border-radius:7px}
+.basebar button{
+  background:none;border:0;color:var(--ink2);font:inherit;font-size:11.5px;
+  padding:4px 10px;border-radius:5px;cursor:pointer;
+}
+.basebar button:hover{color:var(--ink)}
+.basebar button.on{background:var(--accent);color:#14190a;font-weight:600}
+#main{display:flex;flex:1;min-height:0}
+
+/* ---------- dashboard ---------- */
+#dash{
+  width:330px;flex:0 0 330px;background:var(--panel);border-right:1px solid var(--line);
+  display:flex;flex-direction:column;min-height:0;
+}
+#dash.collapsed{width:0;flex-basis:0;overflow:hidden;border-right:0}
+.tabs{display:flex;border-bottom:1px solid var(--line);flex:0 0 auto}
+.tabs button{
+  flex:1;background:none;border:0;border-bottom:2px solid transparent;
+  color:var(--ink3);font:inherit;font-size:11px;padding:9px 2px;cursor:pointer;
+  text-transform:uppercase;letter-spacing:.4px;
+}
+.tabs button:hover{color:var(--ink2)}
+.tabs button.on{color:var(--accent);border-bottom-color:var(--accent)}
+.tabpane{display:none;padding:14px;overflow-y:auto;flex:1;min-height:0}
+.tabpane.on{display:block}
+
+.card{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:12px;margin-bottom:11px}
+.card h3{
+  margin:0 0 9px;font-size:10.5px;text-transform:uppercase;letter-spacing:.7px;
+  color:var(--ink3);font-weight:650;
+}
+.big{font-size:27px;font-weight:680;letter-spacing:-.5px;line-height:1.1}
+.big small{font-size:12px;font-weight:400;color:var(--ink3);letter-spacing:0}
+.kv{display:flex;justify-content:space-between;gap:10px;padding:4px 0;border-bottom:1px dotted #333d2866}
+.kv:last-child{border-bottom:0}
+.kv dt{color:var(--ink3);font-size:12px}
+.kv dd{margin:0;text-align:right;font-variant-numeric:tabular-nums;font-weight:550;font-size:12px}
+dl{margin:0}
+.note{color:var(--ink3);font-size:11px;line-height:1.5;margin:8px 0 0}
+.pill{display:inline-block;padding:1px 7px;border-radius:20px;font-size:10.5px;font-weight:600}
+
+/* bars */
+.bar{height:7px;border-radius:4px;background:#2a3320;overflow:hidden;margin:5px 0 2px}
+.bar i{display:block;height:100%;border-radius:4px}
+.barrow{margin-bottom:11px}
+.barrow .lbl{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink2)}
+.barrow .lbl b{color:var(--ink);font-variant-numeric:tabular-nums}
+
+table.mini{width:100%;border-collapse:collapse;font-size:11.5px;font-variant-numeric:tabular-nums}
+table.mini th{text-align:right;color:var(--ink3);font-weight:600;padding:5px 4px;border-bottom:1px solid var(--line);font-size:10.5px}
+table.mini th:first-child{text-align:left}
+table.mini td{text-align:right;padding:5px 4px;border-bottom:1px dotted #333d2866}
+table.mini td:first-child{text-align:left}
+table.mini tr:last-child td{border-bottom:0}
+table.mini tfoot td{font-weight:700;border-top:1px solid var(--line);border-bottom:0;padding-top:7px}
+
+/* data room */
+.doc{display:flex;gap:9px;align-items:flex-start;padding:6px 0;border-bottom:1px dotted #333d2866}
+.doc:last-of-type{border-bottom:0}
+.ext{
+  flex:0 0 38px;text-align:center;font-size:8.5px;font-weight:700;letter-spacing:.4px;
+  padding:3px 0;border-radius:4px;border:1px solid;font-style:normal;margin-top:1px;
+}
+.docmeta{min-width:0;flex:1}
+.docname{font-size:11.5px;color:var(--ink);line-height:1.35;word-break:break-word}
+.docname a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.docname a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.docsub{font-size:10.5px;color:var(--ink3);line-height:1.4}
+.docsub a{color:var(--ink2)}
+b.int{
+  font-size:8.5px;text-transform:uppercase;letter-spacing:.5px;font-weight:700;
+  color:#ffa8a8;background:#e0313122;border:1px solid #e0313155;
+  padding:0 4px;border-radius:3px;vertical-align:1px;
+}
+ul.notes{margin:0;padding-left:16px;color:var(--ink2);font-size:11.5px;line-height:1.6}
+ul.notes li{margin-bottom:7px}
+.warn{border-left:2px solid var(--accent);padding-left:9px;color:var(--ink2);font-size:11.5px;line-height:1.55;margin:9px 0}
+
+/* ---------- map ---------- */
+#mapwrap{flex:1;position:relative;min-width:0}
+#map{position:absolute;inset:0;background:#0b0e08}
+.leaflet-container{font:inherit;background:#0b0e08}
+
+/* layer control */
+#layers{
+  position:absolute;top:10px;right:10px;z-index:900;width:272px;
+  background:rgba(23,28,18,.95);border:1px solid var(--line);border-radius:9px;
+  backdrop-filter:blur(8px);max-height:calc(100% - 20px);display:flex;flex-direction:column;
+}
+#layers header{
+  background:none;border:0;border-bottom:1px solid var(--line);padding:8px 11px;
+  font-size:10.5px;text-transform:uppercase;letter-spacing:.7px;color:var(--ink3);
+  font-weight:650;cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+}
+#layerbody{overflow-y:auto;padding:7px 6px 9px}
+#layers.min #layerbody{display:none}
+.grp{margin:0 0 6px}
+.grp>p{margin:8px 5px 3px}
+.grp>p label{
+  display:flex;align-items:center;gap:6px;cursor:pointer;
+  font-size:9.5px;text-transform:uppercase;letter-spacing:.6px;
+  color:var(--ink3);font-weight:650;
+}
+.lyr{display:flex;align-items:center;gap:7px;padding:3px 6px;border-radius:5px;cursor:pointer}
+.lyr:hover{background:#ffffff0a}
+.lyr input[type=checkbox]{margin:0;accent-color:var(--accent);cursor:pointer;flex:0 0 auto}
+.lyr .sw{width:15px;height:11px;border-radius:3px;flex:0 0 auto;border:1px solid #0006}
+.lyr span{font-size:11.5px;color:var(--ink2);flex:1;line-height:1.3;min-width:0}
+.lyr input[type=checkbox]:checked ~ span{color:var(--ink)}
+.lyr.master{
+  border-bottom:1px solid var(--line);margin:0 0 4px;padding-bottom:7px;border-radius:0;
+}
+.lyr.master span{font-size:10.5px;text-transform:uppercase;letter-spacing:.6px;
+  color:var(--ink2);font-weight:650}
+/* per-layer opacity: thin, unobtrusive, always reachable */
+input.lop{
+  flex:0 0 46px;width:46px;height:3px;margin:0;padding:0;cursor:pointer;
+  accent-color:var(--sage);opacity:.5;transition:opacity .12s;
+}
+.lyr:hover input.lop{opacity:1}
+input[type=checkbox]:checked ~ input.lop{opacity:.85}
+.opa{display:flex;align-items:center;gap:7px;padding:8px 6px 2px;border-top:1px solid var(--line);margin-top:8px}
+.opa label{font-size:10.5px;color:var(--ink3);text-transform:uppercase;letter-spacing:.5px}
+.opa input{flex:1;accent-color:var(--accent)}
+#basesel{
+  background:var(--panel2);color:var(--ink);border:1px solid var(--line);
+  border-radius:6px;padding:4px 6px;font:inherit;font-size:11px;cursor:pointer;
+  min-width:0;max-width:150px;
+}
+#basesel:focus{outline:1px solid var(--accent)}
+#basesel optgroup{background:var(--panel);color:var(--ink3);font-size:11px}
+#basesel option{background:var(--panel);color:var(--ink)}
+
+/* readouts */
+#coords{
+  position:absolute;left:10px;bottom:10px;z-index:900;
+  background:rgba(23,28,18,.92);border:1px solid var(--line);border-radius:7px;
+  padding:5px 10px;font-size:11px;color:var(--ink2);font-variant-numeric:tabular-nums;
+}
+#coords b{color:var(--ink);font-weight:600}
+.leaflet-popup-content-wrapper{background:var(--panel);color:var(--ink);border-radius:9px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--panel);border:1px solid var(--line)}
+.leaflet-popup-content{margin:11px 13px;font-size:12px;min-width:190px}
+.leaflet-popup-content h4{margin:0 0 7px;font-size:12.5px;color:var(--accent)}
+.leaflet-popup-content .photolink img{
+  display:block;width:100%;max-width:260px;border-radius:6px;margin:0 0 8px;
+  border:1px solid var(--line);
+}
+.leaflet-popup-content a.btn,.card a.btn{
+  display:inline-block;margin-top:8px;padding:5px 11px;border-radius:6px;
+  background:var(--sage);color:#fff;text-decoration:none;font-size:11.5px;font-weight:600;
+}
+.leaflet-popup-content a.btn:hover,.card a.btn:hover{background:var(--accent);color:#14190a}
+.leaflet-popup-content .kv dt{font-size:11.5px}
+.leaflet-popup-content .kv dd{font-size:11.5px}
+a.leaflet-popup-close-button{color:var(--ink3)!important}
+.leaflet-bar a{background:var(--panel);color:var(--ink);border-color:var(--line)}
+.leaflet-bar a:hover{background:var(--panel2);color:var(--accent)}
+.leaflet-control-attribution{background:rgba(23,28,18,.85)!important;color:var(--ink3)!important;font-size:10px}
+.leaflet-control-attribution a{color:var(--ink2)!important}
+.leaflet-control-scale-line{background:rgba(23,28,18,.85);border-color:var(--line);color:var(--ink2)}
+
+.blk-lbl{
+  background:none;border:0;box-shadow:none;font-size:12px;font-weight:700;
+  letter-spacing:.6px;text-transform:uppercase;white-space:nowrap;
+  text-shadow:0 0 4px #000,0 0 4px #000,0 0 8px #000;pointer-events:none;
+}
+.blkbtn{
+  background:var(--panel2);border:1px solid var(--line);color:var(--ink2);
+  border-radius:6px;padding:3px 7px;font:inherit;font-size:10.5px;cursor:pointer;
+  display:inline-flex;align-items:center;gap:5px;white-space:nowrap;
+}
+.blkgroup{display:flex;flex-wrap:nowrap;gap:4px;flex:0 1 auto;min-width:0;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
+.blkbtn:hover{color:var(--ink);border-color:var(--sage)}
+.blkbtn i{width:10px;height:10px;border-radius:2px;display:inline-block}
+.blkrow{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.sched td.bar{padding:0 4px}
+.ctour-lbl{
+  background:none;border:0;box-shadow:none;color:#e0c9a6;font-size:9.5px;
+  font-weight:600;text-shadow:0 0 3px #000,0 0 3px #000;
+}
+.plotmk{border-radius:50%;border:1.5px solid #fff;box-shadow:0 0 0 1px #0008}
+.owner-lbl{background:none;border:0;box-shadow:none;pointer-events:none}
+.owner-lbl div{transform:translate(-50%,-50%);white-space:nowrap;font-size:10px;font-weight:600;
+  color:#f1e6cf;text-shadow:0 0 3px #000,0 0 3px #000,0 0 6px #000;letter-spacing:.2px}
+#toggleDash{
+  background:var(--panel2);border:1px solid var(--line);color:var(--ink2);
+  border-radius:6px;padding:4px 9px;font:inherit;font-size:11.5px;cursor:pointer;
+}
+#toggleDash:hover{color:var(--accent)}
+/* contact agent: header on desktop, floating pill on phones */
+.contact{display:flex;gap:6px;align-items:center;flex:0 0 auto}
+.contact a{
+  display:inline-flex;align-items:center;gap:6px;text-decoration:none;white-space:nowrap;
+  font-size:11.5px;font-weight:600;border-radius:6px;padding:5px 11px;border:1px solid var(--line);
+}
+.contact a.mail{background:var(--accent);color:#14190a;border-color:var(--accent)}
+.contact a.mail:hover{background:#b3c57f}
+.contact a.tel{background:var(--panel2);color:var(--ink);font-variant-numeric:tabular-nums}
+.contact a.tel:hover{border-color:var(--sage);color:var(--accent)}
+#contactfab{display:none}
+#sheethandle{display:none}
+/* ---------- small screens ----------
+   Below 700px the three panels stack instead of sitting side by side: the
+   map takes the whole viewport, the dashboard becomes a bottom sheet the
+   menu button pulls up, and the overlay panel collapses to a pill. Nothing
+   is dropped - it is the same content, reached one panel at a time. */
+@media (max-width:900px) and (min-width:701px){
+  #dash{width:290px;flex-basis:290px}
+  #layers{width:230px}
+}
+@media (max-width:700px){
+  header{padding:8px 10px;gap:10px;flex-wrap:nowrap}
+  #brand{height:26px}
+  .rule,.sub{display:none}
+  .titleblock{flex:1;min-width:0}
+  header h1{font-size:15px;letter-spacing:.6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .basebar{padding:2px}
+  #toggleDash{flex:0 0 auto;padding:5px 9px}
+  .spacer{display:none}
+  #layers:not(.min){z-index:1001}
+  .lyr{padding:5px 6px}
+  .lyr span{font-size:12px}
+  input.lop{flex:0 0 36px;width:36px;opacity:.7}
+  .basebar.inpanel{margin:4px 5px 10px;display:block}
+  .basebar.inpanel #basesel{width:100%;min-width:0;font-size:12px}
+  .basebar.inpanel::before{
+    content:"Base layer";display:block;font-size:9.5px;text-transform:uppercase;
+    letter-spacing:.6px;color:var(--ink3);font-weight:650;margin:4px 0 5px;
+  }
+  #main{position:relative}
+  #dash{
+    position:absolute;left:0;right:0;bottom:0;top:auto;width:auto;flex:none;height:64%;
+    z-index:1000;border-right:0;border-top:2px solid var(--sage);border-radius:14px 14px 0 0;
+    box-shadow:0 -8px 24px #0009;transition:transform .22s ease;overflow:hidden;
+  }
+  #dash.collapsed{width:auto;flex-basis:auto;transform:translateY(100%)}
+  #sheethandle{
+    display:block;height:18px;flex:0 0 auto;cursor:pointer;position:relative;
+  }
+  #sheethandle::before{
+    content:"";position:absolute;left:50%;top:7px;width:40px;height:4px;margin-left:-20px;
+    border-radius:2px;background:var(--ink3);
+  }
+  .tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs button{flex:0 0 auto;padding:10px 13px;font-size:11.5px}
+  .tabpane{padding:10px}
+  #brandfoot{padding:8px 12px}
+  #brandfoot img{height:22px}
+  #layers{width:auto;left:10px;right:10px;max-height:56%}
+  #layers.min{left:auto;width:auto}
+  #layers header{padding:9px 12px;font-size:11px}
+  #coords{display:none}
+  .leaflet-popup-content{min-width:160px;max-width:78vw}
+  #contacthdr{display:none}
+  #contactfab{
+    display:flex;position:absolute;left:10px;bottom:34px;z-index:900;gap:5px;
+    background:rgba(23,28,18,.95);border:1px solid var(--line);border-radius:9px;
+    padding:5px;backdrop-filter:blur(8px);
+  }
+  #contactfab a{padding:8px 11px;font-size:12px}
+}
+</style>
+<link rel="icon" href="data:image/png;base64,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">
+<meta name="description" content="Tākapu Forest, 236 Takapu Road, Takapu Valley, Wellington (rated as 226 & 251 Takapu Road) - 235.6 ha, freehold. Interactive map: boundary, forest, access, contours and NES-CF layers. Searle Forestry.">
+<meta property="og:title" content="Tākapu Forest - Interactive Map">
+<meta property="og:description" content="Tākapu Forest, 236 Takapu Road, Takapu Valley, Wellington (rated as 226 & 251 Takapu Road) - 235.6 ha, freehold. Interactive map: boundary, forest, access, contours and NES-CF layers. Searle Forestry.">
+<meta property="og:type" content="website">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<div id="shell">
+  <header>
+    <button id="toggleDash" title="Show / hide dashboard">&#9776;</button>
+    <img id="brand" src="data:image/png;base64,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" alt="Searle Forestry">
+    <i class="rule"></i>
+    <div class="titleblock">
+      <h1 id="proptitle"></h1>
+      <div class="sub" id="hdrsub"></div>
+    </div>
+    <div class="spacer"></div>
+    <div class="contact" id="contacthdr"></div>
+    <div class="basebar" id="basebar"></div>
+  </header>
+
+  <div id="main">
+    <aside id="dash">
+      <div id="sheethandle" title="Hide"></div>
+      <div class="tabs" id="tabs"></div>
+      <div class="tabpane on" id="pane-overview"></div>
+      <div class="tabpane" id="pane-crop"></div>
+      <div class="tabpane" id="pane-rates"></div>
+      <div class="tabpane" id="pane-ets"></div>
+      <div class="tabpane" id="pane-terrain"></div>
+      <div class="tabpane" id="pane-docs"></div>
+      <div class="tabpane" id="pane-data"></div>
+      <div id="brandfoot">
+        <img src="data:image/png;base64,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" alt="">
+        <span>Prepared by <b>Searle Forestry</b><span id="footcontact"></span><br>Licensed under the Real Estate Agents Act 2008</span>
+      </div>
+    </aside>
+
+    <div id="mapwrap">
+      <div id="map"></div>
+      <div id="layers">
+        <header id="lyrhdr"><span>Overlays</span><span id="lyrcar">&#9662;</span></header>
+        <div id="layerbody"></div>
+      </div>
+      <div id="coords"></div>
+      <div class="contact" id="contactfab"></div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/layers.js"></script>
+<script>
+window.PROPMAP_STATS={"property":{"name":"T\u0101kapu Forest","address":"236 Takapu Road, Takapu Valley, Wellington (rated as 226 & 251 Takapu Road)","title_reference":"WN74/267 + WN444/197 + WN444/196 + WN55B/537 + WN46B/581","panoramas":null,"legal_description":"Lot 2 DP 84654 + Lot 4 DP 50892 + Lot 9 DP 88281 + Part Section 20 Horokiwi RD DIST + Part Section 23 Horokiwi RD DIST + Section 21 Horokiwi RD DIST + Section 22 Horokiwi RD DIST + Section 24 Horokiwi RD DIST","land_district":"Wellington","tenure":"Freehold","tenure_short":"freehold","zoning":"Rural (General Rural Zone under the Proposed District Plan); Horokiwi Area, Ridgelines & Hilltops and Special Amenity Landscape overlays apply to parts","territorial_authority":"Wellington City","regional_council":"Greater Wellington Regional Council","title_area_ha_linz":235.43,"title_area_ha_im":235.6,"parcel_count":8,"centroid":[-41.178573,174.862621],"bbox":[174.821325,-41.206869,174.902753,-41.150269]},"blocks":[],"rates":{"total_annual":12539.45,"source":"WCC combined rates notices, rating year 1 Jul 2024 - 30 Jun 2025, both rating units (226 Takapu Rd $6,952.43 + 251 Takapu Rd $5,587.02): WCC $10,345.84 | GWRC $2,125.83 | sludge levy $67.78. Values per WCC rating valuations 16690-51800 and 16690-50032.","district_council":"Wellington City","regional_council":"Greater Wellington Regional Council","capital_value":3860000.0,"land_value":3790000.0,"improvements_value":70000.0,"rates_per_ha_title":53.26,"rates_per_ha_stocked":75.18,"rates_per_ha_registered":93.75,"rates_pct_of_cv":0.325,"cv_per_ha":16396.0,"lv_per_ha":16098.0,"rates_per_nzu":0.177,"split_available":true,"note":""},"ets":{"caas":[{"caa":1,"planted":1995,"species":"Pinus radiata","registered_ha":1.02,"nzu":533,"age_2026":31,"nzu_per_ha":522.5,"mapped_ha":1.02},{"caa":2,"planted":1996,"species":"Pinus radiata","registered_ha":13.15,"nzu":7113,"age_2026":30,"nzu_per_ha":540.9,"mapped_ha":13.15},{"caa":3,"planted":1994,"species":"Pinus radiata","registered_ha":48.7,"nzu":25466,"age_2026":32,"nzu_per_ha":522.9,"mapped_ha":48.69},{"caa":4,"planted":1994,"species":"Pinus radiata","registered_ha":9.6,"nzu":5020,"age_2026":32,"nzu_per_ha":522.9,"mapped_ha":9.59},{"caa":5,"planted":1994,"species":"Pinus radiata","registered_ha":1.42,"nzu":731,"age_2026":32,"nzu_per_ha":514.8,"mapped_ha":1.42},{"caa":6,"planted":1995,"species":"Pinus radiata","registered_ha":49.9,"nzu":26582,"age_2026":31,"nzu_per_ha":532.7,"mapped_ha":49.89},{"caa":7,"planted":1995,"species":"Pinus radiata","registered_ha":9.97,"nzu":5327,"age_2026":31,"nzu_per_ha":534.3,"mapped_ha":9.97}],"registered_ha":133.76,"nzu_transferring":70772,"accounting":"Stock change","activity":"Post-1989 forest land, Landowner","participant":"RR Trotter No. 2 Trust (NZ-7823)","constitution_date":"09/06/2022","fma":true,"status":"","mapped_eligible_ha":133.74,"mapped_ineligible_ha":0.0,"ineligible_reason":""},"crop":null,"narrative":{"overview_note":"T\u0101kapu Forest is 235.6 ha of freehold land in five records of title about 16 km north of Wellington and CentrePort. Net stocked area is 166.8 ha of Pinus radiata (1984-1996) on the Forestry Maps August 2024 mapping: 49.1 ha of pruned, harvest-ready stands on the lower western block (841, 951, 952, 961) and 117.7 ha of minimally tended carbon stands to the east (943, 953). 133.8 ha is registered in the ETS under stock change across seven CAAs, with 70,772 NZUs held.","cover_note":"The stand layers are digitised from the vendor's Forestry Maps A2 stand map (RP 26 Aug 2024, 1:5000): the P. radiata fill measures 166.8 ha, native gullies 23.2 ha, pasture 12.4 ha and Transpower corridors 21.3 ha. An older area basis of 174.7 ha (Woodnet Feb 2016 inventory map, gross stand areas including canopy gaps and the powerline corridor through stand 841) appears in the data-room area table and the 2024 Morice valuation; the 2024 net stocked mapping is the current basis.","rates_note":"Two rating units: 226 Takapu Road (Pt Sec 23, Secs 20-24 Horokiwi, Lot 4 DP 50892; 197.84 ha; LV $2,280,000, CV $2,320,000; rates $6,952.43) and 251 Takapu Road (Lots 2 & 9; 37.78 ha; LV $1,510,000, CV $1,540,000; rates $5,587.02). The IM quotes only the 251 Takapu Road rates against the combined values."},"terrain":{"min_elevation_m":80,"max_elevation_m":420,"contour_interval_m":20},"access":{"track_km_on_property":5.98,"formed_road_km_on_property":0.0,"legal_road_parcels_nearby":601,"legal_road_ha_on_property":0.0,"note":"Dual road access: sealed Takapu Road on the western boundary (Lot 2 DP 84654, where the ~6 ha pasture paddock and the harvest access sit) and metalled Horokiwi Road at the southern corner. A right of way in favour of Transpower serves the tower line through the property, and there is an informal arrangement for maintenance of a cell tower near the north-east boundary. The rear Horokiwi sections have no road frontage of their own, so legal access to them is a due-diligence item. Caveat 12130 on WN444/196 (Pt Sec 23) restricts transfer."},"cover":{"native_ha_on_property":1.06,"scrub_ha_on_property":22.56,"exotic_ha_on_property":179.95,"net_stocked_pine_ha":166.8,"river_km_on_property":5.13,"source":"LINZ Topo50 vegetation polygons - indicative only"},"environment":{"esc":[{"key":"Low","ha":113.4,"pct":48.2},{"key":"Moderate","ha":122.1,"pct":51.8}],"esc_high_ha":0,"esc_source":"MPI Erosion Susceptibility Classification (March 2018), the classification the NES-CF works off","luc":[{"key":"6","ha":113.2,"pct":48.1},{"key":"7","ha":122.2,"pct":51.9}],"luc_subclasses":[{"key":"7e","ha":122.2,"pct":51.9},{"key":"6c","ha":72.3,"pct":30.7},{"key":"6e","ha":40.9,"pct":17.4}],"luc_source":"LRIS NZLRI Land Use Capability 2021 (layer 48076)","luc_units":[{"key":"Steep to very steep greywacke hill country below 500m asl with Brown (yellow brown earth) soils in moderate to high (1100-2000mm) rainfall areas with a potential for severe sheet and scree erosion, and moderate soil slip erosion.","ha":122.2},{"key":"Rolling to strong rolling exposed broad greywacke ridges mantled with loess between 300-500m asl with Brown (yellow brown earth) soils in moderate (1270-1780mm) rainfall areas subject to strong winds and cool temperatures, with a potential for slight sheet erosion.","ha":42.1},{"key":"Moderately steep to steep greywacke hill country below 400m asl with Brown (yellow brown earth) soils, in moderate (1100-1600mm) rainfall areas subject to periods of soil moisture deficit and wind, with a potential for moderate sheet, soil slip and scree erosion.","ha":31.7},{"key":"Rolling to strongly rolling exposed greywacke ridges with common rock outcrops near the coast, below 400 m asl with shallow Brown (yellow brown earth) soils in moderate (1140-1275mm) rainfall areas exposed to strong salt laden winds and subject to seasonal soil moisture deficiencies.","ha":30.1}],"fish_spawning_reaches":109,"fish_species":["Banded kokopu","Brown trout","Dwarf galaxias","Giant kokopu","Koaro","Redfin bully"]},"neighbours":{"doc_parcels_adjoining":35,"doc_names":["Arthur Carman Park Recreation Reserve","Belmont Regional Park Scenic Reserve","Belmont Reserve Scenic Reserve","Boscobel Lane Station Reserve Local Purpose (Car Park) Reserve","Caribbean Avenue Reserve Scenic Reserve","Charles Duncan Reserve Scenic Reserve","Colonial Knob Scenic Reserve","Duncan Street Railway Reserve Recreation Reserve","Grasslees Reserve Recreation Reserve","Hillcroft Road Reserves Scenic Reserve","Katarina Grove Scenic Reserve (located in Tawa, Wellington)","Linden Park West Recreation Reserve","Local Purpose (Cycleway and Access) Reserve (located off Findlay and Gee Streets, Lindenvale - Wellington)","Local Purpose Reserve Normandale","Lyndhurst Park Recreation Reserve","Main Road Park Recreation Reserve","Main Road West Reserve Scenic Reserve (located in Tawa, Wellington)","Recreation Reserve (located at 27A Matuhi Street/142 Tirohanga Road, Tirohanga -Hutt City)","Recreation Reserve - Poto Park, Normandale","Recreation Reserve - Takapu - Waitangirua","Recreation reserve - Maungaraki Domain","Redwood Park Recreation Reserve - Tawa, Wellington","Remutaka Forest Park","Seton Nossiter Park Scenic Reserve (known as Seton Nossiter Park)","Takapu Recreation Reserve","Takapu Road Reserve Scenic Reserve","Tawa Bush Reserves Scenic Reserve","Tawa Cemetery Reserve Historic Reserve","Victory Crescent Main Road Cutting Scenic Reserve","Wall Park Recreation Reserve","West Coast North Island Marine Mammal Sanctuary","Woodburn Reserve Scenic Reserve","Woodman Drive Extension Reserve Scenic Reserve"]},"data_notes":["Boundary: LINZ NZ Primary Parcels (layer 50772) matched on title. Roads, contours, hydrology and vegetation: LINZ Topo50 layers, fetched live via WFS.","ETS CAA polygons: MPI-issued final eligible/ineligible shapefiles.","Native and scrub areas are LINZ Topo50 vegetation polygons clipped to the title \u2014 indicative, not a survey.","Erosion susceptibility and Land Use Capability: MPI Erosion Susceptibility Classification (March 2018) via the MPI geospatial service. The ESC sets the NES-CF consenting thresholds.","Rates source: WCC combined rates notices, rating year 1 Jul 2024 - 30 Jun 2025, both rating units (226 Takapu Rd $6,952.43 + 251 Takapu Rd $5,587.02): WCC $10,345.84 | GWRC $2,125.83 | sludge levy $67.78. Values per WCC rating valuations 16690-51800 and 16690-50032..","AREA BASIS: the IM net stocked area of 166.8 ha is the Forestry Maps (Manawatu Aerial Photo Services) August 2024 mapping, gaps mapped to 0.02 ha and powerline corridors (21.3 ha) mapped out; the vector polygons in that PDF measure 166.81 ha. The 174.7 ha in the data-room area table (Takapu_General.xlsx) and the Morice valuation is the Woodnet Feb 2016 gross stand area (841 25.0, 943 62.1, 951 1.4, 952 12.2, 953 60.6, 961 13.4 ha). 166.8 ha is the vendor's current basis.","TITLES: the property is five records of title, not the four listed in the IM. WN46B/581 (Lot 4 DP 50892, 0.001 ha) is a 0.6 m strip across the end of Horokiwi Road in the same ownership and inside the 226 Takapu Road rating unit. LINZ survey areas total 235.6204 ha and tie exactly to the two rated areas.","RATES: the IM figure ($4,707.08 city / $851.61 regional) covers only the 251 Takapu Road rating unit. Combined 2024/25 rates for both units are $12,539.45 (WCC $10,345.84, GWRC $2,125.83, sludge levy $67.78).","ETS vs STOCKED AREA: georeferencing the 2024 stand map against the NZ-7823 CAA shapefile puts about 128.5 ha of mapped canopy inside the 133.8 ha registered (the CAAs carry about 5 ha of mapped gaps) and about 38 ha of stocked area outside the CAAs - the 23.3 ha 1984 stand plus unregistered margins of the 1994-96 stands. The IM's 'approximately 36.9 ha pre-1990' comes from the older stand list (23.8 ha 1984 + 13.1 ha 1994/95 replant on pre-1990 land); Forest360 should confirm the pre-1990 classification.","PASTURE: the paddock adjoining Takapu Road measures 5.6 ha on the 2024 map (6.0 ha in the Morice valuation); the IM says approximately 7 ha. Total open pasture on the map is 12.4 ha including strips on the eastern side.","ADDRESS: LINZ places both 236 and 251 Takapu Road inside the title; WCC rates the Horokiwi sections as 226 Takapu Road. The IM uses 236.","Stand layers are the stand boundaries of the August 2024 Forestry Maps map, digitised from the vector PDF and fitted to the LINZ titles; they are not a survey of the current crop.","Imagery on this page is served as flat images captured from LINZ, so the map needs no LINZ account to view. Vector overlays are LINZ data as at 23 September 2026."]};
+window.PROPMAP_PHOTOS={"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[174.874893,-41.179245]},"properties":{"file":"20260622_214724000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_214724000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_214724000_iOS.jpg","alt_m":462.9,"taken":"2026:06:23 09:47:24","is_pano":false,"web":"20260622_214724000_iOS.jpg","thumb":"20260622_214724000_iOS.jpg","href":"assets/photos/web/20260622_214724000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_214724000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.873485,-41.179592]},"properties":{"file":"20260622_214744000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_214744000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_214744000_iOS.jpg","alt_m":464.6,"taken":"2026:06:23 09:47:45","is_pano":false,"web":"20260622_214744000_iOS.jpg","thumb":"20260622_214744000_iOS.jpg","href":"assets/photos/web/20260622_214744000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_214744000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.873488,-41.179592]},"properties":{"file":"20260622_214748000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_214748000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_214748000_iOS.jpg","alt_m":464.9,"taken":"2026:06:23 09:47:49","is_pano":false,"web":"20260622_214748000_iOS.jpg","thumb":"20260622_214748000_iOS.jpg","href":"assets/photos/web/20260622_214748000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_214748000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.86525,-41.179929]},"properties":{"file":"20260622_214926000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_214926000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_214926000_iOS.jpg","alt_m":446.4,"taken":"2026:06:23 09:49:26","is_pano":false,"web":"20260622_214926000_iOS.jpg","thumb":"20260622_214926000_iOS.jpg","href":"assets/photos/web/20260622_214926000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_214926000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.865248,-41.179928]},"properties":{"file":"20260622_214934000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_214934000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_214934000_iOS.jpg","alt_m":445.9,"taken":"2026:06:23 09:49:33","is_pano":false,"web":"20260622_214934000_iOS.jpg","thumb":"20260622_214934000_iOS.jpg","href":"assets/photos/web/20260622_214934000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_214934000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.865249,-41.17993]},"properties":{"file":"20260622_214938000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_214938000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_214938000_iOS.jpg","alt_m":445.3,"taken":"2026:06:23 09:49:39","is_pano":false,"web":"20260622_214938000_iOS.jpg","thumb":"20260622_214938000_iOS.jpg","href":"assets/photos/web/20260622_214938000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_214938000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.865647,-41.177048]},"properties":{"file":"20260622_215024000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_215024000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_215024000_iOS.jpg","alt_m":443.5,"taken":"2026:06:23 09:50:23","is_pano":false,"web":"20260622_215024000_iOS.jpg","thumb":"20260622_215024000_iOS.jpg","href":"assets/photos/web/20260622_215024000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_215024000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.865646,-41.177047]},"properties":{"file":"20260622_215026000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_215026000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_215026000_iOS.jpg","alt_m":443.5,"taken":"2026:06:23 09:50:26","is_pano":false,"web":"20260622_215026000_iOS.jpg","thumb":"20260622_215026000_iOS.jpg","href":"assets/photos/web/20260622_215026000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_215026000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.865647,-41.17705]},"properties":{"file":"20260622_215030000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_215030000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_215030000_iOS.jpg","alt_m":443.0,"taken":"2026:06:23 09:50:30","is_pano":false,"web":"20260622_215030000_iOS.jpg","thumb":"20260622_215030000_iOS.jpg","href":"assets/photos/web/20260622_215030000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_215030000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.865647,-41.177053]},"properties":{"file":"20260622_215036000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_215036000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_215036000_iOS.jpg","alt_m":443.0,"taken":"2026:06:23 09:50:36","is_pano":false,"web":"20260622_215036000_iOS.jpg","thumb":"20260622_215036000_iOS.jpg","href":"assets/photos/web/20260622_215036000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_215036000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.865553,-41.177106]},"properties":{"file":"20260622_215208000_iOS.jpg","width":14400,"height":7200,"rel":"Photos/20260622_215208000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_215208000_iOS.jpg","alt_m":533.4,"taken":"2026:06:23 09:51:02","is_pano":true,"web":"20260622_215208000_iOS.jpg","thumb":"20260622_215208000_iOS.jpg","href":"assets/photos/web/20260622_215208000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_215208000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.865892,-41.173857]},"properties":{"file":"20260622_215230000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_215230000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_215230000_iOS.jpg","alt_m":376.0,"taken":"2026:06:23 09:52:29","is_pano":false,"web":"20260622_215230000_iOS.jpg","thumb":"20260622_215230000_iOS.jpg","href":"assets/photos/web/20260622_215230000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_215230000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.86589,-41.173856]},"properties":{"file":"20260622_215232000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_215232000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_215232000_iOS.jpg","alt_m":375.9,"taken":"2026:06:23 09:52:31","is_pano":false,"web":"20260622_215232000_iOS.jpg","thumb":"20260622_215232000_iOS.jpg","href":"assets/photos/web/20260622_215232000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_215232000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.861569,-41.175311]},"properties":{"file":"20260622_215322000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_215322000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_215322000_iOS.jpg","alt_m":376.3,"taken":"2026:06:23 09:53:22","is_pano":false,"web":"20260622_215322000_iOS.jpg","thumb":"20260622_215322000_iOS.jpg","href":"assets/photos/web/20260622_215322000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_215322000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.861572,-41.17532]},"properties":{"file":"20260622_215334000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_215334000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_215334000_iOS.jpg","alt_m":376.3,"taken":"2026:06:23 09:53:34","is_pano":false,"web":"20260622_215334000_iOS.jpg","thumb":"20260622_215334000_iOS.jpg","href":"assets/photos/web/20260622_215334000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_215334000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.86198,-41.175481]},"properties":{"file":"20260622_215344000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_215344000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_215344000_iOS.jpg","alt_m":376.2,"taken":"2026:06:23 09:53:43","is_pano":false,"web":"20260622_215344000_iOS.jpg","thumb":"20260622_215344000_iOS.jpg","href":"assets/photos/web/20260622_215344000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_215344000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.861982,-41.175485]},"properties":{"file":"20260622_215348000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_215348000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_215348000_iOS.jpg","alt_m":376.2,"taken":"2026:06:23 09:53:48","is_pano":false,"web":"20260622_215348000_iOS.jpg","thumb":"20260622_215348000_iOS.jpg","href":"assets/photos/web/20260622_215348000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_215348000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.851679,-41.173121]},"properties":{"file":"20260622_222836000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_222836000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_222836000_iOS.jpg","alt_m":86.9,"taken":"2026:06:23 10:28:35","is_pano":false,"web":"20260622_222836000_iOS.jpg","thumb":"20260622_222836000_iOS.jpg","href":"assets/photos/web/20260622_222836000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_222836000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.851609,-41.173156]},"properties":{"file":"20260622_222840000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_222840000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_222840000_iOS.jpg","alt_m":86.9,"taken":"2026:06:23 10:28:40","is_pano":false,"web":"20260622_222840000_iOS.jpg","thumb":"20260622_222840000_iOS.jpg","href":"assets/photos/web/20260622_222840000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_222840000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.852445,-41.172733]},"properties":{"file":"20260622_222902000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_222902000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_222902000_iOS.jpg","alt_m":57.0,"taken":"2026:06:23 10:29:01","is_pano":false,"web":"20260622_222902000_iOS.jpg","thumb":"20260622_222902000_iOS.jpg","href":"assets/photos/web/20260622_222902000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_222902000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.852446,-41.172734]},"properties":{"file":"20260622_222906000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_222906000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_222906000_iOS.jpg","alt_m":57.0,"taken":"2026:06:23 10:29:05","is_pano":false,"web":"20260622_222906000_iOS.jpg","thumb":"20260622_222906000_iOS.jpg","href":"assets/photos/web/20260622_222906000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_222906000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.854443,-41.175113]},"properties":{"file":"20260622_223054000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_223054000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_223054000_iOS.jpg","alt_m":256.1,"taken":"2026:06:23 10:30:53","is_pano":false,"web":"20260622_223054000_iOS.jpg","thumb":"20260622_223054000_iOS.jpg","href":"assets/photos/web/20260622_223054000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_223054000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.85483,-41.174543]},"properties":{"file":"20260622_223114000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_223114000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_223114000_iOS.jpg","alt_m":257.3,"taken":"2026:06:23 10:31:14","is_pano":false,"web":"20260622_223114000_iOS.jpg","thumb":"20260622_223114000_iOS.jpg","href":"assets/photos/web/20260622_223114000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_223114000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.854831,-41.174544]},"properties":{"file":"20260622_223116000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_223116000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_223116000_iOS.jpg","alt_m":257.3,"taken":"2026:06:23 10:31:16","is_pano":false,"web":"20260622_223116000_iOS.jpg","thumb":"20260622_223116000_iOS.jpg","href":"assets/photos/web/20260622_223116000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_223116000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.85483,-41.174543]},"properties":{"file":"20260622_223120000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_223120000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_223120000_iOS.jpg","alt_m":256.4,"taken":"2026:06:23 10:31:20","is_pano":false,"web":"20260622_223120000_iOS.jpg","thumb":"20260622_223120000_iOS.jpg","href":"assets/photos/web/20260622_223120000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_223120000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.85483,-41.174543]},"properties":{"file":"20260622_223124000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_223124000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_223124000_iOS.jpg","alt_m":256.3,"taken":"2026:06:23 10:31:23","is_pano":false,"web":"20260622_223124000_iOS.jpg","thumb":"20260622_223124000_iOS.jpg","href":"assets/photos/web/20260622_223124000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_223124000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.8545,-41.174459]},"properties":{"file":"20260622_223140000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_223140000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_223140000_iOS.jpg","alt_m":240.1,"taken":"2026:06:23 10:31:41","is_pano":false,"web":"20260622_223140000_iOS.jpg","thumb":"20260622_223140000_iOS.jpg","href":"assets/photos/web/20260622_223140000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_223140000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.852836,-41.173758]},"properties":{"file":"20260622_223200000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_223200000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_223200000_iOS.jpg","alt_m":188.7,"taken":"2026:06:23 10:32:00","is_pano":false,"web":"20260622_223200000_iOS.jpg","thumb":"20260622_223200000_iOS.jpg","href":"assets/photos/web/20260622_223200000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_223200000_iOS.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[174.852837,-41.173756]},"properties":{"file":"20260622_223202000_iOS.jpg","width":5280,"height":3956,"rel":"Photos/20260622_223202000_iOS.jpg","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Takapu%20Forest/Photos/20260622_223202000_iOS.jpg","alt_m":188.7,"taken":"2026:06:23 10:32:02","is_pano":false,"web":"20260622_223202000_iOS.jpg","thumb":"20260622_223202000_iOS.jpg","href":"assets/photos/web/20260622_223202000_iOS.jpg","thumb_src":"assets/photos/thumb/20260622_223202000_iOS.jpg"}}]};
+window.PROPMAP_DATAROOM={"generated":"23 September 2026","categories":["Information Memorandum","ETS & carbon","Forest inventory","Mapping & boundaries","Consents & compliance","Access & statutory","Title & company","Agency & commercial"],"documents":[{"name":"Takapu Forest  IM.pdf","ext":"PDF","bytes":8322548,"size":"7.9 MB","modified":"01 Aug 2026","category":"Information Memorandum","visibility":"buyer","note":"","href":"dataroom/information-memorandum/Takapu%20Forest%20%20IM.pdf"},{"name":"NZ-7823 RR Trotter No.2 Trust FMAParticipantSpecificTables.pdf","ext":"PDF","bytes":222912,"size":"217.7 KB","modified":"16 Jun 2026","category":"ETS & carbon","visibility":"buyer","note":"Participant-specific FMA carbon tables","href":"dataroom/ets-carbon/NZ-7823%20RR%20Trotter%20No.2%20Trust%20FMAParticipantSpecificTables.pdf"},{"name":"NZ-7823_registered_land.zip","ext":"ZIP","bytes":29809,"size":"29.1 KB","modified":"03 Aug 2026","category":"ETS & carbon","visibility":"buyer","note":"MPI registered-land shapefile - the seven CAA polygons (133.77 ha)","href":"dataroom/ets-carbon/NZ-7823_registered_land.zip"},{"name":"RR Trotter No.2 Trust - ETS Registration.pdf","ext":"PDF","bytes":497580,"size":"485.9 KB","modified":"12 Jun 2026","category":"ETS & carbon","visibility":"buyer","note":"","href":"dataroom/ets-carbon/RR%20Trotter%20No.2%20Trust%20-%20ETS%20Registration.pdf"},{"name":"RR Trotter No.2 Trust CAA land status report-2026-06-15-14-06-36.xlsx","ext":"XLSX","bytes":11735,"size":"11.5 KB","modified":"30 Jun 2026","category":"ETS & carbon","visibility":"buyer","note":"Registered CAA areas and unit balances - governs the carbon position","href":"dataroom/ets-carbon/RR%20Trotter%20No.2%20Trust%20CAA%20land%20status%20report-2026-06-15-14-06-36.xlsx"},{"name":"RR Trotter No.2 Trust Detailed CAA Unit Balance statement-2026-06-15-14-05-46.xlsx","ext":"XLSX","bytes":11687,"size":"11.4 KB","modified":"03 Sep 2026","category":"ETS & carbon","visibility":"buyer","note":"","href":"dataroom/ets-carbon/RR%20Trotter%20No.2%20Trust%20Detailed%20CAA%20Unit%20Balance%20statement-2026-06-15-14-05-46.xlsx"},{"name":"RR Trotter No.2 Trust Land Status Report - Feb 26.pdf","ext":"PDF","bytes":549571,"size":"536.7 KB","modified":"16 Jun 2026","category":"ETS & carbon","visibility":"buyer","note":"","href":"dataroom/ets-carbon/RR%20Trotter%20No.2%20Trust%20Land%20Status%20Report%20-%20Feb%2026.pdf"},{"name":"RR Trotter No2 Family Trust FMA Map.pdf","ext":"PDF","bytes":17240466,"size":"16.4 MB","modified":"18 Aug 2026","category":"ETS & carbon","visibility":"buyer","note":"","href":"dataroom/ets-carbon/RR%20Trotter%20No2%20Family%20Trust%20FMA%20Map.pdf"},{"name":"s_194A_Notice RR Trotter No.2 Trust NZ-7823 FER2025.pdf","ext":"PDF","bytes":149286,"size":"145.8 KB","modified":"16 Jun 2026","category":"ETS & carbon","visibility":"buyer","note":"","href":"dataroom/ets-carbon/s_194A_Notice%20RR%20Trotter%20No.2%20Trust%20NZ-7823%20FER2025.pdf"},{"name":"Takapu A2 ETS map 2024.pdf","ext":"PDF","bytes":8257269,"size":"7.9 MB","modified":"12 Jun 2026","category":"ETS & carbon","visibility":"buyer","note":"","href":"dataroom/ets-carbon/Takapu%20A2%20ETS%20map%202024.pdf"},{"name":"Taka_East_9495.ytf","ext":"YTF","bytes":113488,"size":"110.8 KB","modified":"12 Jun 2026","category":"Forest inventory","visibility":"buyer","note":"YTGen population file","href":"dataroom/forest-inventory/Taka_East_9495.ytf"},{"name":"Taka_East_94T.ytf","ext":"YTF","bytes":11409,"size":"11.1 KB","modified":"12 Jun 2026","category":"Forest inventory","visibility":"buyer","note":"YTGen population file","href":"dataroom/forest-inventory/Taka_East_94T.ytf"},{"name":"Taka_west_84CW.ytf","ext":"YTF","bytes":72846,"size":"71.1 KB","modified":"12 Jun 2026","category":"Forest inventory","visibility":"buyer","note":"YTGen population file","href":"dataroom/forest-inventory/Taka_west_84CW.ytf"},{"name":"Taka_West_9596.ytf","ext":"YTF","bytes":68484,"size":"66.9 KB","modified":"12 Jun 2026","category":"Forest inventory","visibility":"buyer","note":"YTGen population file","href":"dataroom/forest-inventory/Taka_West_9596.ytf"},{"name":"Taka_West_95UT.ytf","ext":"YTF","bytes":5285,"size":"5.2 KB","modified":"12 Jun 2026","category":"Forest inventory","visibility":"buyer","note":"YTGen population file","href":"dataroom/forest-inventory/Taka_West_95UT.ytf"},{"name":"Takapu - Draft Harvest Plan.pdf","ext":"PDF","bytes":4962191,"size":"4.7 MB","modified":"03 Aug 2026","category":"Forest inventory","visibility":"buyer","note":"Desktop harvest plan for the ~50 ha western stands (FTF, 2024)","href":"dataroom/forest-inventory/Takapu%20-%20Draft%20Harvest%20Plan.pdf"},{"name":"Takapu East.fi2","ext":"FI2","bytes":84397,"size":"82.4 KB","modified":"12 Jun 2026","category":"Forest inventory","visibility":"buyer","note":"Forest inventory data file","href":"dataroom/forest-inventory/Takapu%20East.fi2"},{"name":"Takapu West.fi2","ext":"FI2","bytes":97650,"size":"95.4 KB","modified":"12 Jun 2026","category":"Forest inventory","visibility":"buyer","note":"Forest inventory data file","href":"dataroom/forest-inventory/Takapu%20West.fi2"},{"name":"Takapu West_B.fi2","ext":"FI2","bytes":97278,"size":"95.0 KB","modified":"12 Jun 2026","category":"Forest inventory","visibility":"buyer","note":"Forest inventory data file","href":"dataroom/forest-inventory/Takapu%20West_B.fi2"},{"name":"Takapu_As_Msd.xlsx","ext":"XLSX","bytes":174679,"size":"170.6 KB","modified":"24 Aug 2026","category":"Forest inventory","visibility":"buyer","note":"Inventory as measured (Alan Bell & Associates)","href":"dataroom/forest-inventory/Takapu_As_Msd.xlsx"},{"name":"Takapu_General.xlsx","ext":"XLSX","bytes":19669,"size":"19.2 KB","modified":"09 Sep 2026","category":"Forest inventory","visibility":"buyer","note":"Rates, CAA and area tables. The Area Table tab carries the 2016 Woodnet gross stand areas (174.7 ha); the IM basis is 166.8 ha net stocked (2024 mapping).","href":"dataroom/forest-inventory/Takapu_General.xlsx"},{"name":"Takapu_Trotter_Yields.xlsx","ext":"XLSX","bytes":585713,"size":"572.0 KB","modified":"03 Sep 2026","category":"Forest inventory","visibility":"buyer","note":"","href":"dataroom/forest-inventory/Takapu_Trotter_Yields.xlsx"},{"name":"Takapu_West_1984_By_plot.xlsx","ext":"XLSX","bytes":401293,"size":"391.9 KB","modified":"19 Aug 2026","category":"Forest inventory","visibility":"buyer","note":"Plot-by-plot inventory and yield tables","href":"dataroom/forest-inventory/Takapu_West_1984_By_plot.xlsx"},{"name":"Takapu_West_9596_By_plot.xlsx","ext":"XLSX","bytes":387632,"size":"378.5 KB","modified":"03 Sep 2026","category":"Forest inventory","visibility":"buyer","note":"Plot-by-plot inventory and yield tables","href":"dataroom/forest-inventory/Takapu_West_9596_By_plot.xlsx"},{"name":"Mapping - Takapu.docx","ext":"DOCX","bytes":4013830,"size":"3.8 MB","modified":"15 Jun 2026","category":"Mapping & boundaries","visibility":"buyer","note":"Unclassified \u2014 defaults to internal","href":"dataroom/mapping-boundaries/Mapping%20-%20Takapu.docx"},{"name":"Mapping - Takapu.pdf","ext":"PDF","bytes":1458740,"size":"1.4 MB","modified":"15 Jun 2026","category":"Mapping & boundaries","visibility":"buyer","note":"","href":"dataroom/mapping-boundaries/Mapping%20-%20Takapu.pdf"},{"name":"Takapu - Whole Forest.pdf","ext":"PDF","bytes":4569446,"size":"4.4 MB","modified":"18 Aug 2026","category":"Mapping & boundaries","visibility":"buyer","note":"Woodnet Feb 2016 inventory plot map - source of the 174.7 ha gross stand areas","href":"dataroom/mapping-boundaries/Takapu%20-%20Whole%20Forest.pdf"},{"name":"Takapu A2 5000update 2024.pdf","ext":"PDF","bytes":940240,"size":"918.2 KB","modified":"12 Jun 2026","category":"Mapping & boundaries","visibility":"buyer","note":"Forestry Maps stand map, Aug 2024 - the 166.8 ha net stocked area basis used in the IM","href":"dataroom/mapping-boundaries/Takapu%20A2%205000update%202024.pdf"},{"name":"Arotahi - Takapu Forest 1024 issued 24102024.pdf","ext":"PDF","bytes":547154,"size":"534.3 KB","modified":"12 Jun 2026","category":"Consents & compliance","visibility":"buyer","note":"Arotahi Agribusiness - lifestyle / subdivision potential and district plan overlays, Oct 2024","href":"dataroom/consents-compliance/Arotahi%20-%20Takapu%20Forest%201024%20issued%2024102024.pdf"},{"name":"226 Takapu Road_Horokiwi blocks_Annual Rates Summary to June 2025.pdf","ext":"PDF","bytes":212599,"size":"207.6 KB","modified":"12 Jun 2026","category":"Title & company","visibility":"buyer","note":"WCC combined rates notice 2024/25 - one of two rating units","href":"dataroom/title-company/226%20Takapu%20Road_Horokiwi%20blocks_Annual%20Rates%20Summary%20to%20June%202025.pdf"},{"name":"251 Takapu Road_Annual Rates Summary to June 2025.pdf","ext":"PDF","bytes":208928,"size":"204.0 KB","modified":"12 Jun 2026","category":"Title & company","visibility":"buyer","note":"WCC combined rates notice 2024/25 - one of two rating units","href":"dataroom/title-company/251%20Takapu%20Road_Annual%20Rates%20Summary%20to%20June%202025.pdf"},{"name":"Takapu Forest titles.pdf","ext":"PDF","bytes":626248,"size":"611.6 KB","modified":"12 Jun 2026","category":"Title & company","visibility":"buyer","note":"","href":"dataroom/title-company/Takapu%20Forest%20titles.pdf"},{"name":"Takapu_Caveat 12130.pdf","ext":"PDF","bytes":50541,"size":"49.4 KB","modified":"12 Jun 2026","category":"Title & company","visibility":"buyer","note":"Caveat over WN444/196 (Pt Sec 23)","href":"dataroom/title-company/Takapu_Caveat%2012130.pdf"}],"contact":[{"name":"Warwick Searle","role":"National Director Forestry","phone":"+64 21 362 778","email":"warwick@forestrysales.co.nz"},{"name":"George Cashmore","role":"Director Forestry","phone":"+64 21 0264 1362","email":"george@forestrysales.co.nz"},{"name":"James Burke","role":"Forestry Advisor","phone":"+64 21 824 145","email":"james@forestrysales.co.nz"}],"gated":true,"signin_url":"https://maps.forestrysales.co.nz/takapu/dataroom/"};
+window.PROPMAP_STATIC_AERIAL=[{"name": "Aerial \u2014 current", "frame": "wide", "url": "assets/aerial___current_wide.jpg", "south": -41.20758898181024, "west": 174.8199462890625, "north": -41.14970617453725, "east": 174.9078369140625}, {"name": "Wellington 0.2m Rural Aerial Photos (2025-2026)", "frame": "close", "url": "assets/wellington_0_2m_rural_aerial_photos__2025-2026__close.jpg", "south": -41.20758898181024, "west": 174.8199462890625, "north": -41.14970617453725, "east": 174.9078369140625}, {"name": "Wellington 0.3m Rural Aerial Photos (2021)", "frame": "close", "url": "assets/wellington_0_3m_rural_aerial_photos__2021__close.jpg", "south": -41.19518982948958, "west": 174.83642578125, "north": -41.16211393939691, "east": 174.891357421875}, {"name": "Wellington 0.3m Rural Aerial Photos (2016-2017)", "frame": "close", "url": "assets/wellington_0_3m_rural_aerial_photos__2016-2017__close.jpg", "south": -41.19518982948958, "west": 174.83642578125, "north": -41.16211393939691, "east": 174.891357421875}, {"name": "Wellington 0.3m Rural Aerial Photos (2012-2013)", "frame": "close", "url": "assets/wellington_0_3m_rural_aerial_photos__2012-2013__close.jpg", "south": -41.19518982948958, "west": 174.83642578125, "north": -41.16211393939691, "east": 174.891357421875}];
+window.PROPMAP_BASEMAPS_KEY="";
+window.PROPMAP_API_KEY="";window.PROPMAP_ESRI_KEY="";
+</script>
+<script>
+/* ===== data injected at build time ===== */
+const LAYERS = window.PROPMAP_LAYERS;
+const STATS  = window.PROPMAP_STATS;
+const PHOTOS = window.PROPMAP_PHOTOS;
+const SURVEYS = window.PROPMAP_SURVEYS || [];
+const LINZ_BASEMAPS_KEY = window.PROPMAP_BASEMAPS_KEY;
+const LINZ_API_KEY      = window.PROPMAP_API_KEY;
+const ESRI_KEY          = window.PROPMAP_ESRI_KEY || '';
+
+/* ===== helpers ===== */
+const fmt = (n, d = 0) => n == null ? '—' :
+  Number(n).toLocaleString('en-NZ', {minimumFractionDigits: d, maximumFractionDigits: d});
+const money = (n, d = 2) => n == null ? '—' : '$' + fmt(n, d);
+const el = (h) => { const t = document.createElement('template'); t.innerHTML = h.trim(); return t.content.firstElementChild; };
+const kv = (k, v) => `<div class="kv"><dt>${k}</dt><dd>${v}</dd></div>`;
+
+const P = STATS.property, R = STATS.rates, E = STATS.ets, T = STATS.terrain,
+      A = STATS.access, C = STATS.cover, NB = STATS.neighbours,
+      EV = STATS.environment, BL = STATS.blocks || [], CROP = STATS.crop,
+      NARR = STATS.narrative || {};
+
+/* Blocks: each gets its own boundary colour and a label. A single-block
+   property keeps the traditional yellow. Palette chosen for legibility over
+   green imagery, not for brand. */
+const BLOCK_PALETTE = ['#ffcc33', '#ff7ad9', '#4dd4ff', '#b5ff5c', '#ffa94d'];
+const BLOCK_COLOUR = {};
+BL.forEach((b, i) => { BLOCK_COLOUR[b.name] = b.colour || BLOCK_PALETTE[i % BLOCK_PALETTE.length]; });
+const blockColour = name => BLOCK_COLOUR[name] || '#ffcc33';
+
+/* Owner names, internal build only (window.PROPMAP_OWNERS is never written
+   by build_share.py / build_web.py). Keyed by title; a parcel may carry
+   several titles. */
+const OWNERS = window.PROPMAP_OWNERS && Object.keys(window.PROPMAP_OWNERS).length ? window.PROPMAP_OWNERS : null;
+const ownerOf = titles => {
+  if (!OWNERS || !titles) return '';
+  const names = [...new Set(String(titles).split(',').map(t => (OWNERS[t.trim()] || {}).owners).filter(Boolean))];
+  return names.join(' / ');
+};
+
+/* ===== map ===== */
+const map = L.map('map', {zoomControl: true, preferCanvas: true, maxZoom: 19});
+
+/* Shareable build: the imagery is baked into the file as flat JPEGs, so the
+   page makes no keyed request to LINZ. The internal build streams live tiles
+   instead and offers the historic surveys configured in property.json. */
+const STATIC_AERIAL = window.PROPMAP_STATIC_AERIAL || null;
+
+const LDS = id =>
+  `https://data.linz.govt.nz/services;key=${LINZ_API_KEY}/tiles/v4/layer=${id}/EPSG:3857/{z}/{x}/{y}.png`;
+const linzAttr = 'Imagery &copy; <a href="https://data.linz.govt.nz/">LINZ</a>';
+
+/* Esri World Imagery (Vantor Vivid, 30-50 cm over rural NZ). With an
+   ArcGIS Location Platform key the keyed raster behind Esri's arcgis/imagery
+   basemap style is used and the imagery is licensed for prints and
+   screenshots with attribution; without one the legacy unkeyed service is
+   used for context only. Tile order is {z}/{y}/{x}, unlike LINZ. */
+const esriAttr = 'Imagery: Esri, Vantor, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community';
+const esriUrl = () => ESRI_KEY
+  ? `https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}?token=${ESRI_KEY}`
+  : 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+const esriOpts = {};
+
+/* Historic surveys come from property.json (imagery_surveys), which is only
+   ever filled from `stitch_imagery.py --probe` - so every entry here has
+   been verified to actually serve tiles over the block. */
+const BASES = STATIC_AERIAL ? [] : [
+  ['Imagery', [
+    ['Aerial — current', L.tileLayer(
+      `https://basemaps.linz.govt.nz/v1/tiles/aerial/EPSG:3857/{z}/{x}/{y}.webp?api=${LINZ_BASEMAPS_KEY}`,
+      {maxZoom: 19, maxNativeZoom: 19, attribution: linzAttr + ' Basemaps'})],
+    ['Esri World Imagery', L.tileLayer(esriUrl(),
+      Object.assign({maxZoom: 19, maxNativeZoom: 19, attribution: esriAttr}, esriOpts))],
+  ].concat(SURVEYS.filter(s => s.source !== 'esri').map(s => [s.label || s.name,
+      L.tileLayer(LDS(s.lds_layer_id), {maxZoom: 19, maxNativeZoom: s.max_native_zoom || 18,
+                                        attribution: linzAttr})]))],
+  ['Maps', [
+    ['Topo 50', L.tileLayer(LDS(50767), {maxZoom: 18, maxNativeZoom: 16, attribution: 'Topo50 &copy; LINZ'})],
+    ['Terrain relief', L.tileLayer(LDS(50765), {maxZoom: 18, maxNativeZoom: 15, attribution: 'Relief &copy; LINZ'})],
+    ['OpenStreetMap', L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+      {maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'})],
+  ]],
+];
+/* Baked imagery: several frames can share one name (a wide overview plus a
+   detailed frame per block) and are shown as a single base layer. They sit
+   in the tile pane so they can never paint over the vector overlays. */
+/* Keyless context under the baked frames, so the hosted page still shows the
+   rest of New Zealand when a viewer zooms out. Esri World Imagery and OSM
+   both allow public embedding with attribution. Inside the claude.ai Artifact
+   sandbox external tiles are blocked and these simply stay blank. */
+const esriImagery = () => L.tileLayer(esriUrl(),
+  Object.assign({maxZoom: 19, maxNativeZoom: 18, pane: 'tilePane',
+                 attribution: 'Context ' + esriAttr.replace('Imagery:', 'imagery:')}, esriOpts));
+const osmStreets = () => L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {maxZoom: 19, pane: 'tilePane', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'});
+const SHARE_BASES = STATIC_AERIAL ? (() => {
+  const byName = new Map();
+  STATIC_AERIAL.forEach(a => { if (!byName.has(a.name)) byName.set(a.name, []); byName.get(a.name).push(a); });
+  const items = [...byName.entries()].map(([n, frames], i) => [n, L.layerGroup(
+    (i === 0 ? [esriImagery()] : []).concat(
+    frames.map(a => L.imageOverlay(a.url, [[a.south, a.west], [a.north, a.east]],
+      {attribution: linzAttr, pane: 'tilePane'}))))]);
+  return [['Imagery', items], ['Maps', [
+    ['OpenStreetMap', osmStreets()],
+    ['Plain background', L.layerGroup()],
+  ]]];
+})() : null;
+
+const USE = SHARE_BASES || BASES;
+const baseByName = {};
+USE.forEach(([, items]) => items.forEach(([n, l]) => { baseByName[n] = l; }));
+const firstBase = USE[0][1][0][0];
+
+let activeBase = baseByName[firstBase].addTo(map);
+
+const sel = el('<select id="basesel" title="Base layer"></select>');
+USE.forEach(([grp, items]) => {
+  const og = el(`<optgroup label="${grp}"></optgroup>`);
+  items.forEach(([n]) => og.appendChild(el(`<option>${n}</option>`)));
+  sel.appendChild(og);
+});
+sel.onchange = () => {
+  map.removeLayer(activeBase);
+  activeBase = baseByName[sel.value].addTo(map);
+  if (activeBase.bringToBack) activeBase.bringToBack();
+};
+document.getElementById('basebar').appendChild(sel);
+
+L.control.scale({imperial: false, position: 'bottomright'}).addTo(map);
+
+/* ===== styling ===== */
+/* Age class gets a ramp built from the planting years actually present, so
+   any property colours sensibly rather than relying on hard-coded years. */
+const AGE_RAMP = ['#e8590c', '#f59f00', '#fcc419', '#94d82d', '#40c057'];
+const AGE_COLOUR = (() => {
+  const years = [...new Set((LAYERS.ets_caa?.features || [])
+    .map(f => f.properties.YEAR_PLANT).filter(Boolean))].sort((a, b) => a - b);
+  const m = {};
+  years.forEach((y, i) => {
+    m[y] = AGE_RAMP[Math.round(i * (AGE_RAMP.length - 1) / Math.max(1, years.length - 1))];
+  });
+  return m;
+})();
+
+/* MPI's own NES-CF erosion classes and the LUC ramp (good land green,
+   marginal land brown), so the map reads the way the official tools do. */
+const ESC_COLOUR = {
+  'Low': '#40a02b', 'Moderate': '#d9a700',
+  'High': '#e8590c', 'Very High': '#c92a2a',
+  'other': '#868e96', 'shingle': '#adb5bd', 'water': '#4dabf7',
+};
+const LUC_COLOUR = {
+  '1': '#2b8a3e', '2': '#2f9e44', '3': '#51cf66', '4': '#94d82d',
+  '5': '#d8f000', '6': '#f59f00', '7': '#e8590c', '8': '#a15c2b',
+};
+
+function popup(title, rows) {
+  return `<h4>${title}</h4><dl>${rows.filter(Boolean).join('')}</dl>`;
+}
+
+const boundarySwatch = BL.length > 1
+  ? `linear-gradient(90deg,${BL.map(b => blockColour(b.name)).join(',')})`
+  : '#ffcc33';
+
+/* Layer definitions: key -> config.
+   `on` = visible at first paint. `sw` = legend swatch colour. */
+const DEFS = [
+  {grp: 'Property'},
+  /* Non-interactive: it sits in the top pane and spans the whole property, so
+     leaving it clickable would swallow every click meant for the layers below.
+     Its detail is on the Overview tab instead. */
+  {k: 'title_boundary', n: BL.length > 1 ? 'Block boundaries' : 'Title boundary',
+   on: true, sw: boundarySwatch, pane: 'top', noclick: true,
+   style: f => ({color: blockColour(f.properties.block), weight: 3, opacity: 1, fill: false})},
+
+  {k: 'neighbour_parcels', n: 'Neighbouring parcels', on: false, sw: '#8899aa',
+   style: () => ({color: '#8899aa', weight: 1, opacity: .75, fillOpacity: .04, fillColor: '#8899aa'}),
+   pop: p => popup(p.appellation || 'Parcel', [
+     kv('Title', p.titles || '—'),
+     ownerOf(p.titles) ? kv('Owner', ownerOf(p.titles)) : '',
+     kv('Intent', p.parcel_intent),
+     kv('Area', fmt(p.calc_area / 10000, 2) + ' ha')])},
+  /* Internal build only: owner names as labels on the neighbouring parcels
+     (LINZ personal data licence - never in the share or hosted builds). */
+  ...(OWNERS ? [{k: '__owner_labels', n: 'Neighbour owner names', on: false, sw: '#d9c8a6', point: true, noclick: true,
+   mk: (f, ll) => L.marker(ll, {interactive: false, icon: L.divIcon({className: 'owner-lbl',
+        html: `<div>${f.properties.owner}</div>`, iconSize: [0, 0]})}),
+   style: () => ({})}] : []),
+
+  {grp: 'Forest & carbon'},
+  /* Stand layers: any LAYERS key beginning "stand_" (data/stand_<code>.geojson)
+     becomes its own toggle. Scrub / unplanted is grey; each stand gets its own colour. */
+  ...Object.keys(LAYERS).filter(k => k.startsWith('stand_')).map((k, i) => {
+    const feats = LAYERS[k].features || [];
+    const f0 = feats[0] || {properties: {}};
+    const p0 = f0.properties;
+    const STAND_COLOURS = ['#e8590c', '#f59f00', '#fcc419', '#94d82d', '#40c057', '#1c7ed6', '#ae3ec9'];
+    const col = p0.stand === 'scrub' ? '#adb5bd' : STAND_COLOURS[i % STAND_COLOURS.length];
+    // A file whose features carry `layer_label` is a per-block stand layer
+    // (many stands in one toggle, first used on Roy Forests): name the toggle
+    // by block, colour each piece by planting year, and outline pieces whose
+    // status says they lie outside the title boundary.
+    const perBlock = p0.layer_label !== undefined;
+    const tot = feats.reduce((a, f) => a + (+f.properties.map_ha || 0), 0);
+    const name = perBlock ? `${p0.layer_label} (${fmt(tot, 0)} ha, ${feats.length} pieces)`
+               : p0.stand === 'scrub' ? (p0.label || 'Scrub / unplanted')
+               : `${p0.label || k} — ${p0.year || ''} ${p0.species || ''}`.trim() + (p0.area_ha ? ` (${fmt(p0.area_ha, 1)} ha)` : '');
+    const over = p => /outside/i.test(p.status || '');
+    return {k, n: name, on: !perBlock, sw: perBlock ? 'linear-gradient(90deg,#e8590c,#f59f00,#94d82d)' : col,
+      style: f => perBlock
+        ? ({color: over(f.properties) ? '#ff3b3b' : '#ffffff', weight: over(f.properties) ? 2.2 : 0.8,
+            dashArray: over(f.properties) ? '5,3' : null,
+            fillColor: AGE_COLOUR[f.properties.year] || '#adb5bd', fillOpacity: .40})
+        : ({color: col, weight: 1.6, fillColor: col, fillOpacity: p0.stand === 'scrub' ? .30 : .38,
+            dashArray: p0.stand === 'scrub' ? '4,3' : null}),
+      pop: p => popup(p.label || k, [
+        p.species ? kv('Species', p.species) : '',
+        p.year ? kv('Planted', p.year) : '',
+        p.year ? kv('Age (2026)', (2026 - p.year) + ' yr') : '',
+        kv(perBlock ? 'Stand area (register)' : 'Stand area', fmt(p.area_ha, 1) + ' ha'),
+        p.map_ha ? kv(perBlock ? 'This piece' : 'Area on source map', p.map_ha + ' ha') : '',
+        p.status ? kv('Status', p.status) : '',
+        p.source ? kv('Source', p.source) : ''])};
+  }),
+  {k: 'ets_caa', n: 'ETS CAAs (age class)', on: true, sw: 'linear-gradient(90deg,#e8590c,#f59f00,#94d82d)',
+   style: f => ({color: AGE_COLOUR[f.properties.YEAR_PLANT] || '#adb5bd', weight: 1.6,
+                 fillColor: AGE_COLOUR[f.properties.YEAR_PLANT] || '#adb5bd', fillOpacity: .42}),
+   pop: p => popup('CAA ' + p.CAA_NUM + ' — ' + p.YEAR_PLANT, [
+     kv('Species', p.SPECIES), kv('Planted', p.YEAR_PLANT),
+     kv('Age (2026)', p.age_2026 + ' yr'),
+     kv('Mapped area', fmt(p.area_ha, 2) + ' ha')])},
+
+  /* Violet, not red - red sits too close to the 1994 age-class orange to be
+     readable where an ineligible pocket falls inside a CAA. */
+  {k: 'ets_ineligible', n: 'ETS ineligible areas', on: true, sw: '#ae3ec9',
+   style: () => ({color: '#ffffff', weight: 1.4, fillColor: '#ae3ec9',
+                  fillOpacity: .55, dashArray: '4,3'}),
+   pop: p => popup('Ineligible area ' + p.ISSUE_NUM, [
+     kv('Status', p.ELIGIBILIT), kv('Within', 'CAA ' + p.CAA_NUM),
+     kv('Area', fmt(p.area_ha, 2) + ' ha'), kv('Reason', p.ISSUE_CODE)])},
+
+/* Vegetation overlays over aerial imagery (James Burke, 15 Sep 2026): small
+   scattered polygons are fill-led (opacity ~.45, outline 2); large-area polygons
+   are outline-led (opacity ~.14, outline 2.2); never an outline under 1.5 and no
+   greens/browns for anything that must stand out on forested aerial. */
+  {k: 'exotic_cover', n: 'Exotic forest (Topo50)', on: false, sw: '#ff2d95',
+   style: () => ({color: '#ff2d95', weight: 2, fillColor: '#ff2d95', fillOpacity: .45}),
+   pop: p => popup('Exotic forest (Topo50)', [kv('Species', p.species || '—')])},
+
+  {k: 'cruise_plots', n: 'Cruise plots', on: false, sw: '#da77f2', point: true,
+   mk: (f, ll) => L.circleMarker(ll, {radius: 4, color: '#fff', weight: 1.2,
+        fillColor: '#da77f2', fillOpacity: .95, className: 'plotmk'}),
+   pop: p => popup('Cruise plot — stratum ' + p.StratumName, [
+     kv('Altitude', p.Altitude ? p.Altitude + ' m' : '—'),
+     kv('Measured', (p.LastMeasured || '').slice(0, 10))])},
+
+  {grp: 'Access'},
+  {k: 'legal_roads', n: 'Legal road parcels', on: true, sw: '#ff922b',
+   style: () => ({color: '#ff922b', weight: 1.2, fillColor: '#ff922b', fillOpacity: .3}),
+   pop: p => popup('Legal road', [kv('Appellation', p.appellation || '—'),
+     kv('Area', fmt(p.calc_area / 10000, 2) + ' ha')])},
+
+  {k: 'road_centrelines', n: 'Formed roads', on: true, sw: '#ffffff',
+   style: () => ({color: '#ffffff', weight: 2.4, opacity: .9}),
+   pop: p => popup(p.name || 'Road', [kv('Surface', p.surface || '—'),
+     kv('Status', p.status || '—'), kv('Lanes', p.lane_count || '—')])},
+
+  {k: 'tracks', n: '4WD tracks & foot tracks', on: true, sw: '#ffd43b',
+   style: () => ({color: '#ffd43b', weight: 1.9, opacity: .95, dashArray: '6,4'}),
+   pop: p => popup(p.name || 'Track', [kv('Type', p.track_type || '—'),
+     kv('Use', p.track_use || '—'), kv('Status', p.status || '—')])},
+
+  {grp: 'Terrain & water'},
+  /* Contours start off on a multi-block sale: at the zoom that shows both
+     blocks they are a solid brown wash over the imagery. */
+  {k: 'contours', n: 'Contours (20 m)', on: BL.length <= 1, sw: '#b08968',
+   style: f => {
+     const idx = f.properties.elevation % 100 === 0;
+     return {color: idx ? '#c9a227' : '#b08968', weight: idx ? 1.2 : .6,
+             opacity: idx ? .95 : .6, fill: false};
+   },
+   pop: p => popup(p.elevation + ' m contour', [])},
+
+  {k: 'rivers', n: 'Rivers & streams', on: true, sw: '#4dabf7',
+   style: () => ({color: '#4dabf7', weight: 1.3, opacity: .9})},
+
+  {k: 'river_polygons', n: 'River channels (Topo50)', on: true, sw: '#1c7ed6',
+   style: () => ({color: '#1c7ed6', weight: 1, fillColor: '#1c7ed6', fillOpacity: .55})},
+
+  {grp: 'Regulatory'},
+  /* ESC is the layer that decides what a purchaser can do without consent
+     under the NES-CF, so it leads this group. Colours follow MPI's own
+     green / yellow / orange / red convention — do not restyle them. */
+  {k: 'nes_esc', n: 'Erosion susceptibility (NES-CF)', on: false,
+   sw: 'linear-gradient(90deg,#40a02b,#d9a700,#e8590c,#c92a2a)',
+   style: f => {
+     const c = ESC_COLOUR[f.properties.ESC2018] || '#868e96';
+     return {color: c, weight: .8, fillColor: c, fillOpacity: .45};
+   },
+   pop: p => popup('ESC — ' + (p.ESC2018 || 'unclassified'), [
+     kv('LUC unit', p.LUC || '—'),
+     kv('Class 8e', p.Class8e === 'Yes' ? 'Yes — consent required' : (p.Class8e || '—')),
+     kv('Area', fmt(p.area_ha, 2) + ' ha')])},
+
+  {k: 'luc', n: 'Land Use Capability', on: false,
+   sw: 'linear-gradient(90deg,#2f9e44,#94d82d,#f59f00,#a15c2b)',
+   style: f => {
+     const c = LUC_COLOUR[f.properties.luc_class] || '#868e96';
+     return {color: c, weight: .8, fillColor: c, fillOpacity: .42};
+   },
+   pop: p => popup('LUC ' + (p.luc_subclass || p.luc_class || '—'), [
+     p.nzcu_description ? `<div class="note" style="margin:0 0 7px">${p.nzcu_description}</div>` : '',
+     kv('Class', p.luc_class || '—'),
+     p.luc ? kv('Unit', p.luc) : '',
+     p.slope ? kv('Slope', p.slope) : '',
+     p.present_erosion ? kv('Present erosion', p.present_erosion) : '',
+     p.potential_erosion ? kv('Potential erosion', p.potential_erosion) : '',
+     kv('Area', fmt(p.area_ha, 2) + ' ha')])},
+
+  {k: 'fish_spawning', n: 'Fish spawning reaches (NES-CF)', on: false, sw: '#4dabf7',
+   style: () => ({color: '#74c0fc', weight: 2.6, opacity: .95}),
+   pop: p => popup(p.CommonName || 'Spawning reach', [
+     kv('Species', p.Species || '—'),
+     kv('Spawning window', [p.SpawnFdate, p.SpawnTdate].filter(Boolean).join(' – ') || '—'),
+     kv('Sensitivity', p.Sensitivity || '—')])},
+
+  {grp: 'Land cover & neighbours'},
+  {k: 'native_cover', n: 'Native bush', on: false, sw: '#00e676',
+   style: () => ({color: '#00e676', weight: 2.2, fillColor: '#00e676', fillOpacity: .14})},
+
+  {k: 'scrub_cover', n: 'Scrub (manuka / kanuka)', on: false, sw: '#ffd400',
+   style: () => ({color: '#ffd400', weight: 2.2, fillColor: '#ffd400', fillOpacity: .14})},
+
+  {k: 'protected_areas', n: 'DOC conservation land', on: true, sw: '#2f9e44',
+   style: () => ({color: '#2f9e44', weight: 1.4, fillColor: '#2f9e44', fillOpacity: .16}),
+   pop: p => popup(p.name || 'Protected area', [
+     kv('Type', p.type || '—'), kv('Section', p.section || '—'),
+     kv('Area', p.gis_area_ha ? fmt(p.gis_area_ha, 0) + ' ha' : '—')])},
+
+  {grp: 'Reference'},
+  {k: 'place_names', n: 'Place names', on: false, sw: '#dee2e6', point: true,
+   mk: (f, ll) => L.marker(ll, {icon: L.divIcon({className: 'ctour-lbl',
+        html: `<div style="white-space:nowrap;font-size:11px">${f.properties.name}</div>`,
+        iconSize: [0, 0]})}),
+   pop: p => popup(p.name, [kv('Feature', p.feat_type || '—')])},
+
+  /* Photo popups: a thumbnail when the build carries one, and a link to the
+     photo itself. Which link depends on the build - the builder fills
+     `href` (and `thumb_src`) per photo; see build_*.py. */
+  {k: '__photos', n: 'Aerial photo points', on: false, sw: '#f783ac', point: true,
+   /* 360-degree panoramas get a bigger blue pin and open the hosted
+      Kuula post rather than the flat equirectangular frame. */
+   mk: (f, ll) => f.properties.pano_url
+     ? L.circleMarker(ll, {radius: 6, color: '#fff', weight: 1.6,
+        fillColor: '#4dabf7', fillOpacity: .95})
+     : L.circleMarker(ll, {radius: 3.5, color: '#fff', weight: 1,
+        fillColor: '#f783ac', fillOpacity: .95}),
+   pop: p => popup((p.pano_url ? '360° panorama · ' : '')
+       + (p.taken ? p.taken.replace(/:(\d\d):(\d\d) /, '-$1-$2 ') : p.file), [
+     p.thumb_src
+       ? `<a href="${p.pano_url || p.href || '#'}" target="_blank" rel="noopener" class="photolink">
+            <img src="${p.thumb_src}" alt="" loading="lazy"
+                 onerror="this.closest('.photolink').remove()"></a>`
+       : '',
+     kv('Altitude', p.alt_m != null ? p.alt_m + ' m' : '—'),
+     kv('File', p.file),
+     p.pano_url
+       ? `<a class="btn" href="${p.pano_url}" target="_blank" rel="noopener">Look around in 360° &rarr;</a>`
+       : '',
+     p.href && !p.pano_url
+       ? `<a class="btn" href="${p.href}" target="_blank" rel="noopener">Open photo &rarr;</a>`
+       : (p.href ? '' : `<div class="note">${p.rel}</div>`)])},
+];
+
+/* build layers */
+const built = {};
+
+/* Owner labels: one per neighbouring parcel of 5 ha or more that carries an
+   owner in the (internal-only) owners table, placed at the parcel's centre. */
+if (OWNERS && LAYERS.neighbour_parcels) {
+  LAYERS.__owner_labels = {type: 'FeatureCollection', features: LAYERS.neighbour_parcels.features
+    .filter(f => (f.properties.calc_area || 0) >= 50000 && ownerOf(f.properties.titles))
+    .map(f => {
+      const c = L.geoJSON(f).getBounds().getCenter();
+      const o = ownerOf(f.properties.titles);
+      return {type: 'Feature', geometry: {type: 'Point', coordinates: [c.lng, c.lat]},
+              properties: {owner: o.length > 48 ? o.slice(0, 46) + '…' : o}};
+    })};
+}
+
+/* Per-layer visibility + opacity. Opacity multiplies the layer's own base
+   style, so a layer drawn at 30% fill stays proportionally lighter as the
+   slider moves rather than jumping to a flat value. */
+const state = {};
+let masterOp = 1;
+DEFS.forEach(d => { if (!d.grp) state[d.k] = {vis: !!d.on, op: 1}; });
+
+function styleFor(d, f, bump) {
+  const s = Object.assign({}, d.style(f));
+  const m = state[d.k].op * masterOp;
+  s.opacity = (s.opacity != null ? s.opacity : 1) * m;
+  if (s.fillOpacity != null) s.fillOpacity *= m;
+  if (bump) s.weight = (s.weight || 1) + 1.6;
+  return s;
+}
+
+const topPane = map.createPane('topline');
+topPane.style.zIndex = 650;
+// The canvas renderer gives this pane its own full-size canvas, which would
+// otherwise swallow every click before it reaches the layers underneath.
+// Nothing in this pane is interactive, so let events pass straight through.
+topPane.style.pointerEvents = 'none';
+
+DEFS.forEach(d => {
+  if (d.grp) return;
+  const src = d.k === '__photos' ? PHOTOS : LAYERS[d.k];
+  if (!src || !src.features || !src.features.length) { d.empty = true; return; }
+
+  const opts = {
+    style: d.style,
+    interactive: !d.noclick,
+    pane: d.pane === 'top' ? 'topline' : undefined,
+    pointToLayer: d.point ? d.mk : undefined,
+    onEachFeature: (f, lyr) => {
+      if (d.noclick) return;
+      if (d.pop) lyr.bindPopup(d.pop(f.properties));
+      else if (d.k === 'rivers') lyr.bindPopup(popup('Watercourse', []));
+      if (!d.point && d.k !== 'contours') {
+        lyr.on('mouseover', e => { try { e.target.setStyle(styleFor(d, f, true)); } catch (_) {} });
+        lyr.on('mouseout',  e => { try { e.target.setStyle(styleFor(d, f)); } catch (_) {} });
+      }
+    },
+  };
+  built[d.k] = L.geoJSON(src, opts);
+  if (d.on) built[d.k].addTo(map);
+});
+
+/* Block name labels, for multi-block sales. Non-interactive, always on. */
+if (BL.length > 1) {
+  const labels = L.layerGroup();
+  BL.forEach(b => {
+    if (!b.centroid) return;
+    labels.addLayer(L.marker(b.centroid, {interactive: false, pane: 'topline',
+      icon: L.divIcon({className: 'blk-lbl',
+        html: `<div style="color:${blockColour(b.name)}">${b.name}</div>`, iconSize: [0, 0]})}));
+  });
+  labels.addTo(map);
+}
+
+/* contour elevation labels on index contours, only when zoomed in */
+const clabels = L.layerGroup();
+(LAYERS.contours ? LAYERS.contours.features : []).forEach(f => {
+  if (f.properties.elevation % 100 !== 0) return;
+  const cs = f.geometry.type === 'LineString' ? f.geometry.coordinates : (f.geometry.coordinates[0] || []);
+  if (cs.length < 3) return;
+  const c = cs[Math.floor(cs.length / 2)];
+  clabels.addLayer(L.marker([c[1], c[0]], {interactive: false, icon: L.divIcon({
+    className: 'ctour-lbl', html: f.properties.elevation, iconSize: [26, 11]})}));
+});
+function syncLabels() {
+  const want = map.getZoom() >= 14 && map.hasLayer(built.contours);
+  if (want && !map.hasLayer(clabels)) clabels.addTo(map);
+  if (!want && map.hasLayer(clabels)) map.removeLayer(clabels);
+}
+map.on('zoomend', syncLabels);
+
+/* ===== layer control =====
+   Every overlay has its own tick box and its own opacity slider; groups and
+   the whole panel can be ticked or faded in one go. Effective opacity for a
+   layer is its own slider multiplied by the master slider. */
+const lb = document.getElementById('layerbody');
+const rows = {};                       // key -> {cb, slider}
+const groups = [];                     // {name, keys[], cb}
+
+function effOp(k) { return state[k].op * masterOp; }
+
+function restyle(d) {
+  const g = built[d.k];
+  if (!g) return;
+  g.eachLayer(l => {
+    if (l.setStyle && l.feature && d.style) l.setStyle(styleFor(d, l.feature));
+    else if (l.setOpacity) l.setOpacity(effOp(d.k));
+  });
+}
+
+function setVisible(d, on) {
+  state[d.k].vis = on;
+  if (on) built[d.k].addTo(map); else map.removeLayer(built[d.k]);
+  if (rows[d.k]) rows[d.k].cb.checked = on;
+  if (d.k === 'contours') syncLabels();
+}
+
+function refreshGroupBoxes() {
+  groups.forEach(g => {
+    const on = g.keys.filter(k => state[k].vis).length;
+    g.cb.checked = on > 0;
+    g.cb.indeterminate = on > 0 && on < g.keys.length;
+  });
+  const all = Object.keys(state);
+  const on = all.filter(k => state[k].vis).length;
+  masterCb.checked = on > 0;
+  masterCb.indeterminate = on > 0 && on < all.length;
+}
+
+/* master row */
+const masterRow = el(`<label class="lyr master">
+    <input type="checkbox"><span>All overlays</span></label>`);
+const masterCb = masterRow.querySelector('input');
+masterCb.onchange = () => {
+  const on = masterCb.checked;
+  DEFS.filter(d => !d.grp && !d.empty).forEach(d => setVisible(d, on));
+  refreshGroupBoxes();
+};
+lb.appendChild(masterRow);
+
+let current = null;
+DEFS.forEach(d => {
+  if (d.grp) {
+    const box = el(`<div class="grp"><p><label><input type="checkbox">${d.grp}</label></p></div>`);
+    const cb = box.querySelector('input');
+    const g = {name: d.grp, keys: [], cb};
+    cb.onchange = () => {
+      DEFS.filter(x => !x.grp && !x.empty && g.keys.includes(x.k))
+          .forEach(x => setVisible(x, cb.checked));
+      refreshGroupBoxes();
+    };
+    groups.push(g);
+    lb.appendChild(box);
+    current = g;
+    return;
+  }
+  if (d.empty) return;
+
+  const row = el(`<div class="lyr">
+      <input type="checkbox"${d.on ? ' checked' : ''}>
+      <i class="sw" style="background:${d.sw}"></i>
+      <span>${d.n}</span>
+      <input class="lop" type="range" min="0" max="100" value="100"
+             title="Opacity — ${d.n}">
+    </div>`);
+  const [cb, slider] = [row.querySelector('input[type=checkbox]'), row.querySelector('.lop')];
+  rows[d.k] = {cb, slider};
+
+  cb.onchange = () => { setVisible(d, cb.checked); refreshGroupBoxes(); };
+  slider.oninput = () => {
+    state[d.k].op = slider.value / 100;
+    restyle(d);
+  };
+
+  if (current) current.keys.push(d.k);
+  (current ? current.cb.closest('.grp') : lb).appendChild(row);
+});
+
+lb.appendChild(el(`<div class="opa"><label>Master opacity</label>
+  <input type="range" min="0" max="100" value="100" id="opa"></div>`));
+document.getElementById('opa').oninput = e => {
+  masterOp = e.target.value / 100;
+  DEFS.filter(d => !d.grp && !d.empty).forEach(restyle);
+};
+
+refreshGroupBoxes();
+
+/* Empty groups (e.g. no ETS shapefiles on a forestry right) would otherwise
+   show a heading with nothing under it. */
+groups.forEach(g => { if (!g.keys.length) g.cb.closest('.grp').remove(); });
+
+document.getElementById('lyrhdr').onclick = () => {
+  const p = document.getElementById('layers');
+  p.classList.toggle('min');
+  document.getElementById('lyrcar').innerHTML = p.classList.contains('min') ? '&#9656;' : '&#9662;';
+};
+
+/* ===== fit =====
+   Deferred: fitBounds against a container that has not been laid out yet
+   clamps straight to maxZoom, so wait for the first paint. */
+function fitAll() {
+  map.invalidateSize();
+  map.fitBounds(built.title_boundary.getBounds(), {padding: [26, 26]});
+  syncLabels();
+}
+function fitBlock(name) {
+  const b = BL.find(x => x.name === name);
+  if (!b || !b.bbox) return fitAll();
+  map.invalidateSize();
+  const [w, s, e, n] = b.bbox;
+  // The block frame carries a couple of km of context; trim it a little so
+  // the block itself fills the view.
+  const dx = (e - w) * 0.16, dy = (n - s) * 0.16;
+  map.fitBounds([[s + dy, w + dx], [n - dy, e - dx]], {padding: [10, 10]});
+  syncLabels();
+}
+requestAnimationFrame(() => requestAnimationFrame(fitAll));
+window.addEventListener('load', fitAll);
+
+const HomeCtl = L.Control.extend({
+  options: {position: 'topleft'},
+  onAdd() {
+    const a = L.DomUtil.create('a', '');
+    Object.assign(a, {href: '#', title: 'Zoom to property', innerHTML: '&#9737;'});
+    Object.assign(a.style, {font: '16px/26px system-ui', textAlign: 'center'});
+    const d = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+    d.appendChild(a);
+    L.DomEvent.on(a, 'click', e => { L.DomEvent.stop(e); fitAll(); });
+    return d;
+  },
+});
+map.addControl(new HomeCtl());
+
+/* Block zoom buttons in the header, when there is more than one block. */
+if (BL.length > 1) {
+  const bar = document.getElementById('basebar');
+  const grp = el('<div class="blkgroup"></div>');
+  BL.forEach(b => {
+    const btn = el(`<button class="blkbtn" title="Zoom to ${b.name}"><i style="background:${blockColour(b.name)}"></i>${b.name}</button>`);
+    btn.onclick = () => fitBlock(b.name);
+    grp.appendChild(btn);
+  });
+  bar.parentNode.insertBefore(grp, bar);
+}
+
+/* NZTM readout — Transverse Mercator forward, NZGD2000 / EPSG:2193. */
+function toNZTM(lat, lon) {
+  const a = 6378137, f = 1 / 298.257222101, k0 = 0.9996;
+  const lat0 = 0, lon0 = 173 * Math.PI / 180, E0 = 1600000, N0 = 10000000;
+  const e2 = 2 * f - f * f, ep2 = e2 / (1 - e2);
+  const p = lat * Math.PI / 180, l = lon * Math.PI / 180;
+  const N = a / Math.sqrt(1 - e2 * Math.sin(p) ** 2);
+  const T = Math.tan(p) ** 2, C = ep2 * Math.cos(p) ** 2, A = (l - lon0) * Math.cos(p);
+  const n = f / (2 - f);
+  const G = a * (1 - n) * (1 - n * n) * (1 + 9 / 4 * n * n + 225 / 64 * n ** 4) * Math.PI / 180;
+  const M = a * ((1 - e2 / 4 - 3 * e2 * e2 / 64 - 5 * e2 ** 3 / 256) * p
+    - (3 * e2 / 8 + 3 * e2 * e2 / 32 + 45 * e2 ** 3 / 1024) * Math.sin(2 * p)
+    + (15 * e2 * e2 / 256 + 45 * e2 ** 3 / 1024) * Math.sin(4 * p)
+    - (35 * e2 ** 3 / 3072) * Math.sin(6 * p));
+  const M0 = 0;
+  const E = E0 + k0 * N * (A + (1 - T + C) * A ** 3 / 6
+    + (5 - 18 * T + T * T + 72 * C - 58 * ep2) * A ** 5 / 120);
+  const Nn = N0 + k0 * (M - M0 + N * Math.tan(p) * (A * A / 2 + (5 - T + 9 * C + 4 * C * C) * A ** 4 / 24
+    + (61 - 58 * T + T * T + 600 * C - 330 * ep2) * A ** 6 / 720));
+  return [Math.round(E), Math.round(Nn)];
+}
+const co = document.getElementById('coords');
+function readout(lat, lon) {
+  const [e, n] = toNZTM(lat, lon);
+  co.innerHTML = `<b>${lat.toFixed(5)}, ${lon.toFixed(5)}</b> &nbsp;·&nbsp; NZTM <b>${fmt(e)}E ${fmt(n)}N</b>`;
+}
+map.on('mousemove', e => readout(e.latlng.lat, e.latlng.lng));
+readout(P.centroid[0], P.centroid[1]);
+
+const toggleDash = () => {
+  document.getElementById('dash').classList.toggle('collapsed');
+  setTimeout(() => map.invalidateSize(), 230);
+};
+document.getElementById('toggleDash').onclick = toggleDash;
+document.getElementById('sheethandle').onclick = toggleDash;
+
+/* Phones start map-first: dashboard sheet down, overlay panel folded to a
+   pill, and the base-layer select moved from the header into the overlay
+   panel so the header has room for the brand and the full property name.
+   Reversible, so a window that is resized or a tablet that is rotated gets
+   the right layout rather than the one it loaded with. */
+const SMALL = window.matchMedia('(max-width: 700px)');
+function applySmall(on) {
+  const dash = document.getElementById('dash');
+  const lp = document.getElementById('layers');
+  const bb = document.getElementById('basebar');
+  if (on) {
+    dash.classList.add('collapsed');
+    lp.classList.add('min');
+    document.getElementById('lyrcar').innerHTML = '&#9656;';
+    bb.classList.add('inpanel');
+    document.getElementById('layerbody').prepend(bb);
+  } else {
+    dash.classList.remove('collapsed');
+    lp.classList.remove('min');
+    document.getElementById('lyrcar').innerHTML = '&#9662;';
+    bb.classList.remove('inpanel');
+    document.getElementById('contacthdr').after(bb);
+  }
+  setTimeout(() => map.invalidateSize(), 50);
+}
+let smallApplied = null;
+function syncSmall() {
+  const m = SMALL.matches;
+  if (m !== smallApplied) { smallApplied = m; applySmall(m); }
+}
+syncSmall();
+SMALL.addEventListener('change', syncSmall);
+let _rt;
+window.addEventListener('resize', () => { clearTimeout(_rt); _rt = setTimeout(syncSmall, 120); });
+// Opening a popup on a phone: close the sheet so the popup is not under it.
+map.on('popupopen', () => { if (SMALL.matches) document.getElementById('dash').classList.add('collapsed'); });
+
+/* ===== dashboard ===== */
+(() => {
+  const parts = P.name.trim().split(/\s+/);
+  const tail = parts.length > 1 ? parts.pop() : '';
+  document.getElementById('proptitle').innerHTML =
+    parts.join(' ') + (tail ? ` <span>${tail}</span>` : '');
+})();
+
+document.getElementById('hdrsub').textContent =
+  `${P.address}  ·  ${fmt(P.title_area_ha_im, 1)} ha ${P.tenure_short}`
+  + (P.title_reference ? `  ·  ${P.title_reference}` : '');
+
+const hasRates = !!R;
+const hasCaas = !!(E && E.caas && E.caas.length);
+const TABS = [['overview', 'Overview']]
+  .concat(CROP ? [['crop', 'Crop']] : [])
+  .concat(hasRates ? [['rates', 'Rates']] : [])
+  .concat([['ets', 'ETS'], ['terrain', 'Land'], ['docs', 'Docs'], ['data', 'Sources']]);
+const tabbar = document.getElementById('tabs');
+TABS.forEach(([id, label], i) => {
+  const b = el(`<button${i === 0 ? ' class="on"' : ''}>${label}</button>`);
+  b.onclick = () => {
+    TABS.forEach(([x]) => document.getElementById('pane-' + x).classList.remove('on'));
+    [...tabbar.children].forEach(c => c.classList.remove('on'));
+    document.getElementById('pane-' + id).classList.add('on');
+    b.classList.add('on');
+  };
+  tabbar.appendChild(b);
+});
+
+const barrow = (n, v, total, c, sub) => `<div class="barrow">
+  <div class="lbl"><span>${n}</span><b>${fmt(v, 1)} ha</b></div>
+  <div class="bar"><i style="width:${Math.min(100, v / total * 100)}%;background:${c}"></i></div>
+  <div class="note" style="margin:0">${sub || fmt(v / total * 100, 1) + '% of title'}</div>
+</div>`;
+
+/* --- overview --- */
+document.getElementById('pane-overview').innerHTML = `
+  <div class="card">
+    <h3>Land area</h3>
+    <div class="big">${fmt(P.title_area_ha_im, 1)}<small> ha ${P.tenure_short}</small></div>
+    <dl style="margin-top:9px">
+      ${kv('LINZ parcel area', fmt(P.title_area_ha_linz, 2) + ' ha')}
+      ${kv('Parcels', fmt(P.parcel_count))}
+      ${kv('Legal description', P.legal_description)}
+      ${P.title_reference ? kv('Title', P.title_reference) : ''}
+      ${kv('Land district', P.land_district)}
+      ${kv('Tenure', P.tenure)}
+      ${kv('Zoning', P.zoning)}
+    </dl>
+    ${NARR.overview_note ? `<p class="note">${NARR.overview_note}</p>` : ''}
+  </div>
+
+  ${P.panoramas && P.panoramas.collection_url ? `<div class="card">
+    <h3>360° panoramas</h3>
+    <p class="note" style="margin-top:0">${P.panoramas.note ||
+      'Drone panoramas you can look around in. The blue pins on the map open each one at the point it was taken.'}</p>
+    <a class="btn" href="${P.panoramas.collection_url}" target="_blank" rel="noopener"
+       style="display:inline-block;margin-top:6px">Open the panorama tour &rarr;</a>
+  </div>` : ''}
+
+  ${BL.length ? `<div class="card">
+    <h3>Blocks</h3>
+    ${BL.map(b => `<div style="margin-bottom:10px">
+      <div class="lbl" style="display:flex;justify-content:space-between;align-items:center">
+        <span style="display:flex;align-items:center;gap:7px;font-weight:650">
+          <i class="sw" style="background:${blockColour(b.name)};width:13px;height:11px;border-radius:3px;display:inline-block"></i>${b.name}</span>
+        <button class="blkbtn" onclick="fitBlock('${b.name.replace(/'/g, "\\'")}')">Zoom</button>
+      </div>
+      <dl style="margin-top:4px">
+        ${b.landowner ? kv('Landowner', b.landowner) : ''}
+        ${kv('Stated area', b.title_area_ha_stated != null ? fmt(b.title_area_ha_stated, 1) + ' ha' : '—')}
+        ${kv('LINZ parcel area', fmt(b.title_area_ha_linz, 1) + ' ha · ' + fmt(b.parcels) + (b.parcels === 1 ? ' parcel' : ' parcels'))}
+        ${b.min_elevation_m != null ? kv('Elevation', fmt(b.min_elevation_m) + ' – ' + fmt(b.max_elevation_m) + ' m') : ''}
+        ${b.esc.length ? kv('ESC high / very high', fmt(b.esc_high_ha, 1) + ' ha') : ''}
+      </dl>
+      ${b.legal_description ? `<p class="note" style="margin-top:4px">${b.legal_description}</p>` : ''}
+      ${(b.notes || []).map(n => `<p class="note" style="margin-top:4px">${n}</p>`).join('')}
+    </div>`).join('')}
+  </div>` : ''}
+
+  <div class="card">
+    <h3>Land use split</h3>
+    ${[['Net stocked (stated)', C.net_stocked_pine_ha, '#f59f00'],
+       ['Exotic forest (Topo50)', C.exotic_ha_on_property, '#2b8a8a'],
+       ['Native bush (Topo50)', C.native_ha_on_property, '#1a7f37'],
+       ['Scrub — manuka / kanuka', C.scrub_ha_on_property, '#8a9a2b']]
+      .filter(([, v]) => v != null && v > 0)
+      .map(([n, v, c]) => barrow(n, v, P.title_area_ha_im, c)).join('')}
+    <p class="note">${NARR.cover_note || 'Exotic, native and scrub areas are LINZ Topo50 ' +
+      'vegetation polygons clipped to the title — indicative, not a survey. The net stocked ' +
+      'figure is as stated by the vendor.'}</p>
+  </div>
+
+  <div class="card">
+    <h3>Authorities</h3>
+    <dl>
+      ${kv('Territorial', P.territorial_authority)}
+      ${kv('Regional', P.regional_council)}
+    </dl>
+  </div>
+
+  ${NB.doc_parcels_adjoining ? `<div class="card">
+    <h3>Conservation land nearby</h3>
+    <p class="note" style="margin-top:0">${NARR.neighbours_note ||
+      `${fmt(NB.doc_parcels_adjoining)} DOC public conservation area${NB.doc_parcels_adjoining === 1 ? '' : 's'} intersect the map frame:`}</p>
+    <ul class="notes">${NB.doc_names.map(n => `<li>${n}</li>`).join('')}</ul>
+  </div>` : ''}`;
+
+/* --- crop (forestry right / tree crop listings) --- */
+if (CROP) {
+  const ac = CROP.age_classes || [];
+  const totalCrop = ac.reduce((s, r) => s + (r.ha || 0), 0);
+  const blocksIn = [...new Set(ac.map(r => r.block).filter(Boolean))];
+  const years = [...new Set(ac.map(r => r.year))].sort();
+  const ageRamp = {};
+  years.forEach((y, i) => {
+    ageRamp[y] = AGE_RAMP[Math.round(i * (AGE_RAMP.length - 1) / Math.max(1, years.length - 1))];
+  });
+  const lr = CROP.land_return || [];
+  const lrBlocks = [...new Set(lr.flatMap(r => Object.keys(r.areas || {})))];
+  const lrTotal = b => lr.reduce((s, r) => s + ((r.areas || {})[b] || 0), 0);
+  const lrAll = lr.reduce((s, r) => s + Object.values(r.areas || {}).reduce((a, v) => a + v, 0), 0);
+  const lrMax = Math.max(1, ...lr.map(r => Object.values(r.areas || {}).reduce((a, v) => a + v, 0)));
+
+  document.getElementById('pane-crop').innerHTML = `
+    <div class="card">
+      <h3>${CROP.title || 'Existing tree crop'}</h3>
+      <div class="big">${fmt(totalCrop, 1)}<small> ha net stocked</small></div>
+      ${(CROP.summary || []).length ? `<dl style="margin-top:9px">${CROP.summary.map(r => kv(r.k, r.v)).join('')}</dl>` : ''}
+      ${CROP.intro ? `<p class="note">${CROP.intro}</p>` : ''}
+    </div>
+
+    ${ac.length ? `<div class="card">
+      <h3>Age class</h3>
+      <table class="mini">
+        <thead><tr>${blocksIn.length ? '<th>Block</th>' : ''}<th>Planted</th><th>Age</th><th>Species</th><th>NSA</th></tr></thead>
+        <tbody>${ac.map(r => `<tr>
+          ${blocksIn.length ? `<td><span style="color:${blockColour(r.block)}">${r.block}</span></td>` : ''}
+          <td><span class="pill" style="background:${ageRamp[r.year]}33;color:${ageRamp[r.year]}">${r.year}</span></td>
+          <td>${r.age != null ? r.age : '—'}</td><td>${r.species || '—'}</td>
+          <td>${fmt(r.ha, 2)} ha</td></tr>`).join('')}
+        </tbody>
+        <tfoot>${blocksIn.map(b => `<tr><td>${b} subtotal</td><td></td><td></td><td></td>
+            <td>${fmt(ac.filter(r => r.block === b).reduce((s, r) => s + r.ha, 0), 2)} ha</td></tr>`).join('')}
+          <tr><td>Total</td>${blocksIn.length ? '<td></td>' : ''}<td></td><td></td><td>${fmt(totalCrop, 2)} ha</td></tr></tfoot>
+      </table>
+      ${CROP.age_note ? `<p class="note">${CROP.age_note}</p>` : ''}
+    </div>` : ''}
+
+    ${lr.length ? `<div class="card">
+      <h3>${CROP.land_return_title || 'Land return schedule'}</h3>
+      <div class="big">${fmt(lrAll, 1)}<small> ha to be returned</small></div>
+      ${CROP.land_return_intro ? `<p class="note" style="margin-top:6px">${CROP.land_return_intro}</p>` : ''}
+      <table class="mini sched" style="margin-top:8px">
+        <thead><tr><th>Year</th>${lrBlocks.map(b => `<th>${b}</th>`).join('')}<th>Total</th><th></th></tr></thead>
+        <tbody>${lr.map(r => {
+          const tot = Object.values(r.areas || {}).reduce((a, v) => a + v, 0);
+          return `<tr><td>${r.year}</td>${lrBlocks.map(b => `<td>${(r.areas || {})[b] ? fmt(r.areas[b], 1) : '—'}</td>`).join('')}
+            <td>${tot ? fmt(tot, 1) : '—'}</td>
+            <td class="bar" style="width:34%"><div class="bar" style="margin:0;display:flex;background:#2a3320">${lrBlocks.map(b =>
+              `<i style="width:${((r.areas || {})[b] || 0) / lrMax * 100}%;background:${blockColour(b)};border-radius:0"></i>`).join('')}</div></td></tr>`;
+        }).join('')}</tbody>
+        <tfoot><tr><td>Total</td>${lrBlocks.map(b => `<td>${fmt(lrTotal(b), 1)}</td>`).join('')}<td>${fmt(lrAll, 1)}</td><td></td></tr></tfoot>
+      </table>
+      ${(CROP.land_return_notes || []).map(n => `<p class="note">${n}</p>`).join('')}
+    </div>` : ''}
+
+    ${(CROP.terms || []).length ? `<div class="card">
+      <h3>${CROP.terms_title || 'Forestry right'}</h3>
+      <dl>${CROP.terms.map(r => kv(r.k, r.v)).join('')}</dl>
+      ${(CROP.terms_notes || []).map(n => `<p class="note">${n}</p>`).join('')}
+    </div>` : ''}
+
+    ${CROP.source ? `<div class="card"><h3>Source</h3><p class="note" style="margin-top:0">${CROP.source}</p></div>` : ''}`;
+}
+
+/* --- rates (only when a rating valuation is part of the sale) --- */
+if (hasRates) {
+  const rateRows = [
+    ['Per hectare of title', money(R.rates_per_ha_title), fmt(P.title_area_ha_im, 2) + ' ha'],
+    ['Per hectare net stocked', money(R.rates_per_ha_stocked), fmt(C.net_stocked_pine_ha, 1) + ' ha'],
+    ['Per hectare ETS registered', money(R.rates_per_ha_registered), fmt(E.registered_ha, 2) + ' ha'],
+    ['Per NZU transferring', money(R.rates_per_nzu, 3), fmt(E.nzu_transferring) + ' NZU'],
+  ].filter(r => r[1] !== '—');
+  document.getElementById('pane-rates').innerHTML = `
+    <div class="card">
+      <h3>Annual rates — district + regional</h3>
+      <div class="big">${money(R.total_annual)}<small> / year</small></div>
+      <dl style="margin-top:9px">
+        ${kv('Territorial authority', R.district_council)}
+        ${kv('Regional council', R.regional_council)}
+        ${R.rates_pct_of_cv != null ? kv('Rates as % of CV', fmt(R.rates_pct_of_cv, 3) + '%') : ''}
+      </dl>
+      ${R.split_available ? '' : `<div class="warn">The rates figure on file is the <b>combined</b>
+      district and regional total. The split between ${R.district_council} and
+      ${R.regional_council} is not in the property file — confirm from the rates
+      notice before quoting a split to a buyer.</div>`}
+      ${R.note ? `<p class="note">${R.note}</p>` : ''}
+    </div>
+
+    <div class="card">
+      <h3>Rating valuation</h3>
+      <dl>
+        ${kv('Capital value (CV)', money(R.capital_value, 0))}
+        ${kv('Land value (LV)', money(R.land_value, 0))}
+        ${kv('Improvements (IV)', money(R.improvements_value, 0))}
+        ${kv('CV per hectare', money(R.cv_per_ha, 0))}
+        ${kv('LV per hectare', money(R.lv_per_ha, 0))}
+      </dl>
+      ${R.land_value != null ? `<div class="bar" style="margin-top:11px">
+        <i style="width:${R.land_value / R.capital_value * 100}%;background:#f59f00"></i>
+      </div>
+      <p class="note" style="margin-top:4px">Land is
+      ${fmt(R.land_value / R.capital_value * 100, 1)}% of capital value; improvements are
+      ${money(R.improvements_value, 0)}.${NARR.rates_note ? ' ' + NARR.rates_note : ''}</p>` :
+      `<p class="note" style="margin-top:4px">The land / improvements split is not on file for every title.${NARR.rates_note ? ' ' + NARR.rates_note : ''}</p>`}
+    </div>
+
+    <div class="card">
+      <h3>Rates intensity</h3>
+      <table class="mini">
+        <thead><tr><th>Basis</th><th>Rate</th><th>Denominator</th></tr></thead>
+        <tbody>${rateRows.map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td>
+          <td style="color:var(--ink3)">${r[2]}</td></tr>`).join('')}</tbody>
+      </table>
+      ${R.rates_per_nzu ? `<p class="note">Rates are ${money(R.rates_per_nzu, 3)} per NZU
+      transferring on settlement.</p>` : ''}
+    </div>
+
+    <div class="card">
+      <h3>Source</h3>
+      <p class="note" style="margin-top:0">${R.source}</p>
+    </div>`;
+}
+
+/* --- ETS --- */
+document.getElementById('pane-ets').innerHTML = hasCaas ? `
+  <div class="card">
+    <h3>Carbon position</h3>
+    <div class="big">${fmt(E.nzu_transferring)}<small> NZU on settlement</small></div>
+    <dl style="margin-top:9px">
+      ${kv('Registered area', fmt(E.registered_ha, 2) + ' ha')}
+      ${kv('Participant', E.participant || '—')}
+      ${kv('Accounting', E.accounting || '—')}
+      ${kv('Activity', E.activity || '—')}
+      ${kv('Constituted', E.constitution_date || '—')}
+      ${kv('Carbon tables', E.fma ? 'Participant-specific FMA' : 'Regional lookup')}
+    </dl>
+    ${E.status ? `<p class="note">${E.status}</p>` : ''}
+  </div>
+
+  <div class="card">
+    <h3>Age class by CAA</h3>
+    <table class="mini">
+      <thead><tr><th>CAA</th><th>Planted</th><th>Age</th><th>Registered</th><th>NZU</th></tr></thead>
+      <tbody>${E.caas.map(c => `<tr>
+        <td><span class="pill" style="background:${AGE_COLOUR[c.planted] || '#adb5bd'}33;color:${AGE_COLOUR[c.planted] || '#adb5bd'}">CAA ${c.caa}</span></td>
+        <td>${c.planted}</td><td>${c.age_2026} yr</td>
+        <td>${fmt(c.registered_ha, 2)} ha</td><td>${fmt(c.nzu)}</td></tr>`).join('')}
+      </tbody>
+      <tfoot><tr><td>Total</td><td></td><td></td>
+        <td>${fmt(E.registered_ha, 2)} ha</td><td>${fmt(E.nzu_transferring)}</td></tr></tfoot>
+    </table>
+    ${E.caas.map(c => `<div class="barrow" style="margin-top:9px">
+      <div class="lbl"><span>CAA ${c.caa} · ${c.planted}</span><b>${fmt(c.nzu_per_ha, 1)} NZU/ha</b></div>
+      <div class="bar"><i style="width:${c.registered_ha / E.registered_ha * 100}%;background:${AGE_COLOUR[c.planted] || '#adb5bd'}"></i></div>
+    </div>`).join('')}
+  </div>
+
+  ${E.mapped_eligible_ha ? `<div class="card">
+    <h3>Eligible vs ineligible (mapped)</h3>
+    <dl>
+      ${kv('Mapped eligible', fmt(E.mapped_eligible_ha, 2) + ' ha')}
+      ${kv('Mapped ineligible', fmt(E.mapped_ineligible_ha, 2) + ' ha')}
+      ${kv('Registered (CAA report)', fmt(E.registered_ha, 2) + ' ha')}
+    </dl>
+    ${Math.abs(E.registered_ha - E.mapped_eligible_ha) > 0.5 ? `<div class="warn">Registered area
+    differs from the mapped eligible shapefile by
+    ${fmt(Math.abs(E.registered_ha - E.mapped_eligible_ha), 2)} ha. The CAA land status report
+    governs the carbon position; the shapefile is the mapping source. Worth
+    reconciling before settlement.</div>` : ''}
+    ${E.ineligible_reason ? `<p class="note">Ineligible area reason: <i>${E.ineligible_reason}</i>.</p>` : ''}
+  </div>` : ''}` : `
+  <div class="card">
+    <h3>ETS position</h3>
+    <div class="big">None<small> registered</small></div>
+    <p class="note" style="margin-top:8px">${E.status ||
+      'No ETS registration forms part of this sale. ETS status of the land to be confirmed.'}</p>
+  </div>`;
+
+/* --- land --- */
+const rangeTxt = T.min_elevation_m != null
+  ? `Contours on the title run from ${fmt(T.min_elevation_m)} m to ${fmt(T.max_elevation_m)} m.`
+  : '';
+document.getElementById('pane-terrain').innerHTML = `
+  ${T.min_elevation_m != null ? `<div class="card">
+    <h3>Relief</h3>
+    <div class="big">${fmt(T.max_elevation_m - T.min_elevation_m)}<small> m of vertical</small></div>
+    <dl style="margin-top:9px">
+      ${kv('Lowest contour on title', fmt(T.min_elevation_m) + ' m')}
+      ${kv('Highest contour on title', fmt(T.max_elevation_m) + ' m')}
+      ${kv('Contour interval', T.contour_interval_m + ' m')}
+      ${BL.length > 1 ? BL.map(b => kv(b.name, b.min_elevation_m != null ? fmt(b.min_elevation_m) + ' – ' + fmt(b.max_elevation_m) + ' m' : '—')).join('') : ''}
+    </dl>
+    <p class="note">${NARR.relief_note || rangeTxt}</p>
+  </div>` : ''}
+
+  <div class="card">
+    <h3>Access</h3>
+    <dl>
+      ${kv('Tracks on title (Topo50)', fmt(A.track_km_on_property, 2) + ' km')}
+      ${kv('Formed road on title', fmt(A.formed_road_km_on_property, 2) + ' km')}
+      ${kv('Legal road parcels in frame', fmt(A.legal_road_parcels_nearby))}
+    </dl>
+    <div class="warn">${A.note}</div>
+    <p class="note">${NARR.access_note || 'Topo50 records ' + fmt(A.track_km_on_property, 2) +
+      ' km of track and ' + fmt(A.formed_road_km_on_property, 2) + ' km of formed road on the title. ' +
+      'Internal forestry roading is usually more extensive than the national topo layer records.'}</p>
+  </div>
+
+  ${!EV || !EV.esc.length ? '' : `
+  <div class="card">
+    <h3>Erosion susceptibility — NES-CF</h3>
+    <div class="big">${fmt(EV.esc_high_ha, 1)}<small> ha high or very high</small></div>
+    <p class="note" style="margin-top:6px">The ESC sets what a purchaser can do
+    without resource consent under the National Environmental Standards for
+    Commercial Forestry. Harvesting, earthworks and replanting on the orange
+    and red classes carry the heavier conditions.</p>
+    ${EV.esc.map(e => `<div class="barrow" style="margin-top:9px">
+      <div class="lbl"><span>${e.key}</span><b>${fmt(e.ha, 1)} ha · ${fmt(e.pct, 1)}%</b></div>
+      <div class="bar"><i style="width:${e.pct}%;background:${ESC_COLOUR[e.key] || '#868e96'}"></i></div>
+    </div>`).join('')}
+    ${BL.length > 1 ? `<table class="mini" style="margin-top:8px">
+      <thead><tr><th>Block</th>${EV.esc.map(e => `<th>${e.key}</th>`).join('')}</tr></thead>
+      <tbody>${BL.map(b => `<tr><td style="color:${blockColour(b.name)}">${b.name}</td>
+        ${EV.esc.map(e => { const r = b.esc.find(x => x.key === e.key); return `<td>${r ? fmt(r.ha, 0) + ' ha' : '—'}</td>`; }).join('')}
+      </tr>`).join('')}</tbody></table>` : ''}
+    <p class="note">${EV.esc_source}.</p>
+  </div>` }
+
+  ${!EV || !EV.luc.length ? '' : `
+  <div class="card">
+    <h3>Land Use Capability</h3>
+    <table class="mini">
+      <thead><tr><th>Class</th><th>Area</th><th>Share</th>${BL.length > 1 ? BL.map(b => `<th>${b.name}</th>`).join('') : ''}</tr></thead>
+      <tbody>${EV.luc.map(l => `<tr>
+        <td><span class="pill" style="background:${(LUC_COLOUR[l.key] || '#868e96')}33;color:${LUC_COLOUR[l.key] || '#adb5bd'}">LUC ${l.key}</span></td>
+        <td>${fmt(l.ha, 1)} ha</td><td>${fmt(l.pct, 1)}%</td>
+        ${BL.length > 1 ? BL.map(b => { const r = b.luc.find(x => x.key === l.key); return `<td>${r ? fmt(r.ha, 0) : '—'}</td>`; }).join('') : ''}</tr>`).join('')}
+      </tbody>
+    </table>
+    ${EV.luc_subclasses.length ? `<p class="note">Units present:
+      ${EV.luc_subclasses.map(s => `${s.key} (${fmt(s.ha, 0)} ha)`).join(', ')}.</p>` : ''}
+    ${(EV.luc_units || []).length ? `<p class="note">${EV.luc_units
+      .map(u => `${u.key} — ${fmt(u.ha, 0)} ha`).join('<br>')}</p>` : ''}
+    <p class="note">${EV.luc_source}. Higher class numbers mean greater physical
+    limitation — 7 and 8 are steep or severely limited land, typically the
+    reason a block is in trees rather than pasture.</p>
+  </div>` }
+
+  ${!EV || !EV.fish_spawning_reaches ? '' : `
+  <div class="card">
+    <h3>Fish spawning — NES-CF</h3>
+    <dl>${kv('Indicator reaches in frame', fmt(EV.fish_spawning_reaches))}</dl>
+    <p class="note">${EV.fish_species.length
+      ? 'Species recorded: ' + EV.fish_species.join(', ') + '. '
+      : ''}Forestry activity near an indicated reach is restricted during the
+    spawning window — factor it into harvest scheduling.</p>
+  </div>` }
+
+  <div class="card">
+    <h3>Water</h3>
+    <dl>${kv('Mapped watercourse on title', fmt(C.river_km_on_property, 2) + ' km')}
+    ${BL.length > 1 ? BL.map(b => kv(b.name, fmt(b.river_km, 2) + ' km')).join('') : ''}</dl>
+    ${NARR.water_note ? `<p class="note">${NARR.water_note}</p>` : ''}
+  </div>`;
+
+/* --- data room ---
+   The internal build links straight to the file on disk. The shared build
+   has no such path to link to, and the documents themselves are not
+   embedded (the Artifact sandbox blocks downloads outright), so it lists
+   what exists and routes the request to the agents. */
+const DR = window.PROPMAP_DATAROOM;
+
+/* Contact agent: the first contact in property.json is the lead; the rest
+   are cc'd so an enquiry reaches the whole team. */
+(() => {
+  const cs = DR.contact || [];
+  const c = cs[0];
+  if (!c) return;
+  const subj = encodeURIComponent(`Enquiry: ${P.name}`);
+  const body = encodeURIComponent(`Hi ${c.name.split(' ')[0]},\n\nI'd like to know more about ${P.name}.\n\n`);
+  const cc = cs.slice(1).map(x => x.email).filter(Boolean).join(',');
+  const href = `mailto:${c.email}?subject=${subj}${cc ? '&cc=' + cc : ''}&body=${body}`;
+  const tel = (c.phone || '').replace(/[^\d+]/g, '');
+  const shown = (c.phone || '').replace(/^\+64\s?/, '0');   // 021 … reads better locally; tel: keeps +64
+  const html = `<a class="mail" href="${href}" title="Email ${c.name}">&#9993;&#xFE0E; Contact agent</a>`
+    + (c.phone ? `<a class="tel" href="tel:${tel}" title="Call ${c.name}">&#9742;&#xFE0E; ${shown}</a>` : '');
+  ['contacthdr', 'contactfab'].forEach(id => { document.getElementById(id).innerHTML = html; });
+  const fc = document.getElementById('footcontact');
+  if (fc && c.phone) fc.innerHTML = ` &middot; ${c.name} <a href="tel:${tel}" style="color:var(--ink);white-space:nowrap">${shown}</a>`;
+})();
+const LINKED = !STATIC_AERIAL;
+/* Hosted build with a gated data room: every buyer document carries an
+   href under dataroom/, which Cloudflare Access puts behind a one-time
+   email code. The page itself stays public. */
+const GATED = !!DR.gated;
+
+const EXT_COLOUR = {
+  PDF: '#e03131', XLSX: '#2f9e44', CSV: '#2f9e44', DOCX: '#4dabf7',
+  SHP: '#f59f00', FI2: '#ae3ec9', MSG: '#868e96', INDD: '#868e96', PNG: '#868e96',
+};
+
+function docRow(d) {
+  const colour = EXT_COLOUR[d.ext] || 'var(--sage)';
+  const label = (LINKED || (GATED && d.href))
+    ? `<a href="${d.href}" target="_blank" rel="noopener">${d.name}</a>`
+    : d.name;
+  return `<div class="doc">
+    <i class="ext" style="background:${colour}22;color:${colour};border-color:${colour}55">${d.ext}</i>
+    <div class="docmeta">
+      <div class="docname">${label}${
+        d.visibility === 'internal' ? ' <b class="int">internal</b>' : ''}</div>
+      <div class="docsub">${d.size} · ${d.modified}${d.note ? ' · ' + d.note : ''}</div>
+    </div>
+  </div>`;
+}
+
+const visible = DR.documents.filter(d => LINKED || d.visibility === 'buyer');
+const byCat = c => visible.filter(d => d.category === c);
+
+document.getElementById('pane-docs').innerHTML = `
+  <div class="card">
+    <h3>Data room</h3>
+    <div class="big">${fmt(visible.length)}<small> documents</small></div>
+    <p class="note" style="margin-top:7px">${
+      LINKED
+        ? 'Click any document to open it from the property folder. Items marked '
+          + '<b class="int">internal</b> are commercial and are withheld from the '
+          + 'shared copy of this map.'
+        : GATED
+        ? (visible.length
+          ? 'Documents are released to registered parties. Click a document and '
+            + 'sign in with the email address you registered with; a one-time code '
+            + 'is emailed to you and no password is needed. Not registered yet? '
+            + 'Contact the agents below.'
+          : 'The due-diligence pack is being assembled. Register your interest with '
+            + 'the agents below to receive access as it is released.')
+        : (visible.length
+          ? 'The full pack is released to registered parties on request. Contact '
+            + 'the agents below and we will provide access.'
+          : 'The due-diligence pack is being assembled. Register your interest with '
+            + 'the agents below to receive it as it is released.')}</p>
+    <p class="note">Indexed ${DR.generated}.</p>
+  </div>
+
+  ${DR.categories.map(c => {
+    const rows = byCat(c);
+    if (!rows.length) return '';
+    return `<div class="card">
+      <h3>${c} <span style="float:right;color:var(--ink3)">${rows.length}</span></h3>
+      ${rows.map(docRow).join('')}
+    </div>`;
+  }).join('')}
+
+  <div class="card">
+    <h3>${LINKED ? 'Agents' : GATED ? 'Register for access' : 'Request the full pack'}</h3>
+    ${DR.contact.map(p => `<div class="doc">
+      <div class="docmeta">
+        <div class="docname">${p.name}</div>
+        <div class="docsub">${p.role}</div>
+        <div class="docsub"><a href="mailto:${p.email}">${p.email}</a> · ${p.phone}</div>
+      </div></div>`).join('')}
+    <p class="note">Searle Forestry · Licensed under the Real Estate Agents Act 2008</p>
+  </div>`;
+
+/* --- data --- */
+document.getElementById('pane-data').innerHTML = `
+  <div class="card">
+    <h3>Sources &amp; caveats</h3>
+    <ul class="notes">${STATS.data_notes.map(n => `<li>${n}</li>`).join('')}</ul>
+  </div>
+  <div class="card">
+    <h3>Layers loaded</h3>
+    <table class="mini"><tbody>
+      ${DEFS.filter(d => !d.grp && !d.empty).map(d => {
+        const src = d.k === '__photos' ? PHOTOS : LAYERS[d.k];
+        return `<tr><td>${d.n}</td><td>${fmt(src.features.length)}</td></tr>`;
+      }).join('')}
+    </tbody></table>
+  </div>
+  <div class="card">
+    <h3>Refreshing</h3>
+    <p class="note" style="margin-top:0">LINZ refreshes parcels weekly. To pull current
+    data and cut a new version of this map:</p>
+    <p class="note" style="font-family:ui-monospace,Consolas,monospace;color:var(--ink2)">
+    python scripts/release.py --refresh --note "..."</p>
+    <p class="note">Built 23 September 2026.</p>
+  </div>`;
+</script>
+</body>
+</html>
