@@ -1,0 +1,1579 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>455 West Coast Road</title>
+<style>.leaflet-image-layer,.leaflet-layer,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-pane,.leaflet-pane>canvas,.leaflet-pane>svg,.leaflet-tile,.leaflet-tile-container,.leaflet-zoom-box{position:absolute;left:0;top:0}.leaflet-container{overflow:hidden}.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile{-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-user-drag:none}.leaflet-tile::selection{background:0 0}.leaflet-safari .leaflet-tile{image-rendering:-webkit-optimize-contrast}.leaflet-safari .leaflet-tile-container{width:1600px;height:1600px;-webkit-transform-origin:0 0}.leaflet-marker-icon,.leaflet-marker-shadow{display:block}.leaflet-container .leaflet-overlay-pane svg{max-width:none!important;max-height:none!important}.leaflet-container .leaflet-marker-pane img,.leaflet-container .leaflet-shadow-pane img,.leaflet-container .leaflet-tile,.leaflet-container .leaflet-tile-pane img,.leaflet-container img.leaflet-image-layer{max-width:none!important;max-height:none!important;width:auto;padding:0}.leaflet-container img.leaflet-tile{mix-blend-mode:plus-lighter}.leaflet-container.leaflet-touch-zoom{-ms-touch-action:pan-x pan-y;touch-action:pan-x pan-y}.leaflet-container.leaflet-touch-drag{-ms-touch-action:pinch-zoom;touch-action:none;touch-action:pinch-zoom}.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom{-ms-touch-action:none;touch-action:none}.leaflet-container{-webkit-tap-highlight-color:transparent}.leaflet-container a{-webkit-tap-highlight-color:rgba(51,181,229,.4)}.leaflet-tile{filter:inherit;visibility:hidden}.leaflet-tile-loaded{visibility:inherit}.leaflet-zoom-box{width:0;height:0;-moz-box-sizing:border-box;box-sizing:border-box;z-index:800}.leaflet-overlay-pane svg{-moz-user-select:none}.leaflet-pane{z-index:400}.leaflet-tile-pane{z-index:200}.leaflet-overlay-pane{z-index:400}.leaflet-shadow-pane{z-index:500}.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}.leaflet-popup-pane{z-index:700}.leaflet-map-pane canvas{z-index:100}.leaflet-map-pane svg{z-index:200}.leaflet-vml-shape{width:1px;height:1px}.lvml{behavior:url(#default#VML);display:inline-block;position:absolute}.leaflet-control{position:relative;z-index:800;pointer-events:visiblePainted;pointer-events:auto}.leaflet-bottom,.leaflet-top{position:absolute;z-index:1000;pointer-events:none}.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}.leaflet-control{float:left;clear:both}.leaflet-right .leaflet-control{float:right}.leaflet-top .leaflet-control{margin-top:10px}.leaflet-bottom .leaflet-control{margin-bottom:10px}.leaflet-left .leaflet-control{margin-left:10px}.leaflet-right .leaflet-control{margin-right:10px}.leaflet-fade-anim .leaflet-popup{opacity:0;-webkit-transition:opacity .2s linear;-moz-transition:opacity .2s linear;transition:opacity .2s linear}.leaflet-fade-anim .leaflet-map-pane .leaflet-popup{opacity:1}.leaflet-zoom-animated{-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0}svg.leaflet-zoom-animated{will-change:transform}.leaflet-zoom-anim .leaflet-zoom-animated{-webkit-transition:-webkit-transform .25s cubic-bezier(0,0,.25,1);-moz-transition:-moz-transform .25s cubic-bezier(0,0,.25,1);transition:transform .25s cubic-bezier(0,0,.25,1)}.leaflet-pan-anim .leaflet-tile,.leaflet-zoom-anim .leaflet-tile{-webkit-transition:none;-moz-transition:none;transition:none}.leaflet-zoom-anim .leaflet-zoom-hide{visibility:hidden}.leaflet-interactive{cursor:pointer}.leaflet-grab{cursor:-webkit-grab;cursor:-moz-grab;cursor:grab}.leaflet-crosshair,.leaflet-crosshair .leaflet-interactive{cursor:crosshair}.leaflet-control,.leaflet-popup-pane{cursor:auto}.leaflet-dragging .leaflet-grab,.leaflet-dragging .leaflet-grab .leaflet-interactive,.leaflet-dragging .leaflet-marker-draggable{cursor:move;cursor:-webkit-grabbing;cursor:-moz-grabbing;cursor:grabbing}.leaflet-image-layer,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-pane>svg path,.leaflet-tile-container{pointer-events:none}.leaflet-image-layer.leaflet-interactive,.leaflet-marker-icon.leaflet-interactive,.leaflet-pane>svg path.leaflet-interactive,svg.leaflet-image-layer.leaflet-interactive path{pointer-events:visiblePainted;pointer-events:auto}.leaflet-container{background:#ddd;outline-offset:1px}.leaflet-container a{color:#0078a8}.leaflet-zoom-box{border:2px dotted #38f;background:rgba(255,255,255,.5)}.leaflet-container{font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;font-size:12px;font-size:.75rem;line-height:1.5}.leaflet-bar{box-shadow:0 1px 5px rgba(0,0,0,.65);border-radius:4px}.leaflet-bar a{background-color:#fff;border-bottom:1px solid #ccc;width:26px;height:26px;line-height:26px;display:block;text-align:center;text-decoration:none;color:#000}.leaflet-bar a,.leaflet-control-layers-toggle{background-position:50% 50%;background-repeat:no-repeat;display:block}.leaflet-bar a:focus,.leaflet-bar a:hover{background-color:#f4f4f4}.leaflet-bar a:first-child{border-top-left-radius:4px;border-top-right-radius:4px}.leaflet-bar a:last-child{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom:none}.leaflet-bar a.leaflet-disabled{cursor:default;background-color:#f4f4f4;color:#bbb}.leaflet-touch .leaflet-bar a{width:30px;height:30px;line-height:30px}.leaflet-touch .leaflet-bar a:first-child{border-top-left-radius:2px;border-top-right-radius:2px}.leaflet-touch .leaflet-bar a:last-child{border-bottom-left-radius:2px;border-bottom-right-radius:2px}.leaflet-control-zoom-in,.leaflet-control-zoom-out{font:bold 18px 'Lucida Console',Monaco,monospace;text-indent:1px}.leaflet-touch .leaflet-control-zoom-in,.leaflet-touch .leaflet-control-zoom-out{font-size:22px}.leaflet-control-layers{box-shadow:0 1px 5px rgba(0,0,0,.4);background:#fff;border-radius:5px}.leaflet-control-layers-toggle{background-image:url(images/layers.png);width:36px;height:36px}.leaflet-retina .leaflet-control-layers-toggle{background-image:url(images/layers-2x.png);background-size:26px 26px}.leaflet-touch .leaflet-control-layers-toggle{width:44px;height:44px}.leaflet-control-layers .leaflet-control-layers-list,.leaflet-control-layers-expanded .leaflet-control-layers-toggle{display:none}.leaflet-control-layers-expanded .leaflet-control-layers-list{display:block;position:relative}.leaflet-control-layers-expanded{padding:6px 10px 6px 6px;color:#333;background:#fff}.leaflet-control-layers-scrollbar{overflow-y:scroll;overflow-x:hidden;padding-right:5px}.leaflet-control-layers-selector{margin-top:2px;position:relative;top:1px}.leaflet-control-layers label{display:block;font-size:13px;font-size:1.08333em}.leaflet-control-layers-separator{height:0;border-top:1px solid #ddd;margin:5px -10px 5px -6px}.leaflet-default-icon-path{background-image:url(images/marker-icon.png)}.leaflet-container .leaflet-control-attribution{background:#fff;background:rgba(255,255,255,.8);margin:0}.leaflet-control-attribution,.leaflet-control-scale-line{padding:0 5px;color:#333;line-height:1.4}.leaflet-control-attribution a{text-decoration:none}.leaflet-control-attribution a:focus,.leaflet-control-attribution a:hover{text-decoration:underline}.leaflet-attribution-flag{display:inline!important;vertical-align:baseline!important;width:1em;height:.6669em}.leaflet-left .leaflet-control-scale{margin-left:5px}.leaflet-bottom .leaflet-control-scale{margin-bottom:5px}.leaflet-control-scale-line{border:2px solid #777;border-top:none;line-height:1.1;padding:2px 5px 1px;white-space:nowrap;-moz-box-sizing:border-box;box-sizing:border-box;background:rgba(255,255,255,.8);text-shadow:1px 1px #fff}.leaflet-control-scale-line:not(:first-child){border-top:2px solid #777;border-bottom:none;margin-top:-2px}.leaflet-control-scale-line:not(:first-child):not(:last-child){border-bottom:2px solid #777}.leaflet-touch .leaflet-bar,.leaflet-touch .leaflet-control-attribution,.leaflet-touch .leaflet-control-layers{box-shadow:none}.leaflet-touch .leaflet-bar,.leaflet-touch .leaflet-control-layers{border:2px solid rgba(0,0,0,.2);background-clip:padding-box}.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}.leaflet-popup-content-wrapper{padding:1px;text-align:left;border-radius:12px}.leaflet-popup-content{margin:13px 24px 13px 20px;line-height:1.3;font-size:13px;font-size:1.08333em;min-height:1px}.leaflet-popup-content p{margin:17px 0;margin:1.3em 0}.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-top:-1px;margin-left:-20px;overflow:hidden;pointer-events:none}.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;pointer-events:auto;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#fff;color:#333;box-shadow:0 3px 14px rgba(0,0,0,.4)}.leaflet-container a.leaflet-popup-close-button{position:absolute;top:0;right:0;border:none;text-align:center;width:24px;height:24px;font:16px/24px Tahoma,Verdana,sans-serif;color:#757575;text-decoration:none;background:0 0}.leaflet-container a.leaflet-popup-close-button:focus,.leaflet-container a.leaflet-popup-close-button:hover{color:#585858}.leaflet-popup-scrolled{overflow:auto}.leaflet-oldie .leaflet-popup-content-wrapper{-ms-zoom:1}.leaflet-oldie .leaflet-popup-tip{width:24px;margin:0 auto}.leaflet-oldie .leaflet-control-layers,.leaflet-oldie .leaflet-control-zoom,.leaflet-oldie .leaflet-popup-content-wrapper,.leaflet-oldie .leaflet-popup-tip{border:1px solid #999}.leaflet-div-icon{background:#fff;border:1px solid #666}.leaflet-tooltip{position:absolute;padding:6px;background-color:#fff;border:1px solid #fff;border-radius:3px;color:#222;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:none;box-shadow:0 1px 3px rgba(0,0,0,.4)}.leaflet-tooltip.leaflet-interactive{cursor:pointer;pointer-events:auto}.leaflet-tooltip-bottom:before,.leaflet-tooltip-left:before,.leaflet-tooltip-right:before,.leaflet-tooltip-top:before{position:absolute;pointer-events:none;border:6px solid transparent;background:0 0;content:""}.leaflet-tooltip-bottom{margin-top:6px}.leaflet-tooltip-top{margin-top:-6px}.leaflet-tooltip-bottom:before,.leaflet-tooltip-top:before{left:50%;margin-left:-6px}.leaflet-tooltip-top:before{bottom:0;margin-bottom:-12px;border-top-color:#fff}.leaflet-tooltip-bottom:before{top:0;margin-top:-12px;margin-left:-6px;border-bottom-color:#fff}.leaflet-tooltip-left{margin-left:-6px}.leaflet-tooltip-right{margin-left:6px}.leaflet-tooltip-left:before,.leaflet-tooltip-right:before{top:50%;margin-top:-6px}.leaflet-tooltip-left:before{right:0;margin-right:-12px;border-left-color:#fff}.leaflet-tooltip-right:before{left:0;margin-left:-12px;border-right-color:#fff}@media print{.leaflet-control{-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+/* Searle Forestry palette: sage #6f7c4a, deep forest #344414.
+   UI chrome is brand-led; map feature colours stay tuned for legibility
+   over aerial imagery, which is a functional requirement, not a brand one. */
+:root{
+  --bg:#0f120c; --panel:#171c12; --panel2:#1f2618; --line:#333d28;
+  --ink:#eef1e6; --ink2:#a8b394; --ink3:#7b8768;
+  --accent:#9aad6b; --sage:#6f7c4a; --forest:#344414;
+  --boundary:#ffcc33;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  font:13px/1.5 "Segoe UI",system-ui,-apple-system,sans-serif;
+  background:var(--bg); color:var(--ink); overflow:hidden;
+}
+
+/* ---------- shell ---------- */
+#shell{display:flex;flex-direction:column;height:100vh}
+header{
+  display:flex;align-items:center;gap:20px;flex-wrap:nowrap;
+  padding:13px 20px;flex:0 0 auto;
+  background:linear-gradient(180deg,#1b2116 0%,var(--panel) 100%);
+  border-bottom:2px solid var(--sage);
+}
+#brand{height:42px;width:auto;display:block;flex:0 0 auto}
+.rule{width:1px;height:40px;background:var(--line);flex:0 0 auto}
+.titleblock{display:flex;flex-direction:column;gap:1px;min-width:0}
+header h1{
+  font:400 30px/1.05 Georgia,"Times New Roman",serif;
+  margin:0;letter-spacing:1.2px;text-transform:uppercase;color:var(--ink);
+}
+header h1 span{color:var(--accent);font-weight:400}
+.sub{color:var(--ink2);font-size:12px;letter-spacing:.2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+header h1{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.titleblock{flex:0 0 auto;max-width:34vw}
+.sub b{color:var(--accent);font-weight:600}
+.spacer{flex:1}
+@media (max-width:1100px){
+  header h1{font-size:22px}
+  #brand{height:32px}
+  .sub{font-size:11px}
+}
+#brandfoot{
+  flex:0 0 auto;border-top:2px solid var(--sage);padding:12px 14px;
+  display:flex;align-items:center;gap:11px;
+  background:linear-gradient(180deg,var(--panel) 0%,#1b2116 100%);
+}
+#brandfoot img{height:30px;opacity:1}
+#brandfoot span{font-size:10.5px;color:var(--ink2);line-height:1.4}
+#brandfoot b{color:var(--accent);font-size:11.5px;letter-spacing:.3px}
+.basebar{display:flex;gap:4px;background:var(--panel2);padding:3px;border-radius:7px}
+.basebar button{
+  background:none;border:0;color:var(--ink2);font:inherit;font-size:11.5px;
+  padding:4px 10px;border-radius:5px;cursor:pointer;
+}
+.basebar button:hover{color:var(--ink)}
+.basebar button.on{background:var(--accent);color:#14190a;font-weight:600}
+#main{display:flex;flex:1;min-height:0}
+
+/* ---------- dashboard ---------- */
+#dash{
+  width:330px;flex:0 0 330px;background:var(--panel);border-right:1px solid var(--line);
+  display:flex;flex-direction:column;min-height:0;
+}
+#dash.collapsed{width:0;flex-basis:0;overflow:hidden;border-right:0}
+.tabs{display:flex;border-bottom:1px solid var(--line);flex:0 0 auto}
+.tabs button{
+  flex:1;background:none;border:0;border-bottom:2px solid transparent;
+  color:var(--ink3);font:inherit;font-size:11px;padding:9px 2px;cursor:pointer;
+  text-transform:uppercase;letter-spacing:.4px;
+}
+.tabs button:hover{color:var(--ink2)}
+.tabs button.on{color:var(--accent);border-bottom-color:var(--accent)}
+.tabpane{display:none;padding:14px;overflow-y:auto;flex:1;min-height:0}
+.tabpane.on{display:block}
+
+.card{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:12px;margin-bottom:11px}
+.card h3{
+  margin:0 0 9px;font-size:10.5px;text-transform:uppercase;letter-spacing:.7px;
+  color:var(--ink3);font-weight:650;
+}
+.big{font-size:27px;font-weight:680;letter-spacing:-.5px;line-height:1.1}
+.big small{font-size:12px;font-weight:400;color:var(--ink3);letter-spacing:0}
+.kv{display:flex;justify-content:space-between;gap:10px;padding:4px 0;border-bottom:1px dotted #333d2866}
+.kv:last-child{border-bottom:0}
+.kv dt{color:var(--ink3);font-size:12px}
+.kv dd{margin:0;text-align:right;font-variant-numeric:tabular-nums;font-weight:550;font-size:12px}
+dl{margin:0}
+.note{color:var(--ink3);font-size:11px;line-height:1.5;margin:8px 0 0}
+.pill{display:inline-block;padding:1px 7px;border-radius:20px;font-size:10.5px;font-weight:600}
+
+/* bars */
+.bar{height:7px;border-radius:4px;background:#2a3320;overflow:hidden;margin:5px 0 2px}
+.bar i{display:block;height:100%;border-radius:4px}
+.barrow{margin-bottom:11px}
+.barrow .lbl{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink2)}
+.barrow .lbl b{color:var(--ink);font-variant-numeric:tabular-nums}
+
+table.mini{width:100%;border-collapse:collapse;font-size:11.5px;font-variant-numeric:tabular-nums}
+table.mini th{text-align:right;color:var(--ink3);font-weight:600;padding:5px 4px;border-bottom:1px solid var(--line);font-size:10.5px}
+table.mini th:first-child{text-align:left}
+table.mini td{text-align:right;padding:5px 4px;border-bottom:1px dotted #333d2866}
+table.mini td:first-child{text-align:left}
+table.mini tr:last-child td{border-bottom:0}
+table.mini tfoot td{font-weight:700;border-top:1px solid var(--line);border-bottom:0;padding-top:7px}
+
+/* data room */
+.doc{display:flex;gap:9px;align-items:flex-start;padding:6px 0;border-bottom:1px dotted #333d2866}
+.doc:last-of-type{border-bottom:0}
+.ext{
+  flex:0 0 38px;text-align:center;font-size:8.5px;font-weight:700;letter-spacing:.4px;
+  padding:3px 0;border-radius:4px;border:1px solid;font-style:normal;margin-top:1px;
+}
+.docmeta{min-width:0;flex:1}
+.docname{font-size:11.5px;color:var(--ink);line-height:1.35;word-break:break-word}
+.docname a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.docname a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.docsub{font-size:10.5px;color:var(--ink3);line-height:1.4}
+.docsub a{color:var(--ink2)}
+b.int{
+  font-size:8.5px;text-transform:uppercase;letter-spacing:.5px;font-weight:700;
+  color:#ffa8a8;background:#e0313122;border:1px solid #e0313155;
+  padding:0 4px;border-radius:3px;vertical-align:1px;
+}
+ul.notes{margin:0;padding-left:16px;color:var(--ink2);font-size:11.5px;line-height:1.6}
+ul.notes li{margin-bottom:7px}
+.warn{border-left:2px solid var(--accent);padding-left:9px;color:var(--ink2);font-size:11.5px;line-height:1.55;margin:9px 0}
+
+/* ---------- map ---------- */
+#mapwrap{flex:1;position:relative;min-width:0}
+#map{position:absolute;inset:0;background:#0b0e08}
+.leaflet-container{font:inherit;background:#0b0e08}
+
+/* layer control */
+#layers{
+  position:absolute;top:10px;right:10px;z-index:900;width:272px;
+  background:rgba(23,28,18,.95);border:1px solid var(--line);border-radius:9px;
+  backdrop-filter:blur(8px);max-height:calc(100% - 20px);display:flex;flex-direction:column;
+}
+#layers header{
+  background:none;border:0;border-bottom:1px solid var(--line);padding:8px 11px;
+  font-size:10.5px;text-transform:uppercase;letter-spacing:.7px;color:var(--ink3);
+  font-weight:650;cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+}
+#layerbody{overflow-y:auto;padding:7px 6px 9px}
+#layers.min #layerbody{display:none}
+.grp{margin:0 0 6px}
+.grp>p{margin:8px 5px 3px}
+.grp>p label{
+  display:flex;align-items:center;gap:6px;cursor:pointer;
+  font-size:9.5px;text-transform:uppercase;letter-spacing:.6px;
+  color:var(--ink3);font-weight:650;
+}
+.lyr{display:flex;align-items:center;gap:7px;padding:3px 6px;border-radius:5px;cursor:pointer}
+.lyr:hover{background:#ffffff0a}
+.lyr input[type=checkbox]{margin:0;accent-color:var(--accent);cursor:pointer;flex:0 0 auto}
+.lyr .sw{width:15px;height:11px;border-radius:3px;flex:0 0 auto;border:1px solid #0006}
+.lyr span{font-size:11.5px;color:var(--ink2);flex:1;line-height:1.3;min-width:0}
+.lyr input[type=checkbox]:checked ~ span{color:var(--ink)}
+.lyr.master{
+  border-bottom:1px solid var(--line);margin:0 0 4px;padding-bottom:7px;border-radius:0;
+}
+.lyr.master span{font-size:10.5px;text-transform:uppercase;letter-spacing:.6px;
+  color:var(--ink2);font-weight:650}
+/* per-layer opacity: thin, unobtrusive, always reachable */
+input.lop{
+  flex:0 0 46px;width:46px;height:3px;margin:0;padding:0;cursor:pointer;
+  accent-color:var(--sage);opacity:.5;transition:opacity .12s;
+}
+.lyr:hover input.lop{opacity:1}
+input[type=checkbox]:checked ~ input.lop{opacity:.85}
+.opa{display:flex;align-items:center;gap:7px;padding:8px 6px 2px;border-top:1px solid var(--line);margin-top:8px}
+.opa label{font-size:10.5px;color:var(--ink3);text-transform:uppercase;letter-spacing:.5px}
+.opa input{flex:1;accent-color:var(--accent)}
+#basesel{
+  background:var(--panel2);color:var(--ink);border:1px solid var(--line);
+  border-radius:6px;padding:4px 6px;font:inherit;font-size:11px;cursor:pointer;
+  min-width:0;max-width:150px;
+}
+#basesel:focus{outline:1px solid var(--accent)}
+#basesel optgroup{background:var(--panel);color:var(--ink3);font-size:11px}
+#basesel option{background:var(--panel);color:var(--ink)}
+
+/* readouts */
+#coords{
+  position:absolute;left:10px;bottom:10px;z-index:900;
+  background:rgba(23,28,18,.92);border:1px solid var(--line);border-radius:7px;
+  padding:5px 10px;font-size:11px;color:var(--ink2);font-variant-numeric:tabular-nums;
+}
+#coords b{color:var(--ink);font-weight:600}
+.leaflet-popup-content-wrapper{background:var(--panel);color:var(--ink);border-radius:9px;border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--panel);border:1px solid var(--line)}
+.leaflet-popup-content{margin:11px 13px;font-size:12px;min-width:190px}
+.leaflet-popup-content h4{margin:0 0 7px;font-size:12.5px;color:var(--accent)}
+.leaflet-popup-content .photolink img{
+  display:block;width:100%;max-width:260px;border-radius:6px;margin:0 0 8px;
+  border:1px solid var(--line);
+}
+.leaflet-popup-content a.btn,.card a.btn{
+  display:inline-block;margin-top:8px;padding:5px 11px;border-radius:6px;
+  background:var(--sage);color:#fff;text-decoration:none;font-size:11.5px;font-weight:600;
+}
+.leaflet-popup-content a.btn:hover,.card a.btn:hover{background:var(--accent);color:#14190a}
+.leaflet-popup-content .kv dt{font-size:11.5px}
+.leaflet-popup-content .kv dd{font-size:11.5px}
+a.leaflet-popup-close-button{color:var(--ink3)!important}
+.leaflet-bar a{background:var(--panel);color:var(--ink);border-color:var(--line)}
+.leaflet-bar a:hover{background:var(--panel2);color:var(--accent)}
+.leaflet-control-attribution{background:rgba(23,28,18,.85)!important;color:var(--ink3)!important;font-size:10px}
+.leaflet-control-attribution a{color:var(--ink2)!important}
+.leaflet-control-scale-line{background:rgba(23,28,18,.85);border-color:var(--line);color:var(--ink2)}
+
+.blk-lbl{
+  background:none;border:0;box-shadow:none;font-size:12px;font-weight:700;
+  letter-spacing:.6px;text-transform:uppercase;white-space:nowrap;
+  text-shadow:0 0 4px #000,0 0 4px #000,0 0 8px #000;pointer-events:none;
+}
+.blkbtn{
+  background:var(--panel2);border:1px solid var(--line);color:var(--ink2);
+  border-radius:6px;padding:3px 7px;font:inherit;font-size:10.5px;cursor:pointer;
+  display:inline-flex;align-items:center;gap:5px;white-space:nowrap;
+}
+.blkgroup{display:flex;flex-wrap:nowrap;gap:4px;flex:0 1 auto;min-width:0;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
+.blkbtn:hover{color:var(--ink);border-color:var(--sage)}
+.blkbtn i{width:10px;height:10px;border-radius:2px;display:inline-block}
+.blkrow{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.sched td.bar{padding:0 4px}
+.ctour-lbl{
+  background:none;border:0;box-shadow:none;color:#e0c9a6;font-size:9.5px;
+  font-weight:600;text-shadow:0 0 3px #000,0 0 3px #000;
+}
+.plotmk{border-radius:50%;border:1.5px solid #fff;box-shadow:0 0 0 1px #0008}
+.owner-lbl{background:none;border:0;box-shadow:none;pointer-events:none}
+.owner-lbl div{transform:translate(-50%,-50%);white-space:nowrap;font-size:10px;font-weight:600;
+  color:#f1e6cf;text-shadow:0 0 3px #000,0 0 3px #000,0 0 6px #000;letter-spacing:.2px}
+#toggleDash{
+  background:var(--panel2);border:1px solid var(--line);color:var(--ink2);
+  border-radius:6px;padding:4px 9px;font:inherit;font-size:11.5px;cursor:pointer;
+}
+#toggleDash:hover{color:var(--accent)}
+/* contact agent: header on desktop, floating pill on phones */
+.contact{display:flex;gap:6px;align-items:center;flex:0 0 auto}
+.contact a{
+  display:inline-flex;align-items:center;gap:6px;text-decoration:none;white-space:nowrap;
+  font-size:11.5px;font-weight:600;border-radius:6px;padding:5px 11px;border:1px solid var(--line);
+}
+.contact a.mail{background:var(--accent);color:#14190a;border-color:var(--accent)}
+.contact a.mail:hover{background:#b3c57f}
+.contact a.tel{background:var(--panel2);color:var(--ink);font-variant-numeric:tabular-nums}
+.contact a.tel:hover{border-color:var(--sage);color:var(--accent)}
+#contactfab{display:none}
+#sheethandle{display:none}
+/* ---------- small screens ----------
+   Below 700px the three panels stack instead of sitting side by side: the
+   map takes the whole viewport, the dashboard becomes a bottom sheet the
+   menu button pulls up, and the overlay panel collapses to a pill. Nothing
+   is dropped - it is the same content, reached one panel at a time. */
+@media (max-width:900px) and (min-width:701px){
+  #dash{width:290px;flex-basis:290px}
+  #layers{width:230px}
+}
+@media (max-width:700px){
+  header{padding:8px 10px;gap:10px;flex-wrap:nowrap}
+  #brand{height:26px}
+  .rule,.sub{display:none}
+  .titleblock{flex:1;min-width:0}
+  header h1{font-size:15px;letter-spacing:.6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .basebar{padding:2px}
+  #toggleDash{flex:0 0 auto;padding:5px 9px}
+  .spacer{display:none}
+  #layers:not(.min){z-index:1001}
+  .lyr{padding:5px 6px}
+  .lyr span{font-size:12px}
+  input.lop{flex:0 0 36px;width:36px;opacity:.7}
+  .basebar.inpanel{margin:4px 5px 10px;display:block}
+  .basebar.inpanel #basesel{width:100%;min-width:0;font-size:12px}
+  .basebar.inpanel::before{
+    content:"Base layer";display:block;font-size:9.5px;text-transform:uppercase;
+    letter-spacing:.6px;color:var(--ink3);font-weight:650;margin:4px 0 5px;
+  }
+  #main{position:relative}
+  #dash{
+    position:absolute;left:0;right:0;bottom:0;top:auto;width:auto;flex:none;height:64%;
+    z-index:1000;border-right:0;border-top:2px solid var(--sage);border-radius:14px 14px 0 0;
+    box-shadow:0 -8px 24px #0009;transition:transform .22s ease;overflow:hidden;
+  }
+  #dash.collapsed{width:auto;flex-basis:auto;transform:translateY(100%)}
+  #sheethandle{
+    display:block;height:18px;flex:0 0 auto;cursor:pointer;position:relative;
+  }
+  #sheethandle::before{
+    content:"";position:absolute;left:50%;top:7px;width:40px;height:4px;margin-left:-20px;
+    border-radius:2px;background:var(--ink3);
+  }
+  .tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs button{flex:0 0 auto;padding:10px 13px;font-size:11.5px}
+  .tabpane{padding:10px}
+  #brandfoot{padding:8px 12px}
+  #brandfoot img{height:22px}
+  #layers{width:auto;left:10px;right:10px;max-height:56%}
+  #layers.min{left:auto;width:auto}
+  #layers header{padding:9px 12px;font-size:11px}
+  #coords{display:none}
+  .leaflet-popup-content{min-width:160px;max-width:78vw}
+  #contacthdr{display:none}
+  #contactfab{
+    display:flex;position:absolute;left:10px;bottom:34px;z-index:900;gap:5px;
+    background:rgba(23,28,18,.95);border:1px solid var(--line);border-radius:9px;
+    padding:5px;backdrop-filter:blur(8px);
+  }
+  #contactfab a{padding:8px 11px;font-size:12px}
+}
+</style>
+<link rel="icon" href="data:image/png;base64,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">
+<meta name="description" content="455 West Coast Road, 455 West Coast Road, Te Kōpuru - 179.6 ha, freehold. Interactive map: boundary, forest, access, contours and NES-CF layers. Searle Forestry.">
+<meta property="og:title" content="455 West Coast Road - Interactive Map">
+<meta property="og:description" content="455 West Coast Road, 455 West Coast Road, Te Kōpuru - 179.6 ha, freehold. Interactive map: boundary, forest, access, contours and NES-CF layers. Searle Forestry.">
+<meta property="og:type" content="website">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<div id="shell">
+  <header>
+    <button id="toggleDash" title="Show / hide dashboard">&#9776;</button>
+    <img id="brand" src="data:image/png;base64,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" alt="Searle Forestry">
+    <i class="rule"></i>
+    <div class="titleblock">
+      <h1 id="proptitle"></h1>
+      <div class="sub" id="hdrsub"></div>
+    </div>
+    <div class="spacer"></div>
+    <div class="contact" id="contacthdr"></div>
+    <div class="basebar" id="basebar"></div>
+  </header>
+
+  <div id="main">
+    <aside id="dash">
+      <div id="sheethandle" title="Hide"></div>
+      <div class="tabs" id="tabs"></div>
+      <div class="tabpane on" id="pane-overview"></div>
+      <div class="tabpane" id="pane-crop"></div>
+      <div class="tabpane" id="pane-rates"></div>
+      <div class="tabpane" id="pane-ets"></div>
+      <div class="tabpane" id="pane-terrain"></div>
+      <div class="tabpane" id="pane-docs"></div>
+      <div class="tabpane" id="pane-data"></div>
+      <div id="brandfoot">
+        <img src="data:image/png;base64,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" alt="">
+        <span>Prepared by <b>Searle Forestry</b><span id="footcontact"></span><br>Licensed under the Real Estate Agents Act 2008</span>
+      </div>
+    </aside>
+
+    <div id="mapwrap">
+      <div id="map"></div>
+      <div id="layers">
+        <header id="lyrhdr"><span>Overlays</span><span id="lyrcar">&#9662;</span></header>
+        <div id="layerbody"></div>
+      </div>
+      <div id="coords"></div>
+      <div class="contact" id="contactfab"></div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/layers.js"></script>
+<script>
+window.PROPMAP_STATS={"property":{"name":"455 West Coast Road","address":"455 West Coast Road, Te K\u014dpuru","title_reference":"1276609","legal_description":"Lot 8 DP 625405","land_district":"North Auckland","tenure":"Freehold","tenure_short":"Freehold","zoning":"Rural Zone \u2013 Kaipara District Plan (Cotality category: Rural Industry Zone A; confirm via LIM)","territorial_authority":"Kaipara District","regional_council":"Northland Regional Council","title_area_ha_linz":179.24,"title_area_ha_im":179.6,"parcel_count":1,"centroid":[-36.045937,173.88347],"bbox":[173.849365,-36.073946,173.913659,-36.014869]},"blocks":[],"rates":{"total_annual":null,"source":"Rating valuation 1 Sep 2023 (Cotality / agency agreement). Annual rates not yet supplied.","district_council":"Kaipara District","regional_council":"Northland Regional Council","capital_value":4750000.0,"land_value":3700000.0,"improvements_value":1050000.0,"rates_per_ha_title":null,"rates_per_ha_stocked":null,"rates_per_ha_registered":null,"rates_pct_of_cv":null,"cv_per_ha":26501.0,"lv_per_ha":20643.0,"rates_per_nzu":null,"split_available":false,"note":""},"ets":{"caas":[],"registered_ha":0,"nzu_transferring":0,"accounting":null,"activity":null,"participant":null,"constitution_date":null,"fma":false,"status":"Dairy farm \u2013 no ETS registration. Not applicable to this listing.","mapped_eligible_ha":0.0,"mapped_ineligible_ha":0.0,"ineligible_reason":""},"crop":null,"narrative":{"tenure_short":"freehold","overview_note":"Established split-calving dairy farm: 175 ha effective platform, 507-cow peak herd, 306,529 kgMS in 2025/26 (Fonterra supply 18108). 33-aside herringbone dairy, feed pad, 61 main paddocks on limestone races, three bores. Two dwellings. The runoff used by the operation is a separate leased block and is not part of this title.","cover_note":"Vegetation areas are LINZ Topo50 polygons clipped to the title \u2013 indicative only. The dairy platform is stated by the vendor as 175 ha effective of 179.6 ha total.","rates_note":"Rating valuation as at 1 September 2023 (Kaipara District Council). Annual rates to be confirmed."},"terrain":{"min_elevation_m":20,"max_elevation_m":60,"contour_interval_m":20},"access":{"track_km_on_property":3.34,"formed_road_km_on_property":0.76,"legal_road_parcels_nearby":67,"legal_road_ha_on_property":0.0,"note":"Sealed road frontage to West Coast Road, approximately 14 km south-west of Dargaville. Three LINZ addresses fall inside the title (425, 455 and 553 West Coast Road)."},"cover":{"native_ha_on_property":0.0,"scrub_ha_on_property":0.0,"exotic_ha_on_property":0.0,"net_stocked_pine_ha":0.0,"river_km_on_property":0.3,"source":"LINZ Topo50 vegetation polygons - indicative only"},"environment":{"esc":[{"key":"Low","ha":179.2,"pct":100.0},{"key":"Moderate","ha":0.0,"pct":0.0}],"esc_high_ha":0,"esc_source":"MPI Erosion Susceptibility Classification (March 2018)","luc":[{"key":"3","ha":7.6,"pct":4.2},{"key":"4","ha":171.6,"pct":95.7},{"key":"6","ha":0.0,"pct":0.0}],"luc_subclasses":[{"key":"4e","ha":100.7,"pct":56.2},{"key":"4s","ha":70.9,"pct":39.6},{"key":"3w","ha":7.6,"pct":4.2},{"key":"6e","ha":0.0,"pct":0.0}],"luc_source":"LRIS NZLRI Land Use Capability 2021 (layer 48076)","luc_units":[{"key":"Undulating to strongly rolling slopes on semi-consolidated sands and gravels below 200 m asl with sandy low fertility, poorly structured Brown and Podzol (podzolised yellow-brown sands) soils  in mild moderate (1000-1400 mm) rainfall areas subject to periods of moisture deficit, with a potential for severe rill, wind and sheet erosion when cultivated.","ha":100.7},{"key":"Flat to undulating coastal terraces, sand plains and beaches below 200 m asl with poorly structured low fertility sandy Brown and Podzol (podzolised yellow brown earths) soils, in mild moderate (1000-1400 mm) rainfall areas with a potential for moderate wind and gully erosion when cultivated.","ha":70.9},{"key":"Flat to undulating alluvial floodplains, low terraces, interdune and estuarine flats below 100 m asl  with poorly drained Organic (organic) and/or peaty soils in mild moderate (1200-1800 mm) rainfall areas.  The soils have low to medium fertility and a moderate wetness limitation.","ha":7.6},{"key":"Undulating to moderately steep sand plains and dissected terraces below 200m asl with low fertility, weakly to moderately leached Sandy Brown, Ultic and Podzol (podzolised yellow-brown sand, podzolised yellow brown earths) soils in moderate to high (1200-2000mm) rainfall areas with a potential for moderate wind, sheet and gully erosion.","ha":0.0}],"fish_spawning_reaches":0,"fish_species":[]},"neighbours":{"doc_parcels_adjoining":1,"doc_names":["West Coast North Island Marine Mammal Sanctuary"]},"data_notes":["Boundary: LINZ NZ Primary Parcels (layer 50772) matched on title. Roads, contours, hydrology and vegetation: LINZ Topo50 layers, fetched live via WFS.","Native and scrub areas are LINZ Topo50 vegetation polygons clipped to the title \u2014 indicative, not a survey.","Erosion susceptibility and Land Use Capability: MPI Erosion Susceptibility Classification (March 2018) via the MPI geospatial service.","Rates source: Rating valuation 1 Sep 2023 (Cotality / agency agreement). Annual rates not yet supplied.. District/regional split not on file \u2014 confirm from the rates notice before quoting a split.","AREA: LINZ parcel geometry gives 179.24 ha; the IM and Cotality state 179.6 ha for Lot 8 DP 625405 (title issued 2 July 2026 following subdivision of the former 184.55 ha holding).","ADDRESSES: LINZ places 425, 455 and 553 West Coast Road inside the title. 553 is the LM Farms mailing address used on the soil tests \u2013 likely the second dwelling; confirm with vendor.","RUNOFF: production and feed figures quoted in the IM include a leased runoff block that does not form part of this title.","CLIMATE: rainfall and sunshine surfaces are 30-year (1981\u20132010) means computed from the Ministry for the Environment / NIWA annual grids (Virtual Climate Station Network, ~5 km cells), data.mfe.govt.nz, CC BY 3.0 NZ. Farm values are the grid cell over the property, not on-farm measurements.","Imagery on this page is served as flat images captured from LINZ, so the map needs no LINZ account to view. Vector overlays are LINZ data as at 23 September 2026."]};
+window.PROPMAP_PHOTOS={"type":"FeatureCollection","features":[]};
+window.PROPMAP_DATAROOM={"generated":"23 September 2026","categories":["Information Memorandum","Farm records","ETS & carbon","Forest inventory","Mapping & boundaries","Access & statutory","Title & company","Agency & commercial"],"documents":[{"name":"Dargaville IM Draft - change list for Anna.docx","ext":"DOCX","bytes":42827,"size":"41.8 KB","modified":"16 Sep 2026","category":"Information Memorandum","visibility":"buyer","note":"","href":"dataroom/information-memorandum/Dargaville%20IM%20Draft%20-%20change%20list%20for%20Anna.docx"},{"name":"LM Farms IM Draft.pdf","ext":"PDF","bytes":9052098,"size":"8.6 MB","modified":"22 Sep 2026","category":"Information Memorandum","visibility":"buyer","note":"","href":"dataroom/information-memorandum/LM%20Farms%20IM%20Draft.pdf"},{"name":"doc_0005.pdf","ext":"PDF","bytes":163365,"size":"159.5 KB","modified":"11 Sep 2026","category":"Farm records","visibility":"buyer","note":"LIC in-calf rates (autumn/spring 2025) and LM Farms machinery list","href":"dataroom/farm-records/doc_0005.pdf"},{"name":"Farm Insights Report_2023-2024_18108.pdf","ext":"PDF","bytes":1664656,"size":"1.6 MB","modified":"11 Sep 2026","category":"Farm records","visibility":"buyer","note":"Fonterra Farm Insights Report (supply 18108)","href":"dataroom/farm-records/Farm%20Insights%20Report_2023-2024_18108.pdf"},{"name":"Farm Insights Report_2024-2025_18108 (1).pdf","ext":"PDF","bytes":1839770,"size":"1.8 MB","modified":"11 Sep 2026","category":"Farm records","visibility":"buyer","note":"Fonterra Farm Insights Report (supply 18108)","href":"dataroom/farm-records/Farm%20Insights%20Report_2024-2025_18108%20%281%29.pdf"},{"name":"Farm Insights Report_2025-2026_18108.pdf","ext":"PDF","bytes":1503628,"size":"1.4 MB","modified":"11 Sep 2026","category":"Farm records","visibility":"buyer","note":"Fonterra Farm Insights Report (supply 18108)","href":"dataroom/farm-records/Farm%20Insights%20Report_2025-2026_18108.pdf"},{"name":"Herd Test Results Autumn.pdf","ext":"PDF","bytes":521190,"size":"509.0 KB","modified":"11 Sep 2026","category":"Farm records","visibility":"buyer","note":"LIC herd test, 11 Aug 2026","href":"dataroom/farm-records/Herd%20Test%20Results%20Autumn.pdf"},{"name":"Herd Test Spring.pdf","ext":"PDF","bytes":478813,"size":"467.6 KB","modified":"11 Sep 2026","category":"Farm records","visibility":"buyer","note":"LIC herd test, 11 Aug 2026","href":"dataroom/farm-records/Herd%20Test%20Spring.pdf"},{"name":"Soil Test.pdf","ext":"PDF","bytes":868310,"size":"848.0 KB","modified":"11 Sep 2026","category":"Farm records","visibility":"buyer","note":"Hill Labs soil tests Oct 2024 + Ballance/Ravensdown fertiliser history","href":"dataroom/farm-records/Soil%20Test.pdf"},{"name":"Farm Map.pdf","ext":"PDF","bytes":104869,"size":"102.4 KB","modified":"16 Sep 2026","category":"Mapping & boundaries","visibility":"buyer","note":"","href":"dataroom/mapping-boundaries/Farm%20Map.pdf"},{"name":"Lease Farm Map.pdf","ext":"PDF","bytes":363347,"size":"354.8 KB","modified":"16 Sep 2026","category":"Mapping & boundaries","visibility":"buyer","note":"","href":"dataroom/mapping-boundaries/Lease%20Farm%20Map.pdf"},{"name":"Effluent and Bore Consents.pdf","ext":"PDF","bytes":707542,"size":"691.0 KB","modified":"23 Sep 2026","category":"Access & statutory","visibility":"buyer","note":"","href":"dataroom/access-statutory/Effluent%20and%20Bore%20Consents.pdf"},{"name":"25 Autumn born Hiefers.pdf","ext":"PDF","bytes":152235,"size":"148.7 KB","modified":"16 Sep 2026","category":"Title & company","visibility":"buyer","note":"","href":"dataroom/title-company/25%20Autumn%20born%20Hiefers.pdf"},{"name":"25 Born Spring H.pdf","ext":"PDF","bytes":427887,"size":"417.9 KB","modified":"16 Sep 2026","category":"Title & company","visibility":"buyer","note":"","href":"dataroom/title-company/25%20Born%20Spring%20H.pdf"},{"name":"Autumn born Hiefers.pdf","ext":"PDF","bytes":123101,"size":"120.2 KB","modified":"16 Sep 2026","category":"Title & company","visibility":"buyer","note":"","href":"dataroom/title-company/Autumn%20born%20Hiefers.pdf"},{"name":"Autumn Calving Cows.pdf","ext":"PDF","bytes":662891,"size":"647.4 KB","modified":"16 Sep 2026","category":"Title & company","visibility":"buyer","note":"","href":"dataroom/title-company/Autumn%20Calving%20Cows.pdf"},{"name":"FEP 18108 - reviewed Sept 2026.pdf","ext":"PDF","bytes":7539199,"size":"7.2 MB","modified":"23 Sep 2026","category":"Title & company","visibility":"buyer","note":"","href":"dataroom/title-company/FEP%2018108%20-%20reviewed%20Sept%202026.pdf"},{"name":"Fonterra_Verification_Assessment_26~18108~2026-06-29~1069060.pdf","ext":"PDF","bytes":71376,"size":"69.7 KB","modified":"23 Sep 2026","category":"Title & company","visibility":"buyer","note":"","href":"dataroom/title-company/Fonterra_Verification_Assessment_26~18108~2026-06-29~1069060.pdf"},{"name":"Incalf Rates LIC.pdf","ext":"PDF","bytes":163365,"size":"159.5 KB","modified":"03 Sep 2026","category":"Title & company","visibility":"buyer","note":"","href":"dataroom/title-company/Incalf%20Rates%20LIC.pdf"},{"name":"Lease Renewal.pdf","ext":"PDF","bytes":283660,"size":"277.0 KB","modified":"16 Sep 2026","category":"Title & company","visibility":"buyer","note":"","href":"dataroom/title-company/Lease%20Renewal.pdf"},{"name":"Machinery List.pdf","ext":"PDF","bytes":63353,"size":"61.9 KB","modified":"16 Sep 2026","category":"Title & company","visibility":"buyer","note":"","href":"dataroom/title-company/Machinery%20List.pdf"},{"name":"Milking Machine Test.pdf","ext":"PDF","bytes":909526,"size":"888.2 KB","modified":"23 Sep 2026","category":"Title & company","visibility":"buyer","note":"","href":"dataroom/title-company/Milking%20Machine%20Test.pdf"},{"name":"Original Lease.pdf","ext":"PDF","bytes":895382,"size":"874.4 KB","modified":"16 Sep 2026","category":"Title & company","visibility":"buyer","note":"","href":"dataroom/title-company/Original%20Lease.pdf"},{"name":"Spring Born Hiefers.pdf","ext":"PDF","bytes":118465,"size":"115.7 KB","modified":"16 Sep 2026","category":"Title & company","visibility":"buyer","note":"","href":"dataroom/title-company/Spring%20Born%20Hiefers.pdf"},{"name":"Spring Calving Cows.pdf","ext":"PDF","bytes":418386,"size":"408.6 KB","modified":"16 Sep 2026","category":"Title & company","visibility":"buyer","note":"","href":"dataroom/title-company/Spring%20Calving%20Cows.pdf"}],"contact":[{"name":"Warwick Searle","role":"National Director Agribusiness","phone":"+64 21 362 778","email":"warwick@searleagri.co.nz"},{"name":"Clint Brereton","role":"Sales Specialist \u2013 Farms & Lifestyle, Colliers","phone":"+64 27 897 1161","email":"Clint.Brereton@colliers.com"}],"gated":true,"signin_url":"https://maps.forestrysales.co.nz/dargaville-dairy/dataroom/"};
+window.PROPMAP_STATIC_AERIAL=[{"name": "Aerial \u2014 current", "frame": "wide", "url": "assets/aerial___current_wide.jpg", "south": -36.07574221562701, "west": 173.84765625, "north": -36.01356058518154, "east": 173.9190673828125}, {"name": "Northland 0.3m Rural Aerial Photos (2023-2025)", "frame": "close", "url": "assets/northland_0_3m_rural_aerial_photos__2023-2025__close.jpg", "south": -36.06242171510889, "west": 173.858642578125, "north": -36.02688935430189, "east": 173.902587890625}, {"name": "Northland 0.4m Rural Aerial Photos (2014-2016)", "frame": "close", "url": "assets/northland_0_4m_rural_aerial_photos__2014-2016__close.jpg", "south": -36.06686213257887, "west": 173.858642578125, "north": -36.02244668175846, "east": 173.902587890625}];
+window.PROPMAP_BASEMAPS_KEY="";
+window.PROPMAP_API_KEY="";window.PROPMAP_ESRI_KEY="";
+</script>
+<script>
+/* ===== data injected at build time ===== */
+const LAYERS = window.PROPMAP_LAYERS;
+const STATS  = window.PROPMAP_STATS;
+const PHOTOS = window.PROPMAP_PHOTOS;
+const SURVEYS = window.PROPMAP_SURVEYS || [];
+const LINZ_BASEMAPS_KEY = window.PROPMAP_BASEMAPS_KEY;
+const LINZ_API_KEY      = window.PROPMAP_API_KEY;
+const ESRI_KEY          = window.PROPMAP_ESRI_KEY || '';
+
+/* ===== helpers ===== */
+const fmt = (n, d = 0) => n == null ? '—' :
+  Number(n).toLocaleString('en-NZ', {minimumFractionDigits: d, maximumFractionDigits: d});
+const money = (n, d = 2) => n == null ? '—' : '$' + fmt(n, d);
+const el = (h) => { const t = document.createElement('template'); t.innerHTML = h.trim(); return t.content.firstElementChild; };
+const kv = (k, v) => `<div class="kv"><dt>${k}</dt><dd>${v}</dd></div>`;
+
+const P = STATS.property, R = STATS.rates, E = STATS.ets, T = STATS.terrain,
+      A = STATS.access, C = STATS.cover, NB = STATS.neighbours,
+      EV = STATS.environment, BL = STATS.blocks || [], CROP = STATS.crop,
+      NARR = STATS.narrative || {};
+
+/* Blocks: each gets its own boundary colour and a label. A single-block
+   property keeps the traditional yellow. Palette chosen for legibility over
+   green imagery, not for brand. */
+const BLOCK_PALETTE = ['#ffcc33', '#ff7ad9', '#4dd4ff', '#b5ff5c', '#ffa94d'];
+const BLOCK_COLOUR = {};
+BL.forEach((b, i) => { BLOCK_COLOUR[b.name] = b.colour || BLOCK_PALETTE[i % BLOCK_PALETTE.length]; });
+const blockColour = name => BLOCK_COLOUR[name] || '#ffcc33';
+
+/* Owner names, internal build only (window.PROPMAP_OWNERS is never written
+   by build_share.py / build_web.py). Keyed by title; a parcel may carry
+   several titles. */
+const OWNERS = window.PROPMAP_OWNERS && Object.keys(window.PROPMAP_OWNERS).length ? window.PROPMAP_OWNERS : null;
+const ownerOf = titles => {
+  if (!OWNERS || !titles) return '';
+  const names = [...new Set(String(titles).split(',').map(t => (OWNERS[t.trim()] || {}).owners).filter(Boolean))];
+  return names.join(' / ');
+};
+
+/* ===== map ===== */
+const map = L.map('map', {zoomControl: true, preferCanvas: true, maxZoom: 19});
+
+/* Shareable build: the imagery is baked into the file as flat JPEGs, so the
+   page makes no keyed request to LINZ. The internal build streams live tiles
+   instead and offers the historic surveys configured in property.json. */
+const STATIC_AERIAL = window.PROPMAP_STATIC_AERIAL || null;
+
+const LDS = id =>
+  `https://data.linz.govt.nz/services;key=${LINZ_API_KEY}/tiles/v4/layer=${id}/EPSG:3857/{z}/{x}/{y}.png`;
+const linzAttr = 'Imagery &copy; <a href="https://data.linz.govt.nz/">LINZ</a>';
+
+/* Esri World Imagery (Vantor Vivid, 30-50 cm over rural NZ). With an
+   ArcGIS Location Platform key the keyed raster behind Esri's arcgis/imagery
+   basemap style is used and the imagery is licensed for prints and
+   screenshots with attribution; without one the legacy unkeyed service is
+   used for context only. Tile order is {z}/{y}/{x}, unlike LINZ. */
+const esriAttr = 'Imagery: Esri, Vantor, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community';
+const esriUrl = () => ESRI_KEY
+  ? `https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}?token=${ESRI_KEY}`
+  : 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+const esriOpts = {};
+
+/* Historic surveys come from property.json (imagery_surveys), which is only
+   ever filled from `stitch_imagery.py --probe` - so every entry here has
+   been verified to actually serve tiles over the block. */
+const BASES = STATIC_AERIAL ? [] : [
+  ['Imagery', [
+    ['Aerial — current', L.tileLayer(
+      `https://basemaps.linz.govt.nz/v1/tiles/aerial/EPSG:3857/{z}/{x}/{y}.webp?api=${LINZ_BASEMAPS_KEY}`,
+      {maxZoom: 19, maxNativeZoom: 19, attribution: linzAttr + ' Basemaps'})],
+    ['Esri World Imagery', L.tileLayer(esriUrl(),
+      Object.assign({maxZoom: 19, maxNativeZoom: 19, attribution: esriAttr}, esriOpts))],
+  ].concat(SURVEYS.filter(s => s.source !== 'esri').map(s => [s.label || s.name,
+      L.tileLayer(LDS(s.lds_layer_id), {maxZoom: 19, maxNativeZoom: s.max_native_zoom || 18,
+                                        attribution: linzAttr})]))],
+  ['Maps', [
+    ['Topo 50', L.tileLayer(LDS(50767), {maxZoom: 18, maxNativeZoom: 16, attribution: 'Topo50 &copy; LINZ'})],
+    ['Terrain relief', L.tileLayer(LDS(50765), {maxZoom: 18, maxNativeZoom: 15, attribution: 'Relief &copy; LINZ'})],
+    ['OpenStreetMap', L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+      {maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'})],
+  ]],
+];
+/* Baked imagery: several frames can share one name (a wide overview plus a
+   detailed frame per block) and are shown as a single base layer. They sit
+   in the tile pane so they can never paint over the vector overlays. */
+/* Keyless context under the baked frames, so the hosted page still shows the
+   rest of New Zealand when a viewer zooms out. Esri World Imagery and OSM
+   both allow public embedding with attribution. Inside the claude.ai Artifact
+   sandbox external tiles are blocked and these simply stay blank. */
+const esriImagery = () => L.tileLayer(esriUrl(),
+  Object.assign({maxZoom: 19, maxNativeZoom: 18, pane: 'tilePane',
+                 attribution: 'Context ' + esriAttr.replace('Imagery:', 'imagery:')}, esriOpts));
+const osmStreets = () => L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {maxZoom: 19, pane: 'tilePane', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'});
+const SHARE_BASES = STATIC_AERIAL ? (() => {
+  const byName = new Map();
+  STATIC_AERIAL.forEach(a => { if (!byName.has(a.name)) byName.set(a.name, []); byName.get(a.name).push(a); });
+  const items = [...byName.entries()].map(([n, frames], i) => [n, L.layerGroup(
+    (i === 0 ? [esriImagery()] : []).concat(
+    frames.map(a => L.imageOverlay(a.url, [[a.south, a.west], [a.north, a.east]],
+      {attribution: linzAttr, pane: 'tilePane'}))))]);
+  return [['Imagery', items], ['Maps', [
+    ['OpenStreetMap', osmStreets()],
+    ['Plain background', L.layerGroup()],
+  ]]];
+})() : null;
+
+const USE = SHARE_BASES || BASES;
+const baseByName = {};
+USE.forEach(([, items]) => items.forEach(([n, l]) => { baseByName[n] = l; }));
+const firstBase = USE[0][1][0][0];
+
+let activeBase = baseByName[firstBase].addTo(map);
+
+const sel = el('<select id="basesel" title="Base layer"></select>');
+USE.forEach(([grp, items]) => {
+  const og = el(`<optgroup label="${grp}"></optgroup>`);
+  items.forEach(([n]) => og.appendChild(el(`<option>${n}</option>`)));
+  sel.appendChild(og);
+});
+sel.onchange = () => {
+  map.removeLayer(activeBase);
+  activeBase = baseByName[sel.value].addTo(map);
+  if (activeBase.bringToBack) activeBase.bringToBack();
+};
+document.getElementById('basebar').appendChild(sel);
+
+L.control.scale({imperial: false, position: 'bottomright'}).addTo(map);
+
+/* ===== styling ===== */
+/* Age class gets a ramp built from the planting years actually present, so
+   any property colours sensibly rather than relying on hard-coded years. */
+const AGE_RAMP = ['#e8590c', '#f59f00', '#fcc419', '#94d82d', '#40c057'];
+const AGE_COLOUR = (() => {
+  const years = [...new Set((LAYERS.ets_caa?.features || [])
+    .map(f => f.properties.YEAR_PLANT).filter(Boolean))].sort((a, b) => a - b);
+  const m = {};
+  years.forEach((y, i) => {
+    m[y] = AGE_RAMP[Math.round(i * (AGE_RAMP.length - 1) / Math.max(1, years.length - 1))];
+  });
+  return m;
+})();
+
+/* MPI's own NES-CF erosion classes and the LUC ramp (good land green,
+   marginal land brown), so the map reads the way the official tools do. */
+const ESC_COLOUR = {
+  'Low': '#40a02b', 'Moderate': '#d9a700',
+  'High': '#e8590c', 'Very High': '#c92a2a',
+  'other': '#868e96', 'shingle': '#adb5bd', 'water': '#4dabf7',
+};
+const LUC_COLOUR = {
+  '1': '#2b8a3e', '2': '#2f9e44', '3': '#51cf66', '4': '#94d82d',
+  '5': '#d8f000', '6': '#f59f00', '7': '#e8590c', '8': '#a15c2b',
+};
+
+function popup(title, rows) {
+  return `<h4>${title}</h4><dl>${rows.filter(Boolean).join('')}</dl>`;
+}
+
+const boundarySwatch = BL.length > 1
+  ? `linear-gradient(90deg,${BL.map(b => blockColour(b.name)).join(',')})`
+  : '#ffcc33';
+
+/* Layer definitions: key -> config.
+   `on` = visible at first paint. `sw` = legend swatch colour. */
+const DEFS = [
+  {grp: 'Property'},
+  /* Non-interactive: it sits in the top pane and spans the whole property, so
+     leaving it clickable would swallow every click meant for the layers below.
+     Its detail is on the Overview tab instead. */
+  {k: 'title_boundary', n: BL.length > 1 ? 'Block boundaries' : 'Title boundary',
+   on: true, sw: boundarySwatch, pane: 'top', noclick: true,
+   style: f => ({color: blockColour(f.properties.block), weight: 3, opacity: 1, fill: false})},
+
+  {k: 'neighbour_parcels', n: 'Neighbouring parcels', on: false, sw: '#8899aa',
+   style: () => ({color: '#8899aa', weight: 1, opacity: .75, fillOpacity: .04, fillColor: '#8899aa'}),
+   pop: p => popup(p.appellation || 'Parcel', [
+     kv('Title', p.titles || '—'),
+     ownerOf(p.titles) ? kv('Owner', ownerOf(p.titles)) : '',
+     kv('Intent', p.parcel_intent),
+     kv('Area', fmt(p.calc_area / 10000, 2) + ' ha')])},
+  /* Internal build only: owner names as labels on the neighbouring parcels
+     (LINZ personal data licence - never in the share or hosted builds). */
+  ...(OWNERS ? [{k: '__owner_labels', n: 'Neighbour owner names', on: false, sw: '#d9c8a6', point: true, noclick: true,
+   mk: (f, ll) => L.marker(ll, {interactive: false, icon: L.divIcon({className: 'owner-lbl',
+        html: `<div>${f.properties.owner}</div>`, iconSize: [0, 0]})}),
+   style: () => ({})}] : []),
+
+  {grp: 'Forest & carbon'},
+  /* Stand layers: any LAYERS key beginning "stand_" (data/stand_<code>.geojson)
+     becomes its own toggle. Scrub / unplanted is grey; each stand gets its own colour. */
+  ...Object.keys(LAYERS).filter(k => k.startsWith('stand_')).map((k, i) => {
+    const feats = LAYERS[k].features || [];
+    const f0 = feats[0] || {properties: {}};
+    const p0 = f0.properties;
+    const STAND_COLOURS = ['#e8590c', '#f59f00', '#fcc419', '#94d82d', '#40c057', '#1c7ed6', '#ae3ec9'];
+    const col = p0.stand === 'scrub' ? '#adb5bd' : STAND_COLOURS[i % STAND_COLOURS.length];
+    // A file whose features carry `layer_label` is a per-block stand layer
+    // (many stands in one toggle, first used on Roy Forests): name the toggle
+    // by block, colour each piece by planting year, and outline pieces whose
+    // status says they lie outside the title boundary.
+    const perBlock = p0.layer_label !== undefined;
+    const tot = feats.reduce((a, f) => a + (+f.properties.map_ha || 0), 0);
+    const name = perBlock ? `${p0.layer_label} (${fmt(tot, 0)} ha, ${feats.length} pieces)`
+               : p0.stand === 'scrub' ? (p0.label || 'Scrub / unplanted')
+               : `${p0.label || k} — ${p0.year || ''} ${p0.species || ''}`.trim() + (p0.area_ha ? ` (${fmt(p0.area_ha, 1)} ha)` : '');
+    const over = p => /outside/i.test(p.status || '');
+    return {k, n: name, on: !perBlock, sw: perBlock ? 'linear-gradient(90deg,#e8590c,#f59f00,#94d82d)' : col,
+      style: f => perBlock
+        ? ({color: over(f.properties) ? '#ff3b3b' : '#ffffff', weight: over(f.properties) ? 2.2 : 0.8,
+            dashArray: over(f.properties) ? '5,3' : null,
+            fillColor: AGE_COLOUR[f.properties.year] || '#adb5bd', fillOpacity: .40})
+        : ({color: col, weight: 1.6, fillColor: col, fillOpacity: p0.stand === 'scrub' ? .30 : .38,
+            dashArray: p0.stand === 'scrub' ? '4,3' : null}),
+      pop: p => popup(p.label || k, [
+        p.species ? kv('Species', p.species) : '',
+        p.year ? kv('Planted', p.year) : '',
+        p.year ? kv('Age (2026)', (2026 - p.year) + ' yr') : '',
+        kv(perBlock ? 'Stand area (register)' : 'Stand area', fmt(p.area_ha, 1) + ' ha'),
+        p.map_ha ? kv(perBlock ? 'This piece' : 'Area on source map', p.map_ha + ' ha') : '',
+        p.status ? kv('Status', p.status) : '',
+        p.source ? kv('Source', p.source) : ''])};
+  }),
+  {k: 'ets_caa', n: 'ETS CAAs (age class)', on: true, sw: 'linear-gradient(90deg,#e8590c,#f59f00,#94d82d)',
+   style: f => ({color: AGE_COLOUR[f.properties.YEAR_PLANT] || '#adb5bd', weight: 1.6,
+                 fillColor: AGE_COLOUR[f.properties.YEAR_PLANT] || '#adb5bd', fillOpacity: .42}),
+   pop: p => popup('CAA ' + p.CAA_NUM + ' — ' + p.YEAR_PLANT, [
+     kv('Species', p.SPECIES), kv('Planted', p.YEAR_PLANT),
+     kv('Age (2026)', p.age_2026 + ' yr'),
+     kv('Mapped area', fmt(p.area_ha, 2) + ' ha')])},
+
+  /* Violet, not red - red sits too close to the 1994 age-class orange to be
+     readable where an ineligible pocket falls inside a CAA. */
+  {k: 'ets_ineligible', n: 'ETS ineligible areas', on: true, sw: '#ae3ec9',
+   style: () => ({color: '#ffffff', weight: 1.4, fillColor: '#ae3ec9',
+                  fillOpacity: .55, dashArray: '4,3'}),
+   pop: p => popup('Ineligible area ' + p.ISSUE_NUM, [
+     kv('Status', p.ELIGIBILIT), kv('Within', 'CAA ' + p.CAA_NUM),
+     kv('Area', fmt(p.area_ha, 2) + ' ha'), kv('Reason', p.ISSUE_CODE)])},
+
+/* Vegetation overlays over aerial imagery (James Burke, 15 Sep 2026): small
+   scattered polygons are fill-led (opacity ~.45, outline 2); large-area polygons
+   are outline-led (opacity ~.14, outline 2.2); never an outline under 1.5 and no
+   greens/browns for anything that must stand out on forested aerial. */
+  {k: 'exotic_cover', n: 'Exotic forest (Topo50)', on: false, sw: '#ff2d95',
+   style: () => ({color: '#ff2d95', weight: 2, fillColor: '#ff2d95', fillOpacity: .45}),
+   pop: p => popup('Exotic forest (Topo50)', [kv('Species', p.species || '—')])},
+
+  {k: 'cruise_plots', n: 'Cruise plots', on: false, sw: '#da77f2', point: true,
+   mk: (f, ll) => L.circleMarker(ll, {radius: 4, color: '#fff', weight: 1.2,
+        fillColor: '#da77f2', fillOpacity: .95, className: 'plotmk'}),
+   pop: p => popup('Cruise plot — stratum ' + p.StratumName, [
+     kv('Altitude', p.Altitude ? p.Altitude + ' m' : '—'),
+     kv('Measured', (p.LastMeasured || '').slice(0, 10))])},
+
+  {grp: 'Access'},
+  {k: 'legal_roads', n: 'Legal road parcels', on: true, sw: '#ff922b',
+   style: () => ({color: '#ff922b', weight: 1.2, fillColor: '#ff922b', fillOpacity: .3}),
+   pop: p => popup('Legal road', [kv('Appellation', p.appellation || '—'),
+     kv('Area', fmt(p.calc_area / 10000, 2) + ' ha')])},
+
+  {k: 'road_centrelines', n: 'Formed roads', on: true, sw: '#ffffff',
+   style: () => ({color: '#ffffff', weight: 2.4, opacity: .9}),
+   pop: p => popup(p.name || 'Road', [kv('Surface', p.surface || '—'),
+     kv('Status', p.status || '—'), kv('Lanes', p.lane_count || '—')])},
+
+  {k: 'tracks', n: '4WD tracks & foot tracks', on: true, sw: '#ffd43b',
+   style: () => ({color: '#ffd43b', weight: 1.9, opacity: .95, dashArray: '6,4'}),
+   pop: p => popup(p.name || 'Track', [kv('Type', p.track_type || '—'),
+     kv('Use', p.track_use || '—'), kv('Status', p.status || '—')])},
+
+  {grp: 'Terrain & water'},
+  /* Contours start off on a multi-block sale: at the zoom that shows both
+     blocks they are a solid brown wash over the imagery. */
+  {k: 'contours', n: 'Contours (20 m)', on: BL.length <= 1, sw: '#b08968',
+   style: f => {
+     const idx = f.properties.elevation % 100 === 0;
+     return {color: idx ? '#c9a227' : '#b08968', weight: idx ? 1.2 : .6,
+             opacity: idx ? .95 : .6, fill: false};
+   },
+   pop: p => popup(p.elevation + ' m contour', [])},
+
+  {k: 'rivers', n: 'Rivers & streams', on: true, sw: '#4dabf7',
+   style: () => ({color: '#4dabf7', weight: 1.3, opacity: .9})},
+
+  {k: 'river_polygons', n: 'River channels (Topo50)', on: true, sw: '#1c7ed6',
+   style: () => ({color: '#1c7ed6', weight: 1, fillColor: '#1c7ed6', fillOpacity: .55})},
+
+  {grp: 'Regulatory'},
+  /* ESC is the layer that decides what a purchaser can do without consent
+     under the NES-CF, so it leads this group. Colours follow MPI's own
+     green / yellow / orange / red convention — do not restyle them. */
+  {k: 'nes_esc', n: 'Erosion susceptibility (NES-CF)', on: false,
+   sw: 'linear-gradient(90deg,#40a02b,#d9a700,#e8590c,#c92a2a)',
+   style: f => {
+     const c = ESC_COLOUR[f.properties.ESC2018] || '#868e96';
+     return {color: c, weight: .8, fillColor: c, fillOpacity: .45};
+   },
+   pop: p => popup('ESC — ' + (p.ESC2018 || 'unclassified'), [
+     kv('LUC unit', p.LUC || '—'),
+     kv('Class 8e', p.Class8e === 'Yes' ? 'Yes — consent required' : (p.Class8e || '—')),
+     kv('Area', fmt(p.area_ha, 2) + ' ha')])},
+
+  {k: 'luc', n: 'Land Use Capability', on: false,
+   sw: 'linear-gradient(90deg,#2f9e44,#94d82d,#f59f00,#a15c2b)',
+   style: f => {
+     const c = LUC_COLOUR[f.properties.luc_class] || '#868e96';
+     return {color: c, weight: .8, fillColor: c, fillOpacity: .42};
+   },
+   pop: p => popup('LUC ' + (p.luc_subclass || p.luc_class || '—'), [
+     p.nzcu_description ? `<div class="note" style="margin:0 0 7px">${p.nzcu_description}</div>` : '',
+     kv('Class', p.luc_class || '—'),
+     p.luc ? kv('Unit', p.luc) : '',
+     p.slope ? kv('Slope', p.slope) : '',
+     p.present_erosion ? kv('Present erosion', p.present_erosion) : '',
+     p.potential_erosion ? kv('Potential erosion', p.potential_erosion) : '',
+     kv('Area', fmt(p.area_ha, 2) + ' ha')])},
+
+  {k: 'fish_spawning', n: 'Fish spawning reaches (NES-CF)', on: false, sw: '#4dabf7',
+   style: () => ({color: '#74c0fc', weight: 2.6, opacity: .95}),
+   pop: p => popup(p.CommonName || 'Spawning reach', [
+     kv('Species', p.Species || '—'),
+     kv('Spawning window', [p.SpawnFdate, p.SpawnTdate].filter(Boolean).join(' – ') || '—'),
+     kv('Sensitivity', p.Sensitivity || '—')])},
+
+  {grp: 'Land cover & neighbours'},
+  {k: 'native_cover', n: 'Native bush', on: false, sw: '#00e676',
+   style: () => ({color: '#00e676', weight: 2.2, fillColor: '#00e676', fillOpacity: .14})},
+
+  {k: 'scrub_cover', n: 'Scrub (manuka / kanuka)', on: false, sw: '#ffd400',
+   style: () => ({color: '#ffd400', weight: 2.2, fillColor: '#ffd400', fillOpacity: .14})},
+
+  {k: 'protected_areas', n: 'DOC conservation land', on: true, sw: '#2f9e44',
+   style: () => ({color: '#2f9e44', weight: 1.4, fillColor: '#2f9e44', fillOpacity: .16}),
+   pop: p => popup(p.name || 'Protected area', [
+     kv('Type', p.type || '—'), kv('Section', p.section || '—'),
+     kv('Area', p.gis_area_ha ? fmt(p.gis_area_ha, 0) + ' ha' : '—')])},
+
+  {grp: 'Reference'},
+  {k: 'place_names', n: 'Place names', on: false, sw: '#dee2e6', point: true,
+   mk: (f, ll) => L.marker(ll, {icon: L.divIcon({className: 'ctour-lbl',
+        html: `<div style="white-space:nowrap;font-size:11px">${f.properties.name}</div>`,
+        iconSize: [0, 0]})}),
+   pop: p => popup(p.name, [kv('Feature', p.feat_type || '—')])},
+
+  /* Photo popups: a thumbnail when the build carries one, and a link to the
+     photo itself. Which link depends on the build - the builder fills
+     `href` (and `thumb_src`) per photo; see build_*.py. */
+  {k: '__photos', n: 'Aerial photo points', on: false, sw: '#f783ac', point: true,
+   /* 360-degree panoramas get a bigger blue pin and open the hosted
+      Kuula post rather than the flat equirectangular frame. */
+   mk: (f, ll) => f.properties.pano_url
+     ? L.circleMarker(ll, {radius: 6, color: '#fff', weight: 1.6,
+        fillColor: '#4dabf7', fillOpacity: .95})
+     : L.circleMarker(ll, {radius: 3.5, color: '#fff', weight: 1,
+        fillColor: '#f783ac', fillOpacity: .95}),
+   pop: p => popup((p.pano_url ? '360° panorama · ' : '')
+       + (p.taken ? p.taken.replace(/:(\d\d):(\d\d) /, '-$1-$2 ') : p.file), [
+     p.thumb_src
+       ? `<a href="${p.pano_url || p.href || '#'}" target="_blank" rel="noopener" class="photolink">
+            <img src="${p.thumb_src}" alt="" loading="lazy"
+                 onerror="this.closest('.photolink').remove()"></a>`
+       : '',
+     kv('Altitude', p.alt_m != null ? p.alt_m + ' m' : '—'),
+     kv('File', p.file),
+     p.pano_url
+       ? `<a class="btn" href="${p.pano_url}" target="_blank" rel="noopener">Look around in 360° &rarr;</a>`
+       : '',
+     p.href && !p.pano_url
+       ? `<a class="btn" href="${p.href}" target="_blank" rel="noopener">Open photo &rarr;</a>`
+       : (p.href ? '' : `<div class="note">${p.rel}</div>`)])},
+];
+
+/* build layers */
+const built = {};
+
+/* Owner labels: one per neighbouring parcel of 5 ha or more that carries an
+   owner in the (internal-only) owners table, placed at the parcel's centre. */
+if (OWNERS && LAYERS.neighbour_parcels) {
+  LAYERS.__owner_labels = {type: 'FeatureCollection', features: LAYERS.neighbour_parcels.features
+    .filter(f => (f.properties.calc_area || 0) >= 50000 && ownerOf(f.properties.titles))
+    .map(f => {
+      const c = L.geoJSON(f).getBounds().getCenter();
+      const o = ownerOf(f.properties.titles);
+      return {type: 'Feature', geometry: {type: 'Point', coordinates: [c.lng, c.lat]},
+              properties: {owner: o.length > 48 ? o.slice(0, 46) + '…' : o}};
+    })};
+}
+
+/* Per-layer visibility + opacity. Opacity multiplies the layer's own base
+   style, so a layer drawn at 30% fill stays proportionally lighter as the
+   slider moves rather than jumping to a flat value. */
+const state = {};
+let masterOp = 1;
+DEFS.forEach(d => { if (!d.grp) state[d.k] = {vis: !!d.on, op: 1}; });
+
+function styleFor(d, f, bump) {
+  const s = Object.assign({}, d.style(f));
+  const m = state[d.k].op * masterOp;
+  s.opacity = (s.opacity != null ? s.opacity : 1) * m;
+  if (s.fillOpacity != null) s.fillOpacity *= m;
+  if (bump) s.weight = (s.weight || 1) + 1.6;
+  return s;
+}
+
+const topPane = map.createPane('topline');
+topPane.style.zIndex = 650;
+// The canvas renderer gives this pane its own full-size canvas, which would
+// otherwise swallow every click before it reaches the layers underneath.
+// Nothing in this pane is interactive, so let events pass straight through.
+topPane.style.pointerEvents = 'none';
+
+DEFS.forEach(d => {
+  if (d.grp) return;
+  const src = d.k === '__photos' ? PHOTOS : LAYERS[d.k];
+  if (!src || !src.features || !src.features.length) { d.empty = true; return; }
+
+  const opts = {
+    style: d.style,
+    interactive: !d.noclick,
+    pane: d.pane === 'top' ? 'topline' : undefined,
+    pointToLayer: d.point ? d.mk : undefined,
+    onEachFeature: (f, lyr) => {
+      if (d.noclick) return;
+      if (d.pop) lyr.bindPopup(d.pop(f.properties));
+      else if (d.k === 'rivers') lyr.bindPopup(popup('Watercourse', []));
+      if (!d.point && d.k !== 'contours') {
+        lyr.on('mouseover', e => { try { e.target.setStyle(styleFor(d, f, true)); } catch (_) {} });
+        lyr.on('mouseout',  e => { try { e.target.setStyle(styleFor(d, f)); } catch (_) {} });
+      }
+    },
+  };
+  built[d.k] = L.geoJSON(src, opts);
+  if (d.on) built[d.k].addTo(map);
+});
+
+/* Block name labels, for multi-block sales. Non-interactive, always on. */
+if (BL.length > 1) {
+  const labels = L.layerGroup();
+  BL.forEach(b => {
+    if (!b.centroid) return;
+    labels.addLayer(L.marker(b.centroid, {interactive: false, pane: 'topline',
+      icon: L.divIcon({className: 'blk-lbl',
+        html: `<div style="color:${blockColour(b.name)}">${b.name}</div>`, iconSize: [0, 0]})}));
+  });
+  labels.addTo(map);
+}
+
+/* contour elevation labels on index contours, only when zoomed in */
+const clabels = L.layerGroup();
+(LAYERS.contours ? LAYERS.contours.features : []).forEach(f => {
+  if (f.properties.elevation % 100 !== 0) return;
+  const cs = f.geometry.type === 'LineString' ? f.geometry.coordinates : (f.geometry.coordinates[0] || []);
+  if (cs.length < 3) return;
+  const c = cs[Math.floor(cs.length / 2)];
+  clabels.addLayer(L.marker([c[1], c[0]], {interactive: false, icon: L.divIcon({
+    className: 'ctour-lbl', html: f.properties.elevation, iconSize: [26, 11]})}));
+});
+function syncLabels() {
+  const want = map.getZoom() >= 14 && map.hasLayer(built.contours);
+  if (want && !map.hasLayer(clabels)) clabels.addTo(map);
+  if (!want && map.hasLayer(clabels)) map.removeLayer(clabels);
+}
+map.on('zoomend', syncLabels);
+
+/* ===== layer control =====
+   Every overlay has its own tick box and its own opacity slider; groups and
+   the whole panel can be ticked or faded in one go. Effective opacity for a
+   layer is its own slider multiplied by the master slider. */
+const lb = document.getElementById('layerbody');
+const rows = {};                       // key -> {cb, slider}
+const groups = [];                     // {name, keys[], cb}
+
+function effOp(k) { return state[k].op * masterOp; }
+
+function restyle(d) {
+  const g = built[d.k];
+  if (!g) return;
+  g.eachLayer(l => {
+    if (l.setStyle && l.feature && d.style) l.setStyle(styleFor(d, l.feature));
+    else if (l.setOpacity) l.setOpacity(effOp(d.k));
+  });
+}
+
+function setVisible(d, on) {
+  state[d.k].vis = on;
+  if (on) built[d.k].addTo(map); else map.removeLayer(built[d.k]);
+  if (rows[d.k]) rows[d.k].cb.checked = on;
+  if (d.k === 'contours') syncLabels();
+}
+
+function refreshGroupBoxes() {
+  groups.forEach(g => {
+    const on = g.keys.filter(k => state[k].vis).length;
+    g.cb.checked = on > 0;
+    g.cb.indeterminate = on > 0 && on < g.keys.length;
+  });
+  const all = Object.keys(state);
+  const on = all.filter(k => state[k].vis).length;
+  masterCb.checked = on > 0;
+  masterCb.indeterminate = on > 0 && on < all.length;
+}
+
+/* master row */
+const masterRow = el(`<label class="lyr master">
+    <input type="checkbox"><span>All overlays</span></label>`);
+const masterCb = masterRow.querySelector('input');
+masterCb.onchange = () => {
+  const on = masterCb.checked;
+  DEFS.filter(d => !d.grp && !d.empty).forEach(d => setVisible(d, on));
+  refreshGroupBoxes();
+};
+lb.appendChild(masterRow);
+
+let current = null;
+DEFS.forEach(d => {
+  if (d.grp) {
+    const box = el(`<div class="grp"><p><label><input type="checkbox">${d.grp}</label></p></div>`);
+    const cb = box.querySelector('input');
+    const g = {name: d.grp, keys: [], cb};
+    cb.onchange = () => {
+      DEFS.filter(x => !x.grp && !x.empty && g.keys.includes(x.k))
+          .forEach(x => setVisible(x, cb.checked));
+      refreshGroupBoxes();
+    };
+    groups.push(g);
+    lb.appendChild(box);
+    current = g;
+    return;
+  }
+  if (d.empty) return;
+
+  const row = el(`<div class="lyr">
+      <input type="checkbox"${d.on ? ' checked' : ''}>
+      <i class="sw" style="background:${d.sw}"></i>
+      <span>${d.n}</span>
+      <input class="lop" type="range" min="0" max="100" value="100"
+             title="Opacity — ${d.n}">
+    </div>`);
+  const [cb, slider] = [row.querySelector('input[type=checkbox]'), row.querySelector('.lop')];
+  rows[d.k] = {cb, slider};
+
+  cb.onchange = () => { setVisible(d, cb.checked); refreshGroupBoxes(); };
+  slider.oninput = () => {
+    state[d.k].op = slider.value / 100;
+    restyle(d);
+  };
+
+  if (current) current.keys.push(d.k);
+  (current ? current.cb.closest('.grp') : lb).appendChild(row);
+});
+
+lb.appendChild(el(`<div class="opa"><label>Master opacity</label>
+  <input type="range" min="0" max="100" value="100" id="opa"></div>`));
+document.getElementById('opa').oninput = e => {
+  masterOp = e.target.value / 100;
+  DEFS.filter(d => !d.grp && !d.empty).forEach(restyle);
+};
+
+refreshGroupBoxes();
+
+/* Empty groups (e.g. no ETS shapefiles on a forestry right) would otherwise
+   show a heading with nothing under it. */
+groups.forEach(g => { if (!g.keys.length) g.cb.closest('.grp').remove(); });
+
+document.getElementById('lyrhdr').onclick = () => {
+  const p = document.getElementById('layers');
+  p.classList.toggle('min');
+  document.getElementById('lyrcar').innerHTML = p.classList.contains('min') ? '&#9656;' : '&#9662;';
+};
+
+/* ===== fit =====
+   Deferred: fitBounds against a container that has not been laid out yet
+   clamps straight to maxZoom, so wait for the first paint. */
+function fitAll() {
+  map.invalidateSize();
+  map.fitBounds(built.title_boundary.getBounds(), {padding: [26, 26]});
+  syncLabels();
+}
+function fitBlock(name) {
+  const b = BL.find(x => x.name === name);
+  if (!b || !b.bbox) return fitAll();
+  map.invalidateSize();
+  const [w, s, e, n] = b.bbox;
+  // The block frame carries a couple of km of context; trim it a little so
+  // the block itself fills the view.
+  const dx = (e - w) * 0.16, dy = (n - s) * 0.16;
+  map.fitBounds([[s + dy, w + dx], [n - dy, e - dx]], {padding: [10, 10]});
+  syncLabels();
+}
+requestAnimationFrame(() => requestAnimationFrame(fitAll));
+window.addEventListener('load', fitAll);
+
+const HomeCtl = L.Control.extend({
+  options: {position: 'topleft'},
+  onAdd() {
+    const a = L.DomUtil.create('a', '');
+    Object.assign(a, {href: '#', title: 'Zoom to property', innerHTML: '&#9737;'});
+    Object.assign(a.style, {font: '16px/26px system-ui', textAlign: 'center'});
+    const d = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+    d.appendChild(a);
+    L.DomEvent.on(a, 'click', e => { L.DomEvent.stop(e); fitAll(); });
+    return d;
+  },
+});
+map.addControl(new HomeCtl());
+
+/* Block zoom buttons in the header, when there is more than one block. */
+if (BL.length > 1) {
+  const bar = document.getElementById('basebar');
+  const grp = el('<div class="blkgroup"></div>');
+  BL.forEach(b => {
+    const btn = el(`<button class="blkbtn" title="Zoom to ${b.name}"><i style="background:${blockColour(b.name)}"></i>${b.name}</button>`);
+    btn.onclick = () => fitBlock(b.name);
+    grp.appendChild(btn);
+  });
+  bar.parentNode.insertBefore(grp, bar);
+}
+
+/* NZTM readout — Transverse Mercator forward, NZGD2000 / EPSG:2193. */
+function toNZTM(lat, lon) {
+  const a = 6378137, f = 1 / 298.257222101, k0 = 0.9996;
+  const lat0 = 0, lon0 = 173 * Math.PI / 180, E0 = 1600000, N0 = 10000000;
+  const e2 = 2 * f - f * f, ep2 = e2 / (1 - e2);
+  const p = lat * Math.PI / 180, l = lon * Math.PI / 180;
+  const N = a / Math.sqrt(1 - e2 * Math.sin(p) ** 2);
+  const T = Math.tan(p) ** 2, C = ep2 * Math.cos(p) ** 2, A = (l - lon0) * Math.cos(p);
+  const n = f / (2 - f);
+  const G = a * (1 - n) * (1 - n * n) * (1 + 9 / 4 * n * n + 225 / 64 * n ** 4) * Math.PI / 180;
+  const M = a * ((1 - e2 / 4 - 3 * e2 * e2 / 64 - 5 * e2 ** 3 / 256) * p
+    - (3 * e2 / 8 + 3 * e2 * e2 / 32 + 45 * e2 ** 3 / 1024) * Math.sin(2 * p)
+    + (15 * e2 * e2 / 256 + 45 * e2 ** 3 / 1024) * Math.sin(4 * p)
+    - (35 * e2 ** 3 / 3072) * Math.sin(6 * p));
+  const M0 = 0;
+  const E = E0 + k0 * N * (A + (1 - T + C) * A ** 3 / 6
+    + (5 - 18 * T + T * T + 72 * C - 58 * ep2) * A ** 5 / 120);
+  const Nn = N0 + k0 * (M - M0 + N * Math.tan(p) * (A * A / 2 + (5 - T + 9 * C + 4 * C * C) * A ** 4 / 24
+    + (61 - 58 * T + T * T + 600 * C - 330 * ep2) * A ** 6 / 720));
+  return [Math.round(E), Math.round(Nn)];
+}
+const co = document.getElementById('coords');
+function readout(lat, lon) {
+  const [e, n] = toNZTM(lat, lon);
+  co.innerHTML = `<b>${lat.toFixed(5)}, ${lon.toFixed(5)}</b> &nbsp;·&nbsp; NZTM <b>${fmt(e)}E ${fmt(n)}N</b>`;
+}
+map.on('mousemove', e => readout(e.latlng.lat, e.latlng.lng));
+readout(P.centroid[0], P.centroid[1]);
+
+const toggleDash = () => {
+  document.getElementById('dash').classList.toggle('collapsed');
+  setTimeout(() => map.invalidateSize(), 230);
+};
+document.getElementById('toggleDash').onclick = toggleDash;
+document.getElementById('sheethandle').onclick = toggleDash;
+
+/* Phones start map-first: dashboard sheet down, overlay panel folded to a
+   pill, and the base-layer select moved from the header into the overlay
+   panel so the header has room for the brand and the full property name.
+   Reversible, so a window that is resized or a tablet that is rotated gets
+   the right layout rather than the one it loaded with. */
+const SMALL = window.matchMedia('(max-width: 700px)');
+function applySmall(on) {
+  const dash = document.getElementById('dash');
+  const lp = document.getElementById('layers');
+  const bb = document.getElementById('basebar');
+  if (on) {
+    dash.classList.add('collapsed');
+    lp.classList.add('min');
+    document.getElementById('lyrcar').innerHTML = '&#9656;';
+    bb.classList.add('inpanel');
+    document.getElementById('layerbody').prepend(bb);
+  } else {
+    dash.classList.remove('collapsed');
+    lp.classList.remove('min');
+    document.getElementById('lyrcar').innerHTML = '&#9662;';
+    bb.classList.remove('inpanel');
+    document.getElementById('contacthdr').after(bb);
+  }
+  setTimeout(() => map.invalidateSize(), 50);
+}
+let smallApplied = null;
+function syncSmall() {
+  const m = SMALL.matches;
+  if (m !== smallApplied) { smallApplied = m; applySmall(m); }
+}
+syncSmall();
+SMALL.addEventListener('change', syncSmall);
+let _rt;
+window.addEventListener('resize', () => { clearTimeout(_rt); _rt = setTimeout(syncSmall, 120); });
+// Opening a popup on a phone: close the sheet so the popup is not under it.
+map.on('popupopen', () => { if (SMALL.matches) document.getElementById('dash').classList.add('collapsed'); });
+
+/* ===== dashboard ===== */
+(() => {
+  const parts = P.name.trim().split(/\s+/);
+  const tail = parts.length > 1 ? parts.pop() : '';
+  document.getElementById('proptitle').innerHTML =
+    parts.join(' ') + (tail ? ` <span>${tail}</span>` : '');
+})();
+
+document.getElementById('hdrsub').textContent =
+  `${P.address}  ·  ${fmt(P.title_area_ha_im, 1)} ha ${P.tenure_short}`
+  + (P.title_reference ? `  ·  ${P.title_reference}` : '');
+
+const hasRates = !!R;
+const hasCaas = !!(E && E.caas && E.caas.length);
+const TABS = [['overview', 'Overview']]
+  .concat(CROP ? [['crop', 'Crop']] : [])
+  .concat(hasRates ? [['rates', 'Rates']] : [])
+  .concat([['ets', 'ETS'], ['terrain', 'Land'], ['docs', 'Docs'], ['data', 'Sources']]);
+const tabbar = document.getElementById('tabs');
+TABS.forEach(([id, label], i) => {
+  const b = el(`<button${i === 0 ? ' class="on"' : ''}>${label}</button>`);
+  b.onclick = () => {
+    TABS.forEach(([x]) => document.getElementById('pane-' + x).classList.remove('on'));
+    [...tabbar.children].forEach(c => c.classList.remove('on'));
+    document.getElementById('pane-' + id).classList.add('on');
+    b.classList.add('on');
+  };
+  tabbar.appendChild(b);
+});
+
+const barrow = (n, v, total, c, sub) => `<div class="barrow">
+  <div class="lbl"><span>${n}</span><b>${fmt(v, 1)} ha</b></div>
+  <div class="bar"><i style="width:${Math.min(100, v / total * 100)}%;background:${c}"></i></div>
+  <div class="note" style="margin:0">${sub || fmt(v / total * 100, 1) + '% of title'}</div>
+</div>`;
+
+/* --- overview --- */
+document.getElementById('pane-overview').innerHTML = `
+  <div class="card">
+    <h3>Land area</h3>
+    <div class="big">${fmt(P.title_area_ha_im, 1)}<small> ha ${P.tenure_short}</small></div>
+    <dl style="margin-top:9px">
+      ${kv('LINZ parcel area', fmt(P.title_area_ha_linz, 2) + ' ha')}
+      ${kv('Parcels', fmt(P.parcel_count))}
+      ${kv('Legal description', P.legal_description)}
+      ${P.title_reference ? kv('Title', P.title_reference) : ''}
+      ${kv('Land district', P.land_district)}
+      ${kv('Tenure', P.tenure)}
+      ${kv('Zoning', P.zoning)}
+    </dl>
+    ${NARR.overview_note ? `<p class="note">${NARR.overview_note}</p>` : ''}
+  </div>
+
+  ${P.panoramas && P.panoramas.collection_url ? `<div class="card">
+    <h3>360° panoramas</h3>
+    <p class="note" style="margin-top:0">${P.panoramas.note ||
+      'Drone panoramas you can look around in. The blue pins on the map open each one at the point it was taken.'}</p>
+    <a class="btn" href="${P.panoramas.collection_url}" target="_blank" rel="noopener"
+       style="display:inline-block;margin-top:6px">Open the panorama tour &rarr;</a>
+  </div>` : ''}
+
+  ${BL.length ? `<div class="card">
+    <h3>Blocks</h3>
+    ${BL.map(b => `<div style="margin-bottom:10px">
+      <div class="lbl" style="display:flex;justify-content:space-between;align-items:center">
+        <span style="display:flex;align-items:center;gap:7px;font-weight:650">
+          <i class="sw" style="background:${blockColour(b.name)};width:13px;height:11px;border-radius:3px;display:inline-block"></i>${b.name}</span>
+        <button class="blkbtn" onclick="fitBlock('${b.name.replace(/'/g, "\\'")}')">Zoom</button>
+      </div>
+      <dl style="margin-top:4px">
+        ${b.landowner ? kv('Landowner', b.landowner) : ''}
+        ${kv('Stated area', b.title_area_ha_stated != null ? fmt(b.title_area_ha_stated, 1) + ' ha' : '—')}
+        ${kv('LINZ parcel area', fmt(b.title_area_ha_linz, 1) + ' ha · ' + fmt(b.parcels) + (b.parcels === 1 ? ' parcel' : ' parcels'))}
+        ${b.min_elevation_m != null ? kv('Elevation', fmt(b.min_elevation_m) + ' – ' + fmt(b.max_elevation_m) + ' m') : ''}
+        ${b.esc.length ? kv('ESC high / very high', fmt(b.esc_high_ha, 1) + ' ha') : ''}
+      </dl>
+      ${b.legal_description ? `<p class="note" style="margin-top:4px">${b.legal_description}</p>` : ''}
+      ${(b.notes || []).map(n => `<p class="note" style="margin-top:4px">${n}</p>`).join('')}
+    </div>`).join('')}
+  </div>` : ''}
+
+  <div class="card">
+    <h3>Land use split</h3>
+    ${[['Net stocked (stated)', C.net_stocked_pine_ha, '#f59f00'],
+       ['Exotic forest (Topo50)', C.exotic_ha_on_property, '#2b8a8a'],
+       ['Native bush (Topo50)', C.native_ha_on_property, '#1a7f37'],
+       ['Scrub — manuka / kanuka', C.scrub_ha_on_property, '#8a9a2b']]
+      .filter(([, v]) => v != null && v > 0)
+      .map(([n, v, c]) => barrow(n, v, P.title_area_ha_im, c)).join('')}
+    <p class="note">${NARR.cover_note || 'Exotic, native and scrub areas are LINZ Topo50 ' +
+      'vegetation polygons clipped to the title — indicative, not a survey. The net stocked ' +
+      'figure is as stated by the vendor.'}</p>
+  </div>
+
+  <div class="card">
+    <h3>Authorities</h3>
+    <dl>
+      ${kv('Territorial', P.territorial_authority)}
+      ${kv('Regional', P.regional_council)}
+    </dl>
+  </div>
+
+  ${NB.doc_parcels_adjoining ? `<div class="card">
+    <h3>Conservation land nearby</h3>
+    <p class="note" style="margin-top:0">${NARR.neighbours_note ||
+      `${fmt(NB.doc_parcels_adjoining)} DOC public conservation area${NB.doc_parcels_adjoining === 1 ? '' : 's'} intersect the map frame:`}</p>
+    <ul class="notes">${NB.doc_names.map(n => `<li>${n}</li>`).join('')}</ul>
+  </div>` : ''}`;
+
+/* --- crop (forestry right / tree crop listings) --- */
+if (CROP) {
+  const ac = CROP.age_classes || [];
+  const totalCrop = ac.reduce((s, r) => s + (r.ha || 0), 0);
+  const blocksIn = [...new Set(ac.map(r => r.block).filter(Boolean))];
+  const years = [...new Set(ac.map(r => r.year))].sort();
+  const ageRamp = {};
+  years.forEach((y, i) => {
+    ageRamp[y] = AGE_RAMP[Math.round(i * (AGE_RAMP.length - 1) / Math.max(1, years.length - 1))];
+  });
+  const lr = CROP.land_return || [];
+  const lrBlocks = [...new Set(lr.flatMap(r => Object.keys(r.areas || {})))];
+  const lrTotal = b => lr.reduce((s, r) => s + ((r.areas || {})[b] || 0), 0);
+  const lrAll = lr.reduce((s, r) => s + Object.values(r.areas || {}).reduce((a, v) => a + v, 0), 0);
+  const lrMax = Math.max(1, ...lr.map(r => Object.values(r.areas || {}).reduce((a, v) => a + v, 0)));
+
+  document.getElementById('pane-crop').innerHTML = `
+    <div class="card">
+      <h3>${CROP.title || 'Existing tree crop'}</h3>
+      <div class="big">${fmt(totalCrop, 1)}<small> ha net stocked</small></div>
+      ${(CROP.summary || []).length ? `<dl style="margin-top:9px">${CROP.summary.map(r => kv(r.k, r.v)).join('')}</dl>` : ''}
+      ${CROP.intro ? `<p class="note">${CROP.intro}</p>` : ''}
+    </div>
+
+    ${ac.length ? `<div class="card">
+      <h3>Age class</h3>
+      <table class="mini">
+        <thead><tr>${blocksIn.length ? '<th>Block</th>' : ''}<th>Planted</th><th>Age</th><th>Species</th><th>NSA</th></tr></thead>
+        <tbody>${ac.map(r => `<tr>
+          ${blocksIn.length ? `<td><span style="color:${blockColour(r.block)}">${r.block}</span></td>` : ''}
+          <td><span class="pill" style="background:${ageRamp[r.year]}33;color:${ageRamp[r.year]}">${r.year}</span></td>
+          <td>${r.age != null ? r.age : '—'}</td><td>${r.species || '—'}</td>
+          <td>${fmt(r.ha, 2)} ha</td></tr>`).join('')}
+        </tbody>
+        <tfoot>${blocksIn.map(b => `<tr><td>${b} subtotal</td><td></td><td></td><td></td>
+            <td>${fmt(ac.filter(r => r.block === b).reduce((s, r) => s + r.ha, 0), 2)} ha</td></tr>`).join('')}
+          <tr><td>Total</td>${blocksIn.length ? '<td></td>' : ''}<td></td><td></td><td>${fmt(totalCrop, 2)} ha</td></tr></tfoot>
+      </table>
+      ${CROP.age_note ? `<p class="note">${CROP.age_note}</p>` : ''}
+    </div>` : ''}
+
+    ${lr.length ? `<div class="card">
+      <h3>${CROP.land_return_title || 'Land return schedule'}</h3>
+      <div class="big">${fmt(lrAll, 1)}<small> ha to be returned</small></div>
+      ${CROP.land_return_intro ? `<p class="note" style="margin-top:6px">${CROP.land_return_intro}</p>` : ''}
+      <table class="mini sched" style="margin-top:8px">
+        <thead><tr><th>Year</th>${lrBlocks.map(b => `<th>${b}</th>`).join('')}<th>Total</th><th></th></tr></thead>
+        <tbody>${lr.map(r => {
+          const tot = Object.values(r.areas || {}).reduce((a, v) => a + v, 0);
+          return `<tr><td>${r.year}</td>${lrBlocks.map(b => `<td>${(r.areas || {})[b] ? fmt(r.areas[b], 1) : '—'}</td>`).join('')}
+            <td>${tot ? fmt(tot, 1) : '—'}</td>
+            <td class="bar" style="width:34%"><div class="bar" style="margin:0;display:flex;background:#2a3320">${lrBlocks.map(b =>
+              `<i style="width:${((r.areas || {})[b] || 0) / lrMax * 100}%;background:${blockColour(b)};border-radius:0"></i>`).join('')}</div></td></tr>`;
+        }).join('')}</tbody>
+        <tfoot><tr><td>Total</td>${lrBlocks.map(b => `<td>${fmt(lrTotal(b), 1)}</td>`).join('')}<td>${fmt(lrAll, 1)}</td><td></td></tr></tfoot>
+      </table>
+      ${(CROP.land_return_notes || []).map(n => `<p class="note">${n}</p>`).join('')}
+    </div>` : ''}
+
+    ${(CROP.terms || []).length ? `<div class="card">
+      <h3>${CROP.terms_title || 'Forestry right'}</h3>
+      <dl>${CROP.terms.map(r => kv(r.k, r.v)).join('')}</dl>
+      ${(CROP.terms_notes || []).map(n => `<p class="note">${n}</p>`).join('')}
+    </div>` : ''}
+
+    ${CROP.source ? `<div class="card"><h3>Source</h3><p class="note" style="margin-top:0">${CROP.source}</p></div>` : ''}`;
+}
+
+/* --- rates (only when a rating valuation is part of the sale) --- */
+if (hasRates) {
+  const rateRows = [
+    ['Per hectare of title', money(R.rates_per_ha_title), fmt(P.title_area_ha_im, 2) + ' ha'],
+    ['Per hectare net stocked', money(R.rates_per_ha_stocked), fmt(C.net_stocked_pine_ha, 1) + ' ha'],
+    ['Per hectare ETS registered', money(R.rates_per_ha_registered), fmt(E.registered_ha, 2) + ' ha'],
+    ['Per NZU transferring', money(R.rates_per_nzu, 3), fmt(E.nzu_transferring) + ' NZU'],
+  ].filter(r => r[1] !== '—');
+  document.getElementById('pane-rates').innerHTML = `
+    <div class="card">
+      <h3>Annual rates — district + regional</h3>
+      <div class="big">${money(R.total_annual)}<small> / year</small></div>
+      <dl style="margin-top:9px">
+        ${kv('Territorial authority', R.district_council)}
+        ${kv('Regional council', R.regional_council)}
+        ${R.rates_pct_of_cv != null ? kv('Rates as % of CV', fmt(R.rates_pct_of_cv, 3) + '%') : ''}
+      </dl>
+      ${R.split_available ? '' : `<div class="warn">The rates figure on file is the <b>combined</b>
+      district and regional total. The split between ${R.district_council} and
+      ${R.regional_council} is not in the property file — confirm from the rates
+      notice before quoting a split to a buyer.</div>`}
+      ${R.note ? `<p class="note">${R.note}</p>` : ''}
+    </div>
+
+    <div class="card">
+      <h3>Rating valuation</h3>
+      <dl>
+        ${kv('Capital value (CV)', money(R.capital_value, 0))}
+        ${kv('Land value (LV)', money(R.land_value, 0))}
+        ${kv('Improvements (IV)', money(R.improvements_value, 0))}
+        ${kv('CV per hectare', money(R.cv_per_ha, 0))}
+        ${kv('LV per hectare', money(R.lv_per_ha, 0))}
+      </dl>
+      ${R.land_value != null ? `<div class="bar" style="margin-top:11px">
+        <i style="width:${R.land_value / R.capital_value * 100}%;background:#f59f00"></i>
+      </div>
+      <p class="note" style="margin-top:4px">Land is
+      ${fmt(R.land_value / R.capital_value * 100, 1)}% of capital value; improvements are
+      ${money(R.improvements_value, 0)}.${NARR.rates_note ? ' ' + NARR.rates_note : ''}</p>` :
+      `<p class="note" style="margin-top:4px">The land / improvements split is not on file for every title.${NARR.rates_note ? ' ' + NARR.rates_note : ''}</p>`}
+    </div>
+
+    <div class="card">
+      <h3>Rates intensity</h3>
+      <table class="mini">
+        <thead><tr><th>Basis</th><th>Rate</th><th>Denominator</th></tr></thead>
+        <tbody>${rateRows.map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td>
+          <td style="color:var(--ink3)">${r[2]}</td></tr>`).join('')}</tbody>
+      </table>
+      ${R.rates_per_nzu ? `<p class="note">Rates are ${money(R.rates_per_nzu, 3)} per NZU
+      transferring on settlement.</p>` : ''}
+    </div>
+
+    <div class="card">
+      <h3>Source</h3>
+      <p class="note" style="margin-top:0">${R.source}</p>
+    </div>`;
+}
+
+/* --- ETS --- */
+document.getElementById('pane-ets').innerHTML = hasCaas ? `
+  <div class="card">
+    <h3>Carbon position</h3>
+    <div class="big">${fmt(E.nzu_transferring)}<small> NZU on settlement</small></div>
+    <dl style="margin-top:9px">
+      ${kv('Registered area', fmt(E.registered_ha, 2) + ' ha')}
+      ${kv('Participant', E.participant || '—')}
+      ${kv('Accounting', E.accounting || '—')}
+      ${kv('Activity', E.activity || '—')}
+      ${kv('Constituted', E.constitution_date || '—')}
+      ${kv('Carbon tables', E.fma ? 'Participant-specific FMA' : 'Regional lookup')}
+    </dl>
+    ${E.status ? `<p class="note">${E.status}</p>` : ''}
+  </div>
+
+  <div class="card">
+    <h3>Age class by CAA</h3>
+    <table class="mini">
+      <thead><tr><th>CAA</th><th>Planted</th><th>Age</th><th>Registered</th><th>NZU</th></tr></thead>
+      <tbody>${E.caas.map(c => `<tr>
+        <td><span class="pill" style="background:${AGE_COLOUR[c.planted] || '#adb5bd'}33;color:${AGE_COLOUR[c.planted] || '#adb5bd'}">CAA ${c.caa}</span></td>
+        <td>${c.planted}</td><td>${c.age_2026} yr</td>
+        <td>${fmt(c.registered_ha, 2)} ha</td><td>${fmt(c.nzu)}</td></tr>`).join('')}
+      </tbody>
+      <tfoot><tr><td>Total</td><td></td><td></td>
+        <td>${fmt(E.registered_ha, 2)} ha</td><td>${fmt(E.nzu_transferring)}</td></tr></tfoot>
+    </table>
+    ${E.caas.map(c => `<div class="barrow" style="margin-top:9px">
+      <div class="lbl"><span>CAA ${c.caa} · ${c.planted}</span><b>${fmt(c.nzu_per_ha, 1)} NZU/ha</b></div>
+      <div class="bar"><i style="width:${c.registered_ha / E.registered_ha * 100}%;background:${AGE_COLOUR[c.planted] || '#adb5bd'}"></i></div>
+    </div>`).join('')}
+  </div>
+
+  ${E.mapped_eligible_ha ? `<div class="card">
+    <h3>Eligible vs ineligible (mapped)</h3>
+    <dl>
+      ${kv('Mapped eligible', fmt(E.mapped_eligible_ha, 2) + ' ha')}
+      ${kv('Mapped ineligible', fmt(E.mapped_ineligible_ha, 2) + ' ha')}
+      ${kv('Registered (CAA report)', fmt(E.registered_ha, 2) + ' ha')}
+    </dl>
+    ${Math.abs(E.registered_ha - E.mapped_eligible_ha) > 0.5 ? `<div class="warn">Registered area
+    differs from the mapped eligible shapefile by
+    ${fmt(Math.abs(E.registered_ha - E.mapped_eligible_ha), 2)} ha. The CAA land status report
+    governs the carbon position; the shapefile is the mapping source. Worth
+    reconciling before settlement.</div>` : ''}
+    ${E.ineligible_reason ? `<p class="note">Ineligible area reason: <i>${E.ineligible_reason}</i>.</p>` : ''}
+  </div>` : ''}` : `
+  <div class="card">
+    <h3>ETS position</h3>
+    <div class="big">None<small> registered</small></div>
+    <p class="note" style="margin-top:8px">${E.status ||
+      'No ETS registration forms part of this sale. ETS status of the land to be confirmed.'}</p>
+  </div>`;
+
+/* --- land --- */
+const rangeTxt = T.min_elevation_m != null
+  ? `Contours on the title run from ${fmt(T.min_elevation_m)} m to ${fmt(T.max_elevation_m)} m.`
+  : '';
+document.getElementById('pane-terrain').innerHTML = `
+  ${T.min_elevation_m != null ? `<div class="card">
+    <h3>Relief</h3>
+    <div class="big">${fmt(T.max_elevation_m - T.min_elevation_m)}<small> m of vertical</small></div>
+    <dl style="margin-top:9px">
+      ${kv('Lowest contour on title', fmt(T.min_elevation_m) + ' m')}
+      ${kv('Highest contour on title', fmt(T.max_elevation_m) + ' m')}
+      ${kv('Contour interval', T.contour_interval_m + ' m')}
+      ${BL.length > 1 ? BL.map(b => kv(b.name, b.min_elevation_m != null ? fmt(b.min_elevation_m) + ' – ' + fmt(b.max_elevation_m) + ' m' : '—')).join('') : ''}
+    </dl>
+    <p class="note">${NARR.relief_note || rangeTxt}</p>
+  </div>` : ''}
+
+  <div class="card">
+    <h3>Access</h3>
+    <dl>
+      ${kv('Tracks on title (Topo50)', fmt(A.track_km_on_property, 2) + ' km')}
+      ${kv('Formed road on title', fmt(A.formed_road_km_on_property, 2) + ' km')}
+      ${kv('Legal road parcels in frame', fmt(A.legal_road_parcels_nearby))}
+    </dl>
+    <div class="warn">${A.note}</div>
+    <p class="note">${NARR.access_note || 'Topo50 records ' + fmt(A.track_km_on_property, 2) +
+      ' km of track and ' + fmt(A.formed_road_km_on_property, 2) + ' km of formed road on the title. ' +
+      'Internal forestry roading is usually more extensive than the national topo layer records.'}</p>
+  </div>
+
+  ${!EV || !EV.esc.length ? '' : `
+  <div class="card">
+    <h3>Erosion susceptibility — NES-CF</h3>
+    <div class="big">${fmt(EV.esc_high_ha, 1)}<small> ha high or very high</small></div>
+    <p class="note" style="margin-top:6px">The ESC sets what a purchaser can do
+    without resource consent under the National Environmental Standards for
+    Commercial Forestry. Harvesting, earthworks and replanting on the orange
+    and red classes carry the heavier conditions.</p>
+    ${EV.esc.map(e => `<div class="barrow" style="margin-top:9px">
+      <div class="lbl"><span>${e.key}</span><b>${fmt(e.ha, 1)} ha · ${fmt(e.pct, 1)}%</b></div>
+      <div class="bar"><i style="width:${e.pct}%;background:${ESC_COLOUR[e.key] || '#868e96'}"></i></div>
+    </div>`).join('')}
+    ${BL.length > 1 ? `<table class="mini" style="margin-top:8px">
+      <thead><tr><th>Block</th>${EV.esc.map(e => `<th>${e.key}</th>`).join('')}</tr></thead>
+      <tbody>${BL.map(b => `<tr><td style="color:${blockColour(b.name)}">${b.name}</td>
+        ${EV.esc.map(e => { const r = b.esc.find(x => x.key === e.key); return `<td>${r ? fmt(r.ha, 0) + ' ha' : '—'}</td>`; }).join('')}
+      </tr>`).join('')}</tbody></table>` : ''}
+    <p class="note">${EV.esc_source}.</p>
+  </div>` }
+
+  ${!EV || !EV.luc.length ? '' : `
+  <div class="card">
+    <h3>Land Use Capability</h3>
+    <table class="mini">
+      <thead><tr><th>Class</th><th>Area</th><th>Share</th>${BL.length > 1 ? BL.map(b => `<th>${b.name}</th>`).join('') : ''}</tr></thead>
+      <tbody>${EV.luc.map(l => `<tr>
+        <td><span class="pill" style="background:${(LUC_COLOUR[l.key] || '#868e96')}33;color:${LUC_COLOUR[l.key] || '#adb5bd'}">LUC ${l.key}</span></td>
+        <td>${fmt(l.ha, 1)} ha</td><td>${fmt(l.pct, 1)}%</td>
+        ${BL.length > 1 ? BL.map(b => { const r = b.luc.find(x => x.key === l.key); return `<td>${r ? fmt(r.ha, 0) : '—'}</td>`; }).join('') : ''}</tr>`).join('')}
+      </tbody>
+    </table>
+    ${EV.luc_subclasses.length ? `<p class="note">Units present:
+      ${EV.luc_subclasses.map(s => `${s.key} (${fmt(s.ha, 0)} ha)`).join(', ')}.</p>` : ''}
+    ${(EV.luc_units || []).length ? `<p class="note">${EV.luc_units
+      .map(u => `${u.key} — ${fmt(u.ha, 0)} ha`).join('<br>')}</p>` : ''}
+    <p class="note">${EV.luc_source}. Higher class numbers mean greater physical
+    limitation — 7 and 8 are steep or severely limited land, typically the
+    reason a block is in trees rather than pasture.</p>
+  </div>` }
+
+  ${!EV || !EV.fish_spawning_reaches ? '' : `
+  <div class="card">
+    <h3>Fish spawning — NES-CF</h3>
+    <dl>${kv('Indicator reaches in frame', fmt(EV.fish_spawning_reaches))}</dl>
+    <p class="note">${EV.fish_species.length
+      ? 'Species recorded: ' + EV.fish_species.join(', ') + '. '
+      : ''}Forestry activity near an indicated reach is restricted during the
+    spawning window — factor it into harvest scheduling.</p>
+  </div>` }
+
+  <div class="card">
+    <h3>Water</h3>
+    <dl>${kv('Mapped watercourse on title', fmt(C.river_km_on_property, 2) + ' km')}
+    ${BL.length > 1 ? BL.map(b => kv(b.name, fmt(b.river_km, 2) + ' km')).join('') : ''}</dl>
+    ${NARR.water_note ? `<p class="note">${NARR.water_note}</p>` : ''}
+  </div>`;
+
+/* --- data room ---
+   The internal build links straight to the file on disk. The shared build
+   has no such path to link to, and the documents themselves are not
+   embedded (the Artifact sandbox blocks downloads outright), so it lists
+   what exists and routes the request to the agents. */
+const DR = window.PROPMAP_DATAROOM;
+
+/* Contact agent: the first contact in property.json is the lead; the rest
+   are cc'd so an enquiry reaches the whole team. */
+(() => {
+  const cs = DR.contact || [];
+  const c = cs[0];
+  if (!c) return;
+  const subj = encodeURIComponent(`Enquiry: ${P.name}`);
+  const body = encodeURIComponent(`Hi ${c.name.split(' ')[0]},\n\nI'd like to know more about ${P.name}.\n\n`);
+  const cc = cs.slice(1).map(x => x.email).filter(Boolean).join(',');
+  const href = `mailto:${c.email}?subject=${subj}${cc ? '&cc=' + cc : ''}&body=${body}`;
+  const tel = (c.phone || '').replace(/[^\d+]/g, '');
+  const shown = (c.phone || '').replace(/^\+64\s?/, '0');   // 021 … reads better locally; tel: keeps +64
+  const html = `<a class="mail" href="${href}" title="Email ${c.name}">&#9993;&#xFE0E; Contact agent</a>`
+    + (c.phone ? `<a class="tel" href="tel:${tel}" title="Call ${c.name}">&#9742;&#xFE0E; ${shown}</a>` : '');
+  ['contacthdr', 'contactfab'].forEach(id => { document.getElementById(id).innerHTML = html; });
+  const fc = document.getElementById('footcontact');
+  if (fc && c.phone) fc.innerHTML = ` &middot; ${c.name} <a href="tel:${tel}" style="color:var(--ink);white-space:nowrap">${shown}</a>`;
+})();
+const LINKED = !STATIC_AERIAL;
+/* Hosted build with a gated data room: every buyer document carries an
+   href under dataroom/, which Cloudflare Access puts behind a one-time
+   email code. The page itself stays public. */
+const GATED = !!DR.gated;
+
+const EXT_COLOUR = {
+  PDF: '#e03131', XLSX: '#2f9e44', CSV: '#2f9e44', DOCX: '#4dabf7',
+  SHP: '#f59f00', FI2: '#ae3ec9', MSG: '#868e96', INDD: '#868e96', PNG: '#868e96',
+};
+
+function docRow(d) {
+  const colour = EXT_COLOUR[d.ext] || 'var(--sage)';
+  const label = (LINKED || (GATED && d.href))
+    ? `<a href="${d.href}" target="_blank" rel="noopener">${d.name}</a>`
+    : d.name;
+  return `<div class="doc">
+    <i class="ext" style="background:${colour}22;color:${colour};border-color:${colour}55">${d.ext}</i>
+    <div class="docmeta">
+      <div class="docname">${label}${
+        d.visibility === 'internal' ? ' <b class="int">internal</b>' : ''}</div>
+      <div class="docsub">${d.size} · ${d.modified}${d.note ? ' · ' + d.note : ''}</div>
+    </div>
+  </div>`;
+}
+
+const visible = DR.documents.filter(d => LINKED || d.visibility === 'buyer');
+const byCat = c => visible.filter(d => d.category === c);
+
+document.getElementById('pane-docs').innerHTML = `
+  <div class="card">
+    <h3>Data room</h3>
+    <div class="big">${fmt(visible.length)}<small> documents</small></div>
+    <p class="note" style="margin-top:7px">${
+      LINKED
+        ? 'Click any document to open it from the property folder. Items marked '
+          + '<b class="int">internal</b> are commercial and are withheld from the '
+          + 'shared copy of this map.'
+        : GATED
+        ? (visible.length
+          ? 'Documents are released to registered parties. Click a document and '
+            + 'sign in with the email address you registered with; a one-time code '
+            + 'is emailed to you and no password is needed. Not registered yet? '
+            + 'Contact the agents below.'
+          : 'The due-diligence pack is being assembled. Register your interest with '
+            + 'the agents below to receive access as it is released.')
+        : (visible.length
+          ? 'The full pack is released to registered parties on request. Contact '
+            + 'the agents below and we will provide access.'
+          : 'The due-diligence pack is being assembled. Register your interest with '
+            + 'the agents below to receive it as it is released.')}</p>
+    <p class="note">Indexed ${DR.generated}.</p>
+  </div>
+
+  ${DR.categories.map(c => {
+    const rows = byCat(c);
+    if (!rows.length) return '';
+    return `<div class="card">
+      <h3>${c} <span style="float:right;color:var(--ink3)">${rows.length}</span></h3>
+      ${rows.map(docRow).join('')}
+    </div>`;
+  }).join('')}
+
+  <div class="card">
+    <h3>${LINKED ? 'Agents' : GATED ? 'Register for access' : 'Request the full pack'}</h3>
+    ${DR.contact.map(p => `<div class="doc">
+      <div class="docmeta">
+        <div class="docname">${p.name}</div>
+        <div class="docsub">${p.role}</div>
+        <div class="docsub"><a href="mailto:${p.email}">${p.email}</a> · ${p.phone}</div>
+      </div></div>`).join('')}
+    <p class="note">Searle Forestry · Licensed under the Real Estate Agents Act 2008</p>
+  </div>`;
+
+/* --- data --- */
+document.getElementById('pane-data').innerHTML = `
+  <div class="card">
+    <h3>Sources &amp; caveats</h3>
+    <ul class="notes">${STATS.data_notes.map(n => `<li>${n}</li>`).join('')}</ul>
+  </div>
+  <div class="card">
+    <h3>Layers loaded</h3>
+    <table class="mini"><tbody>
+      ${DEFS.filter(d => !d.grp && !d.empty).map(d => {
+        const src = d.k === '__photos' ? PHOTOS : LAYERS[d.k];
+        return `<tr><td>${d.n}</td><td>${fmt(src.features.length)}</td></tr>`;
+      }).join('')}
+    </tbody></table>
+  </div>
+  <div class="card">
+    <h3>Refreshing</h3>
+    <p class="note" style="margin-top:0">LINZ refreshes parcels weekly. To pull current
+    data and cut a new version of this map:</p>
+    <p class="note" style="font-family:ui-monospace,Consolas,monospace;color:var(--ink2)">
+    python scripts/release.py --refresh --note "..."</p>
+    <p class="note">Built 23 September 2026.</p>
+  </div>`;
+</script>
+</body>
+</html>
