@@ -574,7 +574,7 @@ const DEFS = [
      ? popup('Paddock ' + p.paddock, [
          kv('Area (Ballance)', fmt(p.ballance_ha, 1) + ' ha'),
          kv('Mapped area', fmt(p.gis_ha, 2) + ' ha'),
-         '<div class="note">Traced from the vendor's Ballance farm map (Sep 2026) and fitted to the title. Indicative only.</div>'])
+         '<div class="note">Traced from the vendor’s Ballance farm map (Sep 2026) and fitted to the title. Indicative only.</div>'])
      : popup('Unproductive area', [kv('Mapped area', fmt(p.gis_ha, 2) + ' ha')])},
 
   {k: 'neighbour_parcels', n: 'Neighbouring parcels', on: false, sw: '#8899aa',
