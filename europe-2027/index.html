@@ -97,6 +97,17 @@ tr.pick td{color:var(--ink);font-weight:600}
 ol.steps{margin:0;padding-left:1.3rem;display:grid;gap:8px}
 ol.steps li::marker{font-family:var(--mono);color:var(--accent)}
 ul.plain{margin:0;padding-left:1.1rem;display:grid;gap:6px}
+.costs{display:grid;gap:18px;padding-top:26px;border-top:1px solid var(--line)}
+.costs-head{display:grid;gap:8px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:10px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:grid;gap:2px}
+.tile .k{font:500 .72rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.tile .v{font:600 1.5rem var(--mono);font-variant-numeric:tabular-nums}
+.tile .s{font-size:.85rem;color:var(--muted)}
+.tile.total{border-color:var(--accent);background:var(--accent-soft)}
+.costs a{color:var(--accent)}
+.sub{font-size:.85rem;color:var(--muted)}
+.fine{font-size:.85rem;color:var(--muted);max-width:80ch}
 footer{font-size:.8rem;color:var(--muted)}
 
 @media (max-width:760px){
@@ -120,6 +131,7 @@ footer{font-size:.8rem;color:var(--muted)}
       <span><b>5</b> bases</span>
       <span><b>16</b> day trips to pick from</span>
       <span>In <b>LHR</b> · out <b>IST</b></span>
+      <span>About <b>NZ$24,200</b> for two · <a href="#costs" style="color:var(--accent)">costs</a></span>
     </div>
     <p class="note">Dates are a working guess (Fri 21 May – Fri 11 Jun). They'll shift once Taylor's flight times are confirmed.</p>
   </header>
@@ -136,6 +148,58 @@ footer{font-size:.8rem;color:var(--muted)}
 
   <main id="itinerary" style="display:grid;gap:28px"></main>
 
+  <section class="costs" id="costs" aria-labelledby="costs-h">
+    <div class="costs-head">
+      <span class="eyebrow">Budget · for two · NZD</span>
+      <h2 id="costs-h">What it costs</h2>
+      <p class="lede">Emirates premium economy there and back, and a 4-star hotel at every stop. About <b>NZ$24,200</b> for the two of us, or about <b>NZ$22,000</b> if we stay with family in London.</p>
+    </div>
+    <div class="tiles">
+      <div class="tile"><span class="k">International flights</span><span class="v">$13,170</span><span class="s">Emirates premium economy, all four legs</span></div>
+      <div class="tile"><span class="k">Between bases</span><span class="v">$2,420</span><span class="s">3 short flights, 2 ferries, 1 transfer</span></div>
+      <div class="tile"><span class="k">Hotels, 21 nights</span><span class="v">$8,600</span><span class="s">4-star, one room</span></div>
+      <div class="tile total"><span class="k">Total</span><span class="v">~$24,200</span><span class="s">Before car hire, boats, food and insurance</span></div>
+    </div>
+    <div class="scroll">
+    <table class="hotels">
+      <thead><tr><th>Stop</th><th>4-star pick on Booking.com</th><th>Per night</th><th>Stay</th></tr></thead>
+      <tbody>
+        <tr><td>London<br><span class="sub">4 nights</span></td>
+          <td><a href="https://www.booking.com/searchresults.html?ss=Park+Plaza+Westminster+Bridge+London&checkin=2027-05-21&checkout=2027-05-25&group_adults=2&no_rooms=1" target="_blank" rel="noopener">Park Plaza Westminster Bridge</a><br><span class="sub">South Bank, a walk along the river to Borough Market. Or stay with family.</span></td>
+          <td class="n">~$560</td><td class="n">$2,240</td></tr>
+        <tr><td>Paros<br><span class="sub">5 nights</span></td>
+          <td><a href="https://www.booking.com/hotel/gr/opal-paros-paros.html?checkin=2027-05-25&checkout=2027-05-30&group_adults=2&no_rooms=1" target="_blank" rel="noopener">Opal Paros</a><br><span class="sub">Naoussa, 200 m from Piperi Beach. Alternative: <a href="https://www.booking.com/hotel/gr/salt-suites-paros.html?checkin=2027-05-25&checkout=2027-05-30&group_adults=2&no_rooms=1" target="_blank" rel="noopener">Salt Suites Paros</a>.</span></td>
+          <td class="n">~$510</td><td class="n">$2,550</td></tr>
+        <tr><td>Rhodes<br><span class="sub">4 nights</span></td>
+          <td><a href="https://www.booking.com/searchresults.html?ss=Nikos+Takis+Fashion+Boutique+Hotel+Rhodes&checkin=2027-05-30&checkout=2027-06-03&group_adults=2&no_rooms=1" target="_blank" rel="noopener">Nikos Takis Boutique Hotel</a><br><span class="sub">Old Town, by the Street of the Knights. Alternative: <a href="https://www.booking.com/hotel/gr/allegory-boutique.html?checkin=2027-05-30&checkout=2027-06-03&group_adults=2&no_rooms=1" target="_blank" rel="noopener">Allegory Boutique Hotel</a>.</span></td>
+          <td class="n">~$390</td><td class="n">$1,560</td></tr>
+        <tr><td>Fethiye<br><span class="sub">4 nights</span></td>
+          <td><a href="https://www.booking.com/hotel/tr/yacht-classic.html?checkin=2027-06-03&checkout=2027-06-07&group_adults=2&no_rooms=1" target="_blank" rel="noopener">Yacht Classic Hotel</a><br><span class="sub">On the marina where the day boats leave, with a pool. Guests score it 9.6.</span></td>
+          <td class="n">~$305</td><td class="n">$1,220</td></tr>
+        <tr><td>Istanbul<br><span class="sub">4 nights</span></td>
+          <td><a href="https://www.booking.com/searchresults.html?ss=Karakoy+Rooms+Istanbul&checkin=2027-06-07&checkout=2027-06-11&group_adults=2&no_rooms=1" target="_blank" rel="noopener">Karaköy Rooms</a><br><span class="sub">Karaköy, a short walk to Galata and the ferries. Other options: <a href="https://www.booking.com/searchresults.html?ss=Karakoy%2C+Istanbul&checkin=2027-06-07&checkout=2027-06-11&group_adults=2&no_rooms=1&nflt=class%3D4" target="_blank" rel="noopener">all 4-star Karaköy</a>.</span></td>
+          <td class="n">~$255</td><td class="n">$1,020</td></tr>
+        <tr class="pick"><td colspan="3">Hotels, 21 nights</td><td class="n">$8,600</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>Between bases</th><th>How</th><th>For two</th></tr></thead>
+      <tbody>
+        <tr><td>London → Mykonos</td><td>BA or easyJet direct, with bags</td><td class="n">~$800</td></tr>
+        <tr><td>Mykonos → Paros</td><td>Ferry</td><td class="n">~$200</td></tr>
+        <tr><td>Paros → Rhodes</td><td>Fly via Athens (the Blue Star ferry is cheaper)</td><td class="n">~$700</td></tr>
+        <tr><td>Rhodes → Fethiye</td><td>Fast ferry</td><td class="n">~$250</td></tr>
+        <tr><td>Fethiye → Dalaman airport</td><td>Private transfer</td><td class="n">~$120</td></tr>
+        <tr><td>Dalaman → Istanbul</td><td>Turkish, AJet or Pegasus</td><td class="n">~$350</td></tr>
+        <tr class="pick"><td colspan="2">Between bases</td><td class="n">$2,420</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="fine">International flights are Taylor's Flight Centre quote. The hotels are real 4-star places on Booking.com. Their prices are typical early-summer rates found in September 2026, because most 2027 dates aren't priced yet. The links open each search with our dates, so the live price shows once rates load. Rates used: US$1 ≈ NZ$1.70. Paros and Fethiye fill up in June, so book on free cancellation early. Not included: car or quad hire, day boats, tours, food, insurance, and the UK ETA and ETIAS.</p>
+  </section>
+
   <section class="cols">
     <div class="panel">
       <span class="eyebrow">Flights · quoted by Taylor, Flight Centre</span>
@@ -144,14 +208,14 @@ footer{font-size:.8rem;color:var(--muted)}
       <table>
         <thead><tr><th>Option</th><th>Each</th><th>For two</th></tr></thead>
         <tbody>
-          <tr class="pick"><td>Qatar economy, into London, out of Istanbul</td><td class="n">$2,575</td><td class="n">~$5,150</td></tr>
+          <tr><td>Qatar economy, into London, out of Istanbul</td><td class="n">$2,575</td><td class="n">~$5,150</td></tr>
           <tr><td>Emirates premium economy on the long legs to and from Dubai</td><td class="n">$6,245</td><td class="n">~$12,490</td></tr>
-          <tr><td>Emirates premium economy on all four legs</td><td class="n">$6,585</td><td class="n">~$13,170</td></tr>
+          <tr class="pick"><td>Emirates premium economy on all four legs</td><td class="n">$6,585</td><td class="n">~$13,170</td></tr>
           <tr><td>China Eastern economy (9-hour layovers)</td><td class="n">—</td><td class="n">~$4,700</td></tr>
         </tbody>
       </table>
       </div>
-      <p class="d" style="color:var(--muted);font-size:.9rem">Qatar has no premium economy. The open question is whether premium is worth about $8,000 more for the two of us.</p>
+      <p class="d" style="color:var(--muted);font-size:.9rem">Going with Emirates premium economy. Qatar has no premium economy on this route. Premium on just the long legs (via Dubai) would save about $680 for the two of us.</p>
     </div>
     <div class="panel">
       <span class="eyebrow">Doing it ourselves</span>
