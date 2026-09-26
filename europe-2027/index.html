@@ -109,6 +109,8 @@ ul.plain{margin:0;padding-left:1.1rem;display:grid;gap:6px}
 .tile.total{border-color:var(--accent);background:var(--accent-soft)}
 .costs a{color:var(--accent)}
 .sub{font-size:.85rem;color:var(--muted)}
+td.sub{padding-top:12px}
+.flights td:first-child{white-space:nowrap}
 .fine{font-size:.85rem;color:var(--muted);max-width:80ch}
 footer{font-size:.8rem;color:var(--muted)}
 
@@ -133,7 +135,7 @@ footer{font-size:.8rem;color:var(--muted)}
       <span><b>5</b> bases</span>
       <span><b>16</b> day trips to pick from</span>
       <span>In <b>LHR</b> · out <b>IST</b></span>
-      <span>About <b>NZ$24,200</b> for two · <a href="#costs" style="color:var(--accent)">costs</a></span>
+      <span>About <b>NZ$22,000</b> for two · <a href="#costs" style="color:var(--accent)">costs</a></span>
     </div>
     <p class="note">Dates are a working guess (Fri 21 May – Fri 11 Jun). They'll shift once Taylor's flight times are confirmed.</p>
   </header>
@@ -155,21 +157,21 @@ footer{font-size:.8rem;color:var(--muted)}
     <div class="costs-head">
       <span class="eyebrow">Budget · for two · NZD</span>
       <h2 id="costs-h">What it costs</h2>
-      <p class="lede">Emirates premium economy there and back, and a 4-star hotel at every stop. About <b>NZ$24,200</b> for the two of us, or about <b>NZ$22,000</b> if we stay with family in London.</p>
+      <p class="lede">Emirates premium economy there and back, family in London, and a 4-star hotel at every other stop. About <b>NZ$22,000</b> for the two of us.</p>
     </div>
     <div class="tiles">
       <div class="tile"><span class="k">International flights</span><span class="v">$13,170</span><span class="s">Emirates premium economy, all four legs</span></div>
       <div class="tile"><span class="k">Between bases</span><span class="v">$2,420</span><span class="s">3 short flights, 2 ferries, 1 transfer</span></div>
-      <div class="tile"><span class="k">Hotels, 21 nights</span><span class="v">$8,600</span><span class="s">4-star, one room</span></div>
-      <div class="tile total"><span class="k">Total</span><span class="v">~$24,200</span><span class="s">Before car hire, boats, food and insurance</span></div>
+      <div class="tile"><span class="k">Hotels, 17 nights</span><span class="v">$6,360</span><span class="s">4-star, one room. London with family.</span></div>
+      <div class="tile total"><span class="k">Total</span><span class="v">~$21,950</span><span class="s">Before car hire, boats, food and insurance</span></div>
     </div>
     <div class="scroll">
     <table class="hotels">
       <thead><tr><th>Stop</th><th>4-star pick on Booking.com</th><th>Per night</th><th>Stay</th></tr></thead>
       <tbody>
         <tr><td>London<br><span class="sub">4 nights</span></td>
-          <td><a href="https://www.booking.com/searchresults.html?ss=Park+Plaza+Westminster+Bridge+London&checkin=2027-05-21&checkout=2027-05-25&group_adults=2&no_rooms=1" target="_blank" rel="noopener">Park Plaza Westminster Bridge</a><br><span class="sub">South Bank, a walk along the river to Borough Market. Or stay with family.</span></td>
-          <td class="n">~$560</td><td class="n">$2,240</td></tr>
+          <td>Staying with family<br><span class="sub">Borough Market and the South Bank are an easy trip in.</span></td>
+          <td class="n">—</td><td class="n">$0</td></tr>
         <tr><td>Paros<br><span class="sub">5 nights</span></td>
           <td><a href="https://www.booking.com/hotel/gr/opal-paros-paros.html?checkin=2027-05-25&checkout=2027-05-30&group_adults=2&no_rooms=1" target="_blank" rel="noopener">Opal Paros</a><br><span class="sub">Naoussa, 200 m from Piperi Beach. Alternative: <a href="https://www.booking.com/hotel/gr/salt-suites-paros.html?checkin=2027-05-25&checkout=2027-05-30&group_adults=2&no_rooms=1" target="_blank" rel="noopener">Salt Suites Paros</a>.</span></td>
           <td class="n">~$510</td><td class="n">$2,550</td></tr>
@@ -182,7 +184,23 @@ footer{font-size:.8rem;color:var(--muted)}
         <tr><td>Istanbul<br><span class="sub">4 nights</span></td>
           <td><a href="https://www.booking.com/searchresults.html?ss=Karakoy+Rooms+Istanbul&checkin=2027-06-07&checkout=2027-06-11&group_adults=2&no_rooms=1" target="_blank" rel="noopener">Karaköy Rooms</a><br><span class="sub">Karaköy, a short walk to Galata and the ferries. Other options: <a href="https://www.booking.com/searchresults.html?ss=Karakoy%2C+Istanbul&checkin=2027-06-07&checkout=2027-06-11&group_adults=2&no_rooms=1&nflt=class%3D4" target="_blank" rel="noopener">all 4-star Karaköy</a>.</span></td>
           <td class="n">~$255</td><td class="n">$1,020</td></tr>
-        <tr class="pick"><td colspan="3">Hotels, 21 nights</td><td class="n">$8,600</td></tr>
+        <tr class="pick"><td colspan="3">Hotels, 17 nights</td><td class="n">$6,360</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="scroll">
+    <table class="flights">
+      <thead><tr><th>Emirates · premium economy</th><th>Departs</th><th>Arrives</th><th>Flying</th></tr></thead>
+      <tbody>
+        <tr><td colspan="4" class="sub"><b>Out</b> · about 27 h door to door, landing Friday lunchtime</td></tr>
+        <tr><td>EK449 Auckland → Dubai</td><td class="n">Thu 20 May 20:30</td><td class="n">Fri 21 May 05:35</td><td class="n">17 h 05</td></tr>
+        <tr><td colspan="4" class="sub">2 h connection in Dubai</td></tr>
+        <tr><td>EK1 Dubai → London Heathrow</td><td class="n">Fri 21 May 07:35</td><td class="n">Fri 21 May 12:25</td><td class="n">7 h 50</td></tr>
+        <tr><td colspan="4" class="sub"><b>Home</b> · about 29.5 h door to door</td></tr>
+        <tr><td>EK122 Istanbul → Dubai</td><td class="n">Fri 11 Jun 19:35</td><td class="n">Sat 12 Jun 01:35</td><td class="n">5 h 00</td></tr>
+        <tr><td colspan="4" class="sub">8 h 40 connection in Dubai, overnight</td></tr>
+        <tr><td>EK448 Dubai → Auckland</td><td class="n">Sat 12 Jun 10:15</td><td class="n">Sun 13 Jun 10:05</td><td class="n">15 h 50</td></tr>
+        <tr class="pick"><td colspan="3">All four legs, for two (Taylor's quote)</td><td class="n">$13,170</td></tr>
       </tbody>
     </table>
     </div>
@@ -200,7 +218,7 @@ footer{font-size:.8rem;color:var(--muted)}
       </tbody>
     </table>
     </div>
-    <p class="fine">International flights are Taylor's Flight Centre quote. The hotels are real 4-star places on Booking.com. Their prices are typical early-summer rates found in September 2026, because most 2027 dates aren't priced yet. The links open each search with our dates, so the live price shows once rates load. Rates used: US$1 ≈ NZ$1.70. Paros and Fethiye fill up in June, so book on free cancellation early. Not included: car or quad hire, day boats, tours, food, insurance, and the UK ETA and ETIAS.</p>
+    <p class="fine">International flights are Taylor's Flight Centre quote. Flight times are local, from Emirates' current schedule; the 2027 timetable may shift a little. The hotels are real 4-star places on Booking.com. Their prices are typical early-summer rates found in September 2026, because most 2027 dates aren't priced yet. The links open each search with our dates, so the live price shows once rates load. Rates used: US$1 ≈ NZ$1.70. Paros and Fethiye fill up in June, so book on free cancellation early. Not included: car or quad hire, day boats, tours, food, insurance, and the UK ETA and ETIAS.</p>
   </section>
 
   <section class="cols">
@@ -258,7 +276,7 @@ const AKL=[-37.008,174.785], DXB=[25.253,55.365], LHR=[51.47,-0.454], IST=[41.27
 
 const STOPS = [
   {id:"london", name:"London", ll:[51.507,-0.128], dates:"Fri 21 May – Tue 25 May", nights:4,
-   arrive:"Emirates premium economy from Auckland via Dubai into Heathrow. Leave Thu 20 May, land Fri 21 May.",
+   arrive:"Emirates premium economy from Auckland via Dubai into Heathrow. EK449 leaves Thu 20 May at 8:30 pm; EK1 lands Fri 21 May at 12:25 pm.",
    stay:"With or near family.",
    why:"Family time and getting over the jet lag. Keep the first two days empty.",
    trips:[
@@ -294,7 +312,7 @@ const STOPS = [
      {t:"Saklıkent Gorge and Kayaköy", d:"A canyon wade, then the abandoned Greek hillside village on the way back.", how:"Car", ll:[36.47,29.405]}
    ]},
   {id:"istanbul", name:"Istanbul", ll:[41.024,28.975], dates:"Mon 7 Jun – Fri 11 Jun", nights:4,
-   arrive:"45 min to Dalaman airport, then fly to Istanbul (about 1 h 15). Fly home from IST on Fri 11 Jun.",
+   arrive:"45 min to Dalaman airport, then fly to Istanbul (about 1 h 15). Fly home from IST on Fri 11 Jun (EK122, 7:35 pm).",
    stay:"Karaköy or Galata: good food and rooftop bars, a short walk or tram to the old city.",
    why:"The new city of the trip. Get an Istanbulkart and use the ferries.",
    trips:[
@@ -349,10 +367,10 @@ LEGS.forEach(l => {
 });
 
 const LONG = [
-  {from:AKL, to:DXB, bend:.1, t:"Auckland → Dubai", d:"Emirates premium economy, about 17 h. Leave Thu 20 May."},
-  {from:DXB, to:LHR, bend:.12, t:"Dubai → London Heathrow", d:"Emirates premium economy, about 7.5 h. Land Fri 21 May."},
-  {from:IST, to:DXB, bend:.12, t:"Istanbul → Dubai", d:"Emirates premium economy, about 4.5 h. Leave Fri 11 Jun."},
-  {from:DXB, to:AKL, bend:.1, t:"Dubai → Auckland", d:"Emirates premium economy, about 16 h. Home Sun 13 Jun, NZ time."}
+  {from:AKL, to:DXB, bend:.1, t:"Auckland → Dubai", d:"EK449, 17 h 05. Thu 20 May 20:30 → Fri 21 May 05:35."},
+  {from:DXB, to:LHR, bend:.12, t:"Dubai → London Heathrow", d:"EK1, 7 h 50. Fri 21 May 07:35 → 12:25."},
+  {from:IST, to:DXB, bend:.12, t:"Istanbul → Dubai", d:"EK122, 5 h. Fri 11 Jun 19:35 → Sat 01:35."},
+  {from:DXB, to:AKL, bend:.1, t:"Dubai → Auckland", d:"EK448, 15 h 50. Sat 12 Jun 10:15 → Sun 13 Jun 10:05."}
 ];
 LONG.forEach(l => {
   L.polyline(curve(l.from, l.to, l.bend), Object.assign({lineCap:"round"}, STYLE.long)).addTo(map)
