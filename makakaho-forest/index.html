@@ -910,8 +910,9 @@ if (BL.length > 1) {
 const clabels = L.layerGroup();
 (LAYERS.contours ? LAYERS.contours.features : []).forEach(f => {
   if (f.properties.elevation % 100 !== 0) return;
+  if (!f.geometry || !f.geometry.coordinates) return;
   const cs = f.geometry.type === 'LineString' ? f.geometry.coordinates : (f.geometry.coordinates[0] || []);
-  if (cs.length < 3) return;
+  if (!cs || cs.length < 3) return;
   const c = cs[Math.floor(cs.length / 2)];
   clabels.addLayer(L.marker([c[1], c[0]], {interactive: false, icon: L.divIcon({
     className: 'ctour-lbl', html: f.properties.elevation, iconSize: [26, 11]})}));
