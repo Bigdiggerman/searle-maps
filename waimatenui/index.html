@@ -197,6 +197,21 @@ input[type=checkbox]:checked ~ input.lop{opacity:.85}
   padding:5px 10px;font-size:11px;color:var(--ink2);font-variant-numeric:tabular-nums;
 }
 #coords b{color:var(--ink);font-weight:600}
+
+/* ---------- your location ---------- */
+.locbtn{display:flex;align-items:center;justify-content:center;width:30px;height:30px}
+.locbtn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+.locbtn.on{color:#4dabf7!important}
+.locbtn.wait svg{animation:locpulse 1s ease-in-out infinite}
+@keyframes locpulse{50%{opacity:.35}}
+#toast{
+  position:absolute;left:50%;top:12px;transform:translateX(-50%);z-index:1100;
+  background:rgba(23,28,18,.96);border:1px solid var(--line);border-radius:8px;
+  padding:8px 12px;font-size:12px;color:var(--ink);max-width:min(420px,calc(100% - 24px));
+  box-shadow:0 4px 18px #0008;display:none;line-height:1.45;
+}
+#toast.on{display:block}
+#coords .me{color:#74c0fc}
 .leaflet-popup-content-wrapper{background:var(--panel);color:var(--ink);border-radius:9px;border:1px solid var(--line)}
 .leaflet-popup-tip{background:var(--panel);border:1px solid var(--line)}
 .leaflet-popup-content{margin:11px 13px;font-size:12px;min-width:190px}
@@ -367,17 +382,18 @@ a.leaflet-popup-close-button{color:var(--ink3)!important}
         <div id="layerbody"></div>
       </div>
       <div id="coords"></div>
+      <div id="toast" role="status" aria-live="polite"></div>
       <div class="contact" id="contactfab"></div>
     </div>
   </div>
 </div>
 
-<script src="assets/layers.js"></script>
+<script src="assets/layers.js?v=d9810d4f92"></script>
 <script>
-window.PROPMAP_STATS={"property":{"name":"Waimatenui Forest","address":"Wai O Te Kumurau (Waiotekumurau) Road, Waimatenui, Donnellys Crossing \u2013 37 km south-west of Kaikohe","title_reference":"NA55A/92 + NA1188/77 + NA1188/75 + NA42D/776 + NA1188/76","panoramas":{"collection_url":"https://kuula.co/post/n1/collection/7HdW4","note":"Two drone panoramas from 18 December 2025, hosted on Kuula. The blue pins on the map open each one at the point it was taken.","posts":{"DJI_20251218093139_0015_D.JPG":"https://kuula.co/post/hBCzR/collection/7HdW4","DJI_20251218093350_0019_D.JPG":"https://kuula.co/post/hBCQv/collection/7HdW4"}},"legal_description":"Lot 1 DP 41430 + Lot 1 DP 85781 + Section 17 Block VI Tutamoe SD + Section 18 Block VI Tutamoe SD + Section 19 Block VI Tutamoe SD + Section 21 Block VI Tutamoe SD + Section 7 Block II Tutamoe SD","land_district":"North Auckland","tenure":"Freehold, subject to a registered 35-year Crown Forestry Right (executed 23 December 2019) over the plantation area","tenure_short":"freehold","zoning":"Rural Production (Far North District Plan \u2013 to be confirmed)","territorial_authority":"Far North District Council","regional_council":"Northland Regional Council","title_area_ha_linz":596.87,"title_area_ha_im":600.12,"parcel_count":7,"centroid":[-35.656047,173.731509],"bbox":[173.69041,-35.687896,173.772271,-35.615472]},"blocks":[],"rates":{"total_annual":19478.41,"source":"Vendor's key information sheet and draft IM, September 2026 (Far North District Council, combined rates)","district_council":"Far North District Council","regional_council":"Northland Regional Council","capital_value":4075000.0,"land_value":null,"improvements_value":null,"rates_per_ha_title":32.63,"rates_per_ha_stocked":38.05,"rates_per_ha_registered":41.3,"rates_pct_of_cv":0.478,"cv_per_ha":6827.0,"lv_per_ha":null,"rates_per_nzu":null,"split_available":false,"note":"Of the $19,478.41 total, the Crown pays $17,181.57 under the Forestry Right ($11,895.27 on its 503.00 ha rated area plus the $5,286.30 forestry roading targeted rate). The landowner's share is $2,296.83 p.a. on the 97.12 ha it rates directly. RV $4,075,000; the land / improvements split is not on file."},"ets":{"caas":[{"caa":1,"planted":2020,"species":"Pinus radiata","registered_ha":471.6,"nzu":0,"age_2026":6,"nzu_per_ha":0.0}],"registered_ha":471.6,"nzu_transferring":0,"accounting":"Averaging","activity":"Post-1989 forest land, Landowner","participant":"Waimatenui Farms Limited \u2013 NZETR holding account NZ-11633, party P-053466, application APP-0057218","constitution_date":"2021 (application APP-0057218; MPI issue-areas review 22/06/2021 \u2013 CAA land status report to confirm the constitution date)","fma":true,"status":"102,430 NZUs were issued to the participant across the 2022\u20132025 return periods (13,912 MERP 2022; 25,419 PERP 2023; 26,504 PERP 2024; 36,595 MERP 2025 \u2013 per the s194A input return notices). All units issued to date have been sold and none transfer with the sale, so the NZU count above is nil; the purchaser takes over the registration and future issuance under averaging. Latest FMA plots recorded November 2025. The CAA land status report and MPI CAA shapefile are not yet in the property file \u2013 the 471.6 ha is from the s194A notice.","mapped_eligible_ha":0.0,"mapped_ineligible_ha":0.0,"ineligible_reason":""},"crop":{"title":"Crown Forestry Right and tree crop","intro":"The tree crop belongs to the Crown for the term of the Forestry Right; the vendor sells the land, the rental and the ETS registration. Stand areas are Crown Forestry's management figures (net stocked areas measured January 2023) and are not to be relied on for any other purpose.","summary":[{"k":"Net stocked area (all)","v":"511.86 ha"},{"k":"Rental / Forestry Right area","v":"501 ha (stands 1/01\u20131/04)"},{"k":"ETS registered (CAA 1)","v":"471.6 ha, averaging"},{"k":"Species / stocking","v":"Pinus radiata, 986 sph weighted average (target 1,000)"},{"k":"Regime","v":"Pruning 2\u20133 lifts 2025\u201329 where suitable; waste thin unpruned stands 2026\u201329 to ~500 sph. Stand 1/03 assessed as not suitable for pruning."},{"k":"Rotation","v":"25\u201330 years anticipated; clearfell spread over several years"}],"age_classes":[{"block":"Forestry Right","ha":108.7,"year":2020,"age":6,"species":"P. radiata \u2013 stand 1/01"},{"block":"Forestry Right","ha":89.5,"year":2020,"age":6,"species":"P. radiata \u2013 stand 1/02"},{"block":"Forestry Right","ha":299.2,"year":2020,"age":6,"species":"P. radiata \u2013 stand 1/03 (not planned for pruning)"},{"block":"Forestry Right","ha":3.6,"year":2020,"age":6,"species":"P. radiata \u2013 stand 1/04, planted outside the legal boundary by Crown Forestry"},{"block":"Outside Forestry Right","ha":6.86,"year":1996,"age":30,"species":"P. radiata \u2013 older stands"},{"block":"Outside Forestry Right","ha":4.0,"year":2022,"age":4,"species":"Landowner planting (powerline corridor / paper road)"}],"age_note":"Crown Forestry's plan records 497.4 ha in stands 1/01\u20131/03 plus 3.6 ha planted outside the legal boundary (stand 1/04); the Forestry Right rental is charged on 501 ha.","terms_title":"Crown Forestry Right","terms":[{"k":"Grantee","v":"The Crown, administered by Crown Forestry (Te Uru R\u0101kau \u2013 NZ Forest Service, MPI)"},{"k":"Forest manager","v":"Northland Forest Managers (1995) Limited"},{"k":"Executed","v":"23 December 2019 (Forestry Right and Ancillary Deed, transferred to Waimatenui Farms Limited on settlement of the land)"},{"k":"Term","v":"35 years, or completion of the first-rotation harvest if earlier"},{"k":"Costs","v":"All establishment, silviculture, roading and management costs met by the Crown; the Crown also pays rates on the forested area"},{"k":"Stumpage","v":"None \u2013 the Crown keeps the full timber return in exchange for the land rental"},{"k":"Rental area","v":"501 ha"},{"k":"Rental base","v":"$280/ha at commencement (CPI base March 2020)"},{"k":"2024 rental invoiced","v":"$171,673.30 + GST (year to April 2024)"},{"k":"2026 rental","v":"$356.39/ha \u2013 $178,551.39 p.a. excl. GST"},{"k":"Review","v":"Annually to CPI (All Groups): A = B \u00d7 (C \u00f7 D), with a hard ratchet \u2013 rent cannot fall"},{"k":"On expiry","v":"Harvest roading and infrastructure remain with the land"}],"terms_notes":["Crown Forestry must be consulted before any subdivision and a non-objection covenant signed by any new owner of subdivided land.","The landowner may separately register its own retained (non-Forestry-Right) planting in the ETS at its own risk.","Management-plan area statements are for Crown Forestry's purposes and may change with remapping."],"source":"Waiotekumurau (Sands) Forest Management Plan 2024\u20132029 (Crown Forestry, Dec 2024); WFL rental invoice April 2024; vendor key information sheet; draft IM September 2026"},"narrative":{"overview_note":"Waimatenui Forest is a 2020 Pinus radiata plantation on 600 ha of freehold land, held by the Crown under a 35-year Forestry Right administered by Crown Forestry (Te Uru R\u0101kau \u2013 MPI) with Northland Forest Managers as forest manager. The Crown meets every forestry cost and pays the landowner a CPI-indexed land rental ($178,551 p.a. in 2026) with no stumpage share; the landowner is also the ETS participant on 471.6 ha under averaging. The purchase is of the land, the rental stream and the ETS registration.","cover_note":"The stand layers are the vendor's Crown Forestry / NFM stand shapefiles (four stands, 505 ha mapped against a 501 ha rental area). The 6.86 ha of 1996 trees and the landowner's 4.0 ha 2022 planting outside the Forestry Right are not mapped.","rates_note":"The landowner's rates liability is $2,296.83 p.a.; the balance is met by the Crown under the Forestry Right."},"terrain":{"min_elevation_m":200,"max_elevation_m":560,"contour_interval_m":20},"access":{"track_km_on_property":3.16,"formed_road_km_on_property":0.01,"legal_road_parcels_nearby":41,"legal_road_ha_on_property":0.0,"note":"Off Wai O Te Kumurau Road (LINZ: Waiotekumurau Road, Donnellys Crossing), 37 km south-west of Kaikohe and about 100 km from Northport. Two main 4WD metalled tracks enter the forest \u2013 one off Wai O Te Kumurau Road and one along Waiowhata Road to the bottom fertiliser bin \u2013 meeting and climbing to the top fertiliser bin, with grass tracks throughout. No public access for recreation or hunting; no grazing within the Forestry Right area."},"cover":{"native_ha_on_property":60.65,"scrub_ha_on_property":3.71,"exotic_ha_on_property":6.14,"net_stocked_pine_ha":511.86,"river_km_on_property":16.59,"source":"LINZ Topo50 vegetation polygons - indicative only"},"environment":{"esc":[{"key":"Low","ha":215.4,"pct":36.1},{"key":"Moderate","ha":184.1,"pct":30.8},{"key":"High","ha":197.3,"pct":33.1}],"esc_high_ha":197.3,"esc_source":"MPI Erosion Susceptibility Classification (March 2018), the classification the NES-CF works off","luc":[{"key":"3","ha":51.2,"pct":8.6},{"key":"4","ha":164.1,"pct":27.5},{"key":"6","ha":381.6,"pct":63.9}],"luc_subclasses":[{"key":"6e","ha":381.6,"pct":63.9},{"key":"4e","ha":164.1,"pct":27.5},{"key":"3e","ha":51.2,"pct":8.6}],"luc_source":"LRIS NZLRI Land Use Capability 2021 (layer 48076)","luc_units":[{"key":"Strongly rolling to steep slopes on weathered intermediate to basic extrusive lithologies below 800m asl with strongly leached low fertility Granular and Brown (brown granular clays and loams, and red and brown loam) soils in moderate to high (1400-2000mm) rainfall areas and potential for moderate to severe soil slip, sheet, gully, and earthflow erosion.","ha":197.3},{"key":"Strongly rolling to steep slopes developed on volcanic rocks (dolerite, andesite, basalt etc) below 800 m asl with moderately leached Granular, Melanic and Allophanic (brown granular clays and loams, and yellow-brown loam) soils in mild moderate (1200-1800 mm) rainfall areas with a potential for moderate soil slip, sheet and gully erosion.","ha":184.3},{"key":"Rolling to strongly rolling slopes typically below 600 m asl on old basic volcanics and volcanic breccia with Granular (brown granular loams and clay) soils in moderate to high (1400-2000 mm) rainfall areas with a potential for moderate to severe sheet, rill wind and gully erosion when cultivated.","ha":164.1},{"key":"Undulating to rolling slopes on basaltic lava flows, scoria and ash below 400 m asl with Granular and Allophanic (brown and red loam) soils in warm moderate to high (1200-2000 mm) rainfall areas with a potential for moderate rill and gully erosion when cultivated. The presence of boulders may limit horticultural use.","ha":51.2}],"fish_spawning_reaches":1,"fish_species":["Rainbow trout"]},"neighbours":{"doc_parcels_adjoining":6,"doc_names":["Marginal Strip - Waiokumurau Stream","Marlborough Forest (Addition) Conservation Area","Marlborough Forest (Pt Northland Conservation Park)","Mataraua Forest (Pt Northland Conservation Park)","Waiokumurau Local Purpose Esplanade Reserve"]},"data_notes":["Boundary: LINZ NZ Primary Parcels (layer 50772) matched on title. Roads, contours, hydrology and vegetation: LINZ Topo50 layers, fetched live via WFS.","Native and scrub areas are LINZ Topo50 vegetation polygons clipped to the title \u2014 indicative, not a survey.","Erosion susceptibility and Land Use Capability: MPI Erosion Susceptibility Classification (March 2018) via the MPI geospatial service. The ESC sets the NES-CF consenting thresholds.","Rates source: Vendor's key information sheet and draft IM, September 2026 (Far North District Council, combined rates). District/regional split not on file \u2014 confirm from the rates notice before quoting a split.","LINZ parcel area is 596.87 ha against the stated 600.12 ha.","Titles: the five titles carry seven LINZ parcels totalling 596.87 ha by parcel geometry against the 600.12 ha titled area in the IM (600.1233 ha on the vendor's schedule).","ETS CAA polygon: MPI's CAA shapefile is not in the property file, so no CAA layer is drawn; the four stand layers are the vendor's Crown Forestry / NFM stand shapefiles. The MPI issue-areas review file on hand (ETSA046753, June 2021) is the application-stage review, not the registered CAA, and is not shown.","Address: no LINZ address point falls inside the titles. LINZ names the road Waiotekumurau Road, Donnellys Crossing; the IM's 'Wai O Te Kumurau Road, Waimatenui, Kaikohe' is the same road. The vendor's postal address (929 Waimatenui Road, Nukutawhiti) is the farm, 4 km north-east of the forest.","Stand 1/04 (3.6 ha) was planted by Crown Forestry outside the legal boundary \u2013 see the stand layer against the title boundary.","Photos: DJI drone stills and two 360\u00b0 panoramas, 18 December 2025; the panoramas are hosted on Kuula (kuula.co/post/n1/collection/7HdW4).","Imagery on this page is served as flat images captured from LINZ, so the map needs no LINZ account to view. Vector overlays are LINZ data as at 23 September 2026."]};
+window.PROPMAP_STATS={"property":{"name":"Waimatenui Forest","address":"Wai O Te Kumurau (Waiotekumurau) Road, Waimatenui, Donnellys Crossing \u2013 37 km south-west of Kaikohe","title_reference":"NA55A/92 + NA1188/77 + NA1188/75 + NA42D/776 + NA1188/76","panoramas":{"collection_url":"https://kuula.co/post/n1/collection/7HdW4","note":"Two drone panoramas from 18 December 2025, hosted on Kuula. The blue pins on the map open each one at the point it was taken.","posts":{"DJI_20251218093139_0015_D.JPG":"https://kuula.co/post/hBCzR/collection/7HdW4","DJI_20251218093350_0019_D.JPG":"https://kuula.co/post/hBCQv/collection/7HdW4"}},"legal_description":"Lot 1 DP 41430 + Lot 1 DP 85781 + Section 17 Block VI Tutamoe SD + Section 18 Block VI Tutamoe SD + Section 19 Block VI Tutamoe SD + Section 21 Block VI Tutamoe SD + Section 7 Block II Tutamoe SD","land_district":"North Auckland","tenure":"Freehold, subject to a registered 35-year Crown Forestry Right (executed 23 December 2019) over the plantation area","tenure_short":"freehold","zoning":"Rural (Kaipara District Plan)","property_type":"forest","effective_area_ha":null,"territorial_authority":"Kaipara District Council","regional_council":"Northland Regional Council","title_area_ha_linz":596.87,"title_area_ha_im":600.12,"parcel_count":7,"centroid":[-35.656047,173.731509],"bbox":[173.69041,-35.687896,173.772271,-35.615472]},"blocks":[],"rates":{"total_annual":19478.41,"source":"Kaipara District Council / Northland Regional Council rates assessment 2026-27 (valuation 01000-06800) and the vendor's rates recharge to Crown Forestry","district_council":"Kaipara District Council","regional_council":"Northland Regional Council","capital_value":4075000.0,"land_value":3670000.0,"improvements_value":null,"rates_per_ha_title":32.63,"rates_per_ha_stocked":38.05,"rates_per_ha_effective":null,"rates_per_ha_registered":41.3,"rates_pct_of_cv":0.478,"cv_per_ha":6827.0,"lv_per_ha":6149.0,"rates_per_nzu":null,"split_available":false,"note":"Of the $19,478.41 total (excl. GST), the Crown pays $17,181.57 under the Forestry Right ($11,895.27 on its 503.00 ha rated area plus the $5,286.30 forestry roading targeted rate). The landowner's share is $2,296.83 p.a. on the 97.12 ha it rates directly. Capital value $4,075,000, land value $3,670,000 (KDC)."},"ets":{"caas":[{"caa":1,"planted":2020,"species":"Pinus radiata","registered_ha":471.6,"nzu":0,"age_2026":6,"nzu_per_ha":0.0,"mapped_ha":471.41}],"registered_ha":471.6,"nzu_transferring":0,"accounting":"Averaging","activity":"Post-1989 forest land, Landowner","participant":"Waimatenui Farms Limited \u2013 NZETR holding account NZ-11633, party P-053466","constitution_date":"2021 (MPI issue-areas review 22 June 2021; first return period 2018\u20132022 \u2013 CAA land status report to confirm the constitution date)","fma":true,"status":"102,431 NZUs were issued to the participant across the 2022\u20132025 return periods (13,912 MERP 2018\u201322; 25,419 PERP 2023; 26,504 PERP 2024; 36,596 MERP 2023\u201325 \u2013 per the s194A input return notices). All units issued to date have been sold and none transfer with the sale, so the NZU count above is nil; the purchaser takes over the registration and future issuance under averaging. FMA plots measured November 2025; participant-specific tables generated 17 November 2026 (age 6 stock 210.0 t CO2/ha). The CAA land status report is still to come; the 471.6 ha is from the s194A notices.","headline":null,"forecast":null,"mapped_eligible_ha":471.41,"mapped_ineligible_ha":0.0,"ineligible_reason":""},"crop":{"title":"Crown Forestry Right and tree crop","intro":"The tree crop belongs to the Crown for the term of the Forestry Right; the vendor sells the land, the rental and the ETS registration. Stand areas are Crown Forestry's management figures (net stocked areas measured January 2023) and are not to be relied on for any other purpose.","summary":[{"k":"Net stocked area (all)","v":"511.86 ha"},{"k":"Rental / Forestry Right area","v":"501 ha (stands 1/01\u20131/04)"},{"k":"ETS registered (CAA 1)","v":"471.6 ha, averaging"},{"k":"Species / stocking","v":"Pinus radiata, 986 sph weighted average (target 1,000)"},{"k":"Regime","v":"Pruning 2\u20133 lifts 2025\u201329 where suitable; waste thin unpruned stands 2026\u201329 to ~500 sph. Stand 1/03 assessed as not suitable for pruning."},{"k":"Rotation","v":"25\u201330 years anticipated; clearfell spread over several years"}],"age_classes":[{"block":"Forestry Right","ha":108.7,"year":2020,"age":6,"species":"P. radiata \u2013 stand 1/01"},{"block":"Forestry Right","ha":89.5,"year":2020,"age":6,"species":"P. radiata \u2013 stand 1/02"},{"block":"Forestry Right","ha":299.2,"year":2020,"age":6,"species":"P. radiata \u2013 stand 1/03 (not planned for pruning)"},{"block":"Forestry Right","ha":3.6,"year":2020,"age":6,"species":"P. radiata \u2013 stand 1/04, planted outside the legal boundary by Crown Forestry"},{"block":"Outside Forestry Right","ha":6.86,"year":1996,"age":30,"species":"P. radiata \u2013 older stands"},{"block":"Outside Forestry Right","ha":4.0,"year":2022,"age":4,"species":"Landowner planting (powerline corridor / paper road)"}],"age_note":"Crown Forestry's plan records 497.4 ha in stands 1/01\u20131/03 plus 3.6 ha planted outside the legal boundary (stand 1/04); the Forestry Right rental is charged on 501 ha.","terms_title":"Crown Forestry Right","terms":[{"k":"Grantee","v":"The Crown, administered by Crown Forestry (Te Uru R\u0101kau \u2013 NZ Forest Service, MPI)"},{"k":"Forest manager","v":"Northland Forest Managers (1995) Limited"},{"k":"Executed","v":"23 December 2019 (Forestry Right and Ancillary Deed, transferred to Waimatenui Farms Limited on settlement of the land)"},{"k":"Term","v":"35 years, or completion of the first-rotation harvest if earlier"},{"k":"Costs","v":"All establishment, silviculture, roading and management costs met by the Crown; the Crown also pays rates on the forested area"},{"k":"Stumpage","v":"None \u2013 the Crown keeps the full timber return in exchange for the land rental"},{"k":"Rental area","v":"501 ha"},{"k":"Rental base","v":"$280/ha at commencement (CPI base March 2020)"},{"k":"2024 rental invoiced","v":"$171,673.30 + GST (year to April 2024)"},{"k":"2026 rental","v":"$356.39/ha \u2013 $178,550.30 p.a. excl. GST (invoice INV10012, 1 May 2026 \u2013 30 April 2027)"},{"k":"Review","v":"Annually to CPI (All Groups): A = B \u00d7 (C \u00f7 D), with a hard ratchet \u2013 rent cannot fall"},{"k":"On expiry","v":"Harvest roading and infrastructure remain with the land"}],"terms_notes":["Crown Forestry must be consulted before any subdivision and a non-objection covenant signed by any new owner of subdivided land.","The landowner may separately register its own retained (non-Forestry-Right) planting in the ETS at its own risk.","Management-plan area statements are for Crown Forestry's purposes and may change with remapping."],"source":"Waiotekumurau (Sands) Forest Management Plan 2024\u20132029 (Crown Forestry, Dec 2024); WFL rental invoices April 2024 and April 2026; vendor key information sheet; draft IM November 2026"},"narrative":{"overview_note":"Waimatenui Forest is a 2020 Pinus radiata plantation on 600 ha of freehold land, held by the Crown under a 35-year Forestry Right administered by Crown Forestry (Te Uru R\u0101kau \u2013 MPI) with Northland Forest Managers as forest manager. The Crown meets every forestry cost and pays the landowner a CPI-indexed land rental ($178,550 p.a. in 2026) with no stumpage share; the landowner is also the ETS participant on 471.6 ha under averaging. The purchase is of the land, the rental stream and the ETS registration.","cover_note":"The stand layers are the vendor's Crown Forestry / NFM stand shapefiles (four stands, 505 ha mapped against a 501 ha rental area). The 6.86 ha of 1996 trees and the landowner's 4.0 ha 2022 planting outside the Forestry Right are not mapped.","rates_note":"The landowner's rates liability is $2,296.83 p.a.; the balance is met by the Crown under the Forestry Right."},"terrain":{"min_elevation_m":200,"max_elevation_m":560,"contour_interval_m":20},"access":{"track_km_on_property":3.16,"formed_road_km_on_property":0.01,"legal_road_parcels_nearby":41,"legal_road_ha_on_property":0.0,"note":"Off Wai O Te Kumurau Road (LINZ: Waiotekumurau Road, Donnellys Crossing), 37 km south-west of Kaikohe and about 100 km from Northport. Two main 4WD metalled tracks enter the forest \u2013 one off Wai O Te Kumurau Road and one along Waiowhata Road to the bottom fertiliser bin \u2013 meeting and climbing to the top fertiliser bin, with grass tracks throughout. No public access for recreation or hunting; no grazing within the Forestry Right area."},"cover":{"native_ha_on_property":60.65,"scrub_ha_on_property":3.71,"exotic_ha_on_property":6.14,"net_stocked_pine_ha":511.86,"effective_area_ha":null,"river_km_on_property":16.59,"source":"LINZ Topo50 vegetation polygons - indicative only"},"environment":{"esc":[],"esc_high_ha":0,"esc_source":"MPI Erosion Susceptibility Classification (March 2018), the classification the NES-CF works off","luc":[],"luc_subclasses":[],"luc_source":"NZLRI LUC unit carried on the MPI ESC layer","luc_units":[],"fish_spawning_reaches":1,"fish_species":["Rainbow trout"]},"neighbours":{"doc_parcels_adjoining":6,"doc_names":["Marginal Strip - Waiokumurau Stream","Marlborough Forest (Addition) Conservation Area","Marlborough Forest (Pt Northland Conservation Park)","Mataraua Forest (Pt Northland Conservation Park)","Waiokumurau Local Purpose Esplanade Reserve"]},"data_notes":["Boundary: LINZ NZ Primary Parcels (layer 50772) matched on title. Roads, contours, hydrology and vegetation: LINZ Topo50 layers, fetched live via WFS.","ETS CAA polygon: derived from MPI's June 2021 issue-areas review (ETSA046753) \u2013 the application area less the not-eligible issue polygons, 471.4 ha against 471.6 ha registered. It is not the registered CAA export; the CAA land status report will govern.","Native and scrub areas are LINZ Topo50 vegetation polygons clipped to the title \u2014 indicative, not a survey.","Erosion susceptibility and Land Use Capability: MPI Erosion Susceptibility Classification (March 2018) via the MPI geospatial service. The ESC sets the NES-CF consenting thresholds.","Rates source: Kaipara District Council / Northland Regional Council rates assessment 2026-27 (valuation 01000-06800) and the vendor's rates recharge to Crown Forestry. District/regional split not on file \u2014 confirm from the rates notice before quoting a split.","LINZ parcel area is 596.87 ha against the stated 600.12 ha.","Titles: the five titles carry seven LINZ parcels totalling 596.87 ha by parcel geometry against the 600.12 ha titled area in the IM (600.1233 ha on the vendor's schedule).","ETS CAA polygon: the vendor's 'CAA ETS Shape File' and 'ETS CAA Registered Area' files (Dataroom/Shape Files, Nov 2026) are both MPI's application-stage issue-areas review of June 2021, not the registered CAA export. The CAA layer drawn here is that review's application area less its not-eligible issue polygons (471.4 ha mapped, 471.6 ha registered). The CAA land status report, when supplied, governs.","Address: no LINZ address point falls inside the titles. LINZ names the road Waiotekumurau Road, Donnellys Crossing; the IM's 'Wai O Te Kumurau Road, Waimatenui, Kaikohe' is the same road. The vendor's postal address (929 Waimatenui Road, Nukutawhiti) is the farm, 4 km north-east of the forest.","Stand 1/04 (3.6 ha) was planted by Crown Forestry outside the legal boundary \u2013 see the stand layer against the title boundary.","Photos: DJI drone stills and two 360\u00b0 panoramas, 18 December 2025; the panoramas are hosted on Kuula (kuula.co/post/n1/collection/7HdW4).","Council: the IM's September draft named Far North District Council; the 2026\u201327 rates assessment is Kaipara District Council (with Northland Regional Council), and the map uses Kaipara.","NZU issuance: the s194A notices give 13,912 + 25,419 + 26,504 + 36,596 = 102,431 units for 2018\u20132025, all sold by the vendor. Nothing transfers with the sale.","Vendor's 'Net Stocked Area Shape File.kmz' (Crown Forestry planted-area export) carries CPT 1 (111.8 ha), CPT 1.2 (89.5 ha) and CPT 1.3 (300.5 ha) plus 19 unlabelled 'Area' polygons totalling 38.5 ha; the labelled compartments are drawn as the stand layers, the unlabelled polygons are not.","Imagery on this page is served as flat images captured from LINZ, so the map needs no LINZ account to view. Vector overlays are LINZ data as at 18 November 2026."]};
 window.PROPMAP_PHOTOS={"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[173.744224,-35.658845]},"properties":{"file":"DJI_20251218092708_0001_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218092708_0001_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218092708_0001_D.JPG","alt_m":513.2,"taken":"2025:12:18 09:27:08","is_pano":false,"web":"DJI_20251218092708_0001_D.jpg","thumb":"DJI_20251218092708_0001_D.jpg","href":"assets/photos/web/DJI_20251218092708_0001_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218092708_0001_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.743854,-35.657852]},"properties":{"file":"DJI_20251218092723_0002_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218092723_0002_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218092723_0002_D.JPG","alt_m":500.5,"taken":"2025:12:18 09:27:23","is_pano":false,"web":"DJI_20251218092723_0002_D.jpg","thumb":"DJI_20251218092723_0002_D.jpg","href":"assets/photos/web/DJI_20251218092723_0002_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218092723_0002_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.743854,-35.657852]},"properties":{"file":"DJI_20251218092729_0003_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218092729_0003_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218092729_0003_D.JPG","alt_m":500.5,"taken":"2025:12:18 09:27:29","is_pano":false,"web":"DJI_20251218092729_0003_D.jpg","thumb":"DJI_20251218092729_0003_D.jpg","href":"assets/photos/web/DJI_20251218092729_0003_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218092729_0003_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.743854,-35.657851]},"properties":{"file":"DJI_20251218092733_0004_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218092733_0004_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218092733_0004_D.JPG","alt_m":500.7,"taken":"2025:12:18 09:27:33","is_pano":false,"web":"DJI_20251218092733_0004_D.jpg","thumb":"DJI_20251218092733_0004_D.jpg","href":"assets/photos/web/DJI_20251218092733_0004_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218092733_0004_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.745037,-35.655888]},"properties":{"file":"DJI_20251218092843_0006_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218092843_0006_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218092843_0006_D.JPG","alt_m":500.9,"taken":"2025:12:18 09:28:43","is_pano":false,"web":"DJI_20251218092843_0006_D.jpg","thumb":"DJI_20251218092843_0006_D.jpg","href":"assets/photos/web/DJI_20251218092843_0006_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218092843_0006_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.732348,-35.657183]},"properties":{"file":"DJI_20251218093008_0008_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218093008_0008_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218093008_0008_D.JPG","alt_m":550.4,"taken":"2025:12:18 09:30:08","is_pano":false,"web":"DJI_20251218093008_0008_D.jpg","thumb":"DJI_20251218093008_0008_D.jpg","href":"assets/photos/web/DJI_20251218093008_0008_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218093008_0008_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.732352,-35.65718]},"properties":{"file":"DJI_20251218093015_0009_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218093015_0009_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218093015_0009_D.JPG","alt_m":550.2,"taken":"2025:12:18 09:30:15","is_pano":false,"web":"DJI_20251218093015_0009_D.jpg","thumb":"DJI_20251218093015_0009_D.jpg","href":"assets/photos/web/DJI_20251218093015_0009_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218093015_0009_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.732353,-35.657182]},"properties":{"file":"DJI_20251218093023_0010_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218093023_0010_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218093023_0010_D.JPG","alt_m":550.2,"taken":"2025:12:18 09:30:23","is_pano":false,"web":"DJI_20251218093023_0010_D.jpg","thumb":"DJI_20251218093023_0010_D.jpg","href":"assets/photos/web/DJI_20251218093023_0010_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218093023_0010_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.732353,-35.657182]},"properties":{"file":"DJI_20251218093027_0011_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218093027_0011_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218093027_0011_D.JPG","alt_m":550.2,"taken":"2025:12:18 09:30:27","is_pano":false,"web":"DJI_20251218093027_0011_D.jpg","thumb":"DJI_20251218093027_0011_D.jpg","href":"assets/photos/web/DJI_20251218093027_0011_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218093027_0011_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.734727,-35.660417]},"properties":{"file":"DJI_20251218093112_0013_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218093112_0013_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218093112_0013_D.JPG","alt_m":589.6,"taken":"2025:12:18 09:31:12","is_pano":false,"web":"DJI_20251218093112_0013_D.jpg","thumb":"DJI_20251218093112_0013_D.jpg","href":"assets/photos/web/DJI_20251218093112_0013_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218093112_0013_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.734728,-35.660417]},"properties":{"file":"DJI_20251218093118_0014_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218093118_0014_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218093118_0014_D.JPG","alt_m":589.6,"taken":"2025:12:18 09:31:18","is_pano":false,"web":"DJI_20251218093118_0014_D.jpg","thumb":"DJI_20251218093118_0014_D.jpg","href":"assets/photos/web/DJI_20251218093118_0014_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218093118_0014_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.734726,-35.660415]},"properties":{"file":"DJI_20251218093139_0015_D.JPG","width":14400,"height":7200,"rel":"Photos/DJI_20251218093139_0015_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218093139_0015_D.JPG","alt_m":634.0,"taken":"2025:12:18 09:31:39","is_pano":true,"pano_url":"https://kuula.co/post/hBCzR/collection/7HdW4","web":"DJI_20251218093139_0015_D.jpg","thumb":"DJI_20251218093139_0015_D.jpg","href":"assets/photos/web/DJI_20251218093139_0015_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218093139_0015_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.734866,-35.658039]},"properties":{"file":"DJI_20251218093255_0016_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218093255_0016_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218093255_0016_D.JPG","alt_m":743.0,"taken":"2025:12:18 09:32:55","is_pano":false,"web":"DJI_20251218093255_0016_D.jpg","thumb":"DJI_20251218093255_0016_D.jpg","href":"assets/photos/web/DJI_20251218093255_0016_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218093255_0016_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.734866,-35.658039]},"properties":{"file":"DJI_20251218093300_0017_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218093300_0017_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218093300_0017_D.JPG","alt_m":742.7,"taken":"2025:12:18 09:33:00","is_pano":false,"web":"DJI_20251218093300_0017_D.jpg","thumb":"DJI_20251218093300_0017_D.jpg","href":"assets/photos/web/DJI_20251218093300_0017_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218093300_0017_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.734866,-35.65804]},"properties":{"file":"DJI_20251218093308_0018_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218093308_0018_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218093308_0018_D.JPG","alt_m":741.4,"taken":"2025:12:18 09:33:08","is_pano":false,"web":"DJI_20251218093308_0018_D.jpg","thumb":"DJI_20251218093308_0018_D.jpg","href":"assets/photos/web/DJI_20251218093308_0018_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218093308_0018_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.732036,-35.654948]},"properties":{"file":"DJI_20251218093350_0019_D.JPG","width":14400,"height":7200,"rel":"Photos/DJI_20251218093350_0019_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218093350_0019_D.JPG","alt_m":743.8,"taken":"2025:12:18 09:33:50","is_pano":true,"pano_url":"https://kuula.co/post/hBCQv/collection/7HdW4","web":"DJI_20251218093350_0019_D.jpg","thumb":"DJI_20251218093350_0019_D.jpg","href":"assets/photos/web/DJI_20251218093350_0019_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218093350_0019_D.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[173.732039,-35.654941]},"properties":{"file":"DJI_20251218093504_0020_D.JPG","width":5280,"height":3956,"rel":"Photos/DJI_20251218093504_0020_D.JPG","onedrive_url":"https://forestrysales-my.sharepoint.com/personal/warwick_forestrysales_co_nz/Documents/Properties/Waimatenui/Photos/DJI_20251218093504_0020_D.JPG","alt_m":615.2,"taken":"2025:12:18 09:35:04","is_pano":false,"web":"DJI_20251218093504_0020_D.jpg","thumb":"DJI_20251218093504_0020_D.jpg","href":"assets/photos/web/DJI_20251218093504_0020_D.jpg","thumb_src":"assets/photos/thumb/DJI_20251218093504_0020_D.jpg"}}]};
-window.PROPMAP_DATAROOM={"generated":"23 September 2026","categories":["Information Memorandum","ETS & carbon","Forest inventory","Mapping & boundaries","Consents & compliance","Access & statutory","Title & company","Agency & commercial"],"documents":[{"name":"Property Boundaries WFL.kmz","ext":"KMZ","bytes":2923,"size":"2.9 KB","modified":"03 Mar 2025","category":"Mapping & boundaries","visibility":"buyer","note":"LINZ title boundaries (Google Earth)","href":"dataroom/mapping-boundaries/Property%20Boundaries%20WFL.kmz"},{"name":"Sands CPT 1.1.shp","ext":"ZIP","bytes":1856,"size":"1.8 KB","modified":"03 Mar 2025","category":"Mapping & boundaries","visibility":"buyer","note":"Crown Forestry / NFM stand shapefile - drawn on this map as a stand layer - shapefile, zipped","href":"dataroom/mapping-boundaries/Sands%20CPT%201.1.zip"},{"name":"Sands CPT 1.2.shp","ext":"ZIP","bytes":21720,"size":"21.2 KB","modified":"03 Mar 2025","category":"Mapping & boundaries","visibility":"buyer","note":"Crown Forestry / NFM stand shapefile - drawn on this map as a stand layer - shapefile, zipped","href":"dataroom/mapping-boundaries/Sands%20CPT%201.2.zip"},{"name":"Sands OLB CPT 1.4.shp","ext":"ZIP","bytes":828,"size":"828 B","modified":"03 Mar 2025","category":"Mapping & boundaries","visibility":"buyer","note":"Crown Forestry / NFM stand shapefile - drawn on this map as a stand layer - shapefile, zipped","href":"dataroom/mapping-boundaries/Sands%20OLB%20CPT%201.4.zip"},{"name":"Ssnds CPT 1.3.shp","ext":"ZIP","bytes":14740,"size":"14.4 KB","modified":"03 Mar 2025","category":"Mapping & boundaries","visibility":"buyer","note":"Crown Forestry / NFM stand shapefile - drawn on this map as a stand layer - shapefile, zipped","href":"dataroom/mapping-boundaries/Ssnds%20CPT%201.3.zip"},{"name":"Waiotekumurau Forest Management Plan updated December 2024.pdf","ext":"PDF","bytes":546277,"size":"533.5 KB","modified":"03 Mar 2025","category":"Consents & compliance","visibility":"buyer","note":"","href":"dataroom/consents-compliance/Waiotekumurau%20Forest%20Management%20Plan%20updated%20December%202024.pdf"}],"contact":[{"name":"Warwick Searle","role":"Director | Forestry","phone":"+64 21 362 778","email":"warwick@forestrysales.co.nz"},{"name":"George Cashmore","role":"Forestry Advisor","phone":"+64 21 0264 1362","email":"george@forestrysales.co.nz"},{"name":"James Burke","role":"Forestry Advisor","phone":"+64 21 824 145","email":"james@forestrysales.co.nz"}],"gated":true,"signin_url":"https://maps.forestrysales.co.nz/waimatenui/dataroom/"};
-window.PROPMAP_STATIC_AERIAL=[{"name": "Aerial \u2014 current", "frame": "wide", "url": "assets/aerial___current_wide.jpg", "south": -35.688533207388744, "west": 173.6883544921875, "north": -35.6126508187567, "east": 173.7762451171875}, {"name": "Northland 0.3m Rural Aerial Photos (2023-2025)", "frame": "close", "url": "assets/northland_0_3m_rural_aerial_photos__2023-2025__close.jpg", "south": -35.67514743608467, "west": 173.704833984375, "north": -35.630511983000595, "east": 173.7542724609375}, {"name": "Northland 0.4m Rural Aerial Photos (2014-2016)", "frame": "close", "url": "assets/northland_0_4m_rural_aerial_photos__2014-2016__close.jpg", "south": -35.67514743608467, "west": 173.704833984375, "north": -35.630511983000595, "east": 173.759765625}, {"name": "Northland 1m Rural Aerial Photos (2006)", "frame": "close", "url": "assets/northland_1m_rural_aerial_photos__2006__close.jpg", "south": -35.67514743608467, "west": 173.704833984375, "north": -35.630511983000595, "east": 173.759765625}];
+window.PROPMAP_DATAROOM={"generated":"18 November 2026","categories":["Information Memorandum","ETS & carbon","Forest inventory","Mapping & boundaries","Consents & compliance","Access & statutory","Council & property file","Title & company","Agency & commercial"],"documents":[{"name":"Net Stocked Area Shape File.kmz","ext":"KMZ","bytes":40572,"size":"39.6 KB","modified":"17 Nov 2026","category":"Mapping & boundaries","visibility":"buyer","note":"Crown Forestry / NFM planted-area shapefile \u2013 drawn on this map as the stand layers","href":"dataroom/mapping-boundaries/Net%20Stocked%20Area%20Shape%20File.kmz"},{"name":"Planted Area Shape File.zip","ext":"ZIP","bytes":69234,"size":"67.6 KB","modified":"17 Nov 2026","category":"Mapping & boundaries","visibility":"buyer","note":"Crown Forestry / NFM planted-area shapefile \u2013 drawn on this map as the stand layers","href":"dataroom/mapping-boundaries/Planted%20Area%20Shape%20File.zip"},{"name":"Property Boundaries WFL.kmz","ext":"KMZ","bytes":2923,"size":"2.9 KB","modified":"03 Mar 2025","category":"Mapping & boundaries","visibility":"buyer","note":"LINZ title boundaries (Google Earth)","href":"dataroom/mapping-boundaries/Property%20Boundaries%20WFL.kmz"},{"name":"Sands CPT 1.1.shp","ext":"ZIP","bytes":1856,"size":"1.8 KB","modified":"03 Mar 2025","category":"Mapping & boundaries","visibility":"buyer","note":"Crown Forestry / NFM stand shapefile - drawn on this map as a stand layer - shapefile, zipped","href":"dataroom/mapping-boundaries/Sands%20CPT%201.1.zip"},{"name":"Sands CPT 1.2.shp","ext":"ZIP","bytes":21720,"size":"21.2 KB","modified":"03 Mar 2025","category":"Mapping & boundaries","visibility":"buyer","note":"Crown Forestry / NFM stand shapefile - drawn on this map as a stand layer - shapefile, zipped","href":"dataroom/mapping-boundaries/Sands%20CPT%201.2.zip"},{"name":"Sands OLB CPT 1.4.shp","ext":"ZIP","bytes":828,"size":"828 B","modified":"03 Mar 2025","category":"Mapping & boundaries","visibility":"buyer","note":"Crown Forestry / NFM stand shapefile - drawn on this map as a stand layer - shapefile, zipped","href":"dataroom/mapping-boundaries/Sands%20OLB%20CPT%201.4.zip"},{"name":"Ssnds CPT 1.3.shp","ext":"ZIP","bytes":14740,"size":"14.4 KB","modified":"03 Mar 2025","category":"Mapping & boundaries","visibility":"buyer","note":"Crown Forestry / NFM stand shapefile - drawn on this map as a stand layer - shapefile, zipped","href":"dataroom/mapping-boundaries/Ssnds%20CPT%201.3.zip"},{"name":"Annual Operations Report March 2024.pdf","ext":"PDF","bytes":580092,"size":"566.5 KB","modified":"17 Nov 2026","category":"Consents & compliance","visibility":"buyer","note":"Crown Forestry's management plans, annual operations reports and health and safety plans for the forest","href":"dataroom/consents-compliance/Annual%20Operations%20Report%20March%202024.pdf"},{"name":"Annual Operations Update December 2021.pdf","ext":"PDF","bytes":353454,"size":"345.2 KB","modified":"17 Nov 2026","category":"Consents & compliance","visibility":"buyer","note":"Crown Forestry's management plans, annual operations reports and health and safety plans for the forest","href":"dataroom/consents-compliance/Annual%20Operations%20Update%20December%202021.pdf"},{"name":"Annual Operations Update February 2023.pdf","ext":"PDF","bytes":655428,"size":"640.1 KB","modified":"17 Nov 2026","category":"Consents & compliance","visibility":"buyer","note":"Crown Forestry's management plans, annual operations reports and health and safety plans for the forest","href":"dataroom/consents-compliance/Annual%20Operations%20Update%20February%202023.pdf"},{"name":"Crown Forestry Health and Safety Plan_2022.pdf","ext":"PDF","bytes":613539,"size":"599.2 KB","modified":"17 Nov 2026","category":"Consents & compliance","visibility":"buyer","note":"Crown Forestry's management plans, annual operations reports and health and safety plans for the forest","href":"dataroom/consents-compliance/Crown%20Forestry%20Health%20and%20Safety%20Plan_2022.pdf"},{"name":"Crown Forestry Health Safety and Wellbeing Plan 2026.pdf","ext":"PDF","bytes":399867,"size":"390.5 KB","modified":"17 Nov 2026","category":"Consents & compliance","visibility":"buyer","note":"Crown Forestry's management plans, annual operations reports and health and safety plans for the forest","href":"dataroom/consents-compliance/Crown%20Forestry%20Health%20Safety%20and%20Wellbeing%20Plan%202026.pdf"},{"name":"Forest Management Plan December 2023.pdf","ext":"PDF","bytes":512308,"size":"500.3 KB","modified":"17 Nov 2026","category":"Consents & compliance","visibility":"buyer","note":"Crown Forestry's management plans, annual operations reports and health and safety plans for the forest","href":"dataroom/consents-compliance/Forest%20Management%20Plan%20December%202023.pdf"},{"name":"Forest Management Plan December 2024.pdf","ext":"PDF","bytes":546277,"size":"533.5 KB","modified":"17 Nov 2026","category":"Consents & compliance","visibility":"buyer","note":"","href":"dataroom/consents-compliance/Forest%20Management%20Plan%20December%202024.pdf"},{"name":"Waiotekumurau Forest Management Plan updated December 2024.pdf","ext":"PDF","bytes":546277,"size":"533.5 KB","modified":"03 Mar 2025","category":"Consents & compliance","visibility":"buyer","note":"","href":"dataroom/consents-compliance/Waiotekumurau%20Forest%20Management%20Plan%20updated%20December%202024.pdf"},{"name":"Rates - KDC Inovice.pdf","ext":"PDF","bytes":449092,"size":"438.6 KB","modified":"17 Nov 2026","category":"Access & statutory","visibility":"buyer","note":"Kaipara District Council rates assessment 2026\u201327 (combined KDC and NRC)","href":"dataroom/access-statutory/Rates%20-%20KDC%20Inovice.pdf"},{"name":"Annual Operations Report August 2525.pdf","ext":"PDF","bytes":272756,"size":"266.4 KB","modified":"17 Nov 2026","category":"Council & property file","visibility":"buyer","note":"","href":"dataroom/council-property-file/Annual%20Operations%20Report%20August%202525.pdf"},{"name":"Rental & Ancilary Deed.pdf","ext":"PDF","bytes":514233,"size":"502.2 KB","modified":"17 Nov 2026","category":"Council & property file","visibility":"buyer","note":"Forestry Right rental tax invoice - carries the vendor's bank account","href":"dataroom/council-property-file/Rental%20%26%20Ancilary%20Deed.pdf"},{"name":"NA118875.tif","ext":"TIF","bytes":41073,"size":"40.1 KB","modified":"17 Nov 2026","category":"Title & company","visibility":"buyer","note":"Record of title (scanned)","href":"dataroom/title-company/NA118875.tif"},{"name":"NA118876.tif","ext":"TIF","bytes":42565,"size":"41.6 KB","modified":"17 Nov 2026","category":"Title & company","visibility":"buyer","note":"Record of title (scanned)","href":"dataroom/title-company/NA118876.tif"},{"name":"NA118877.tif","ext":"TIF","bytes":42972,"size":"42.0 KB","modified":"17 Nov 2026","category":"Title & company","visibility":"buyer","note":"Record of title (scanned)","href":"dataroom/title-company/NA118877.tif"},{"name":"NA42D776.tif","ext":"TIF","bytes":67721,"size":"66.1 KB","modified":"17 Nov 2026","category":"Title & company","visibility":"buyer","note":"Record of title (scanned)","href":"dataroom/title-company/NA42D776.tif"},{"name":"NA55A92.tif","ext":"TIF","bytes":40175,"size":"39.2 KB","modified":"17 Nov 2026","category":"Title & company","visibility":"buyer","note":"Record of title (scanned)","href":"dataroom/title-company/NA55A92.tif"},{"name":"Profit a prendre.pdf","ext":"PDF","bytes":1900441,"size":"1.8 MB","modified":"17 Nov 2026","category":"Title & company","visibility":"buyer","note":"Registered profit \u00e0 prendre (the Forestry Right instrument on the titles)","href":"dataroom/title-company/Profit%20a%20prendre.pdf"}],"contact":[{"name":"Warwick Searle","role":"National Director | Forestry","phone":"+64 21 362 778","email":"warwick@forestrysales.co.nz"},{"name":"James Burke","role":"Forestry Advisor","phone":"+64 21 824 145","email":"james@forestrysales.co.nz"}],"gated":true,"signin_url":"https://maps.forestrysales.co.nz/waimatenui/dataroom/"};
+window.PROPMAP_STATIC_AERIAL=[{"name": "Aerial \u2014 current", "frame": "wide", "url": "assets/aerial___current_wide.jpg?v=a82a5b491b", "south": -35.688533207388744, "west": 173.6883544921875, "north": -35.6126508187567, "east": 173.7762451171875}, {"name": "Northland 0.3m Rural Aerial Photos (2023-2025)", "frame": "close", "url": "assets/northland_0_3m_rural_aerial_photos__2023-2025__close.jpg?v=301263becd", "south": -35.67514743608467, "west": 173.704833984375, "north": -35.630511983000595, "east": 173.7542724609375}, {"name": "Northland 0.4m Rural Aerial Photos (2014-2016)", "frame": "close", "url": "assets/northland_0_4m_rural_aerial_photos__2014-2016__close.jpg?v=8e0e9d6700", "south": -35.67514743608467, "west": 173.704833984375, "north": -35.630511983000595, "east": 173.759765625}, {"name": "Northland 1m Rural Aerial Photos (2006)", "frame": "close", "url": "assets/northland_1m_rural_aerial_photos__2006__close.jpg?v=f5cd86bce4", "south": -35.67514743608467, "west": 173.704833984375, "north": -35.630511983000595, "east": 173.759765625}];
 window.PROPMAP_BASEMAPS_KEY="";
 window.PROPMAP_API_KEY="";window.PROPMAP_ESRI_KEY="";
 </script>
@@ -402,6 +418,9 @@ const P = STATS.property, R = STATS.rates, E = STATS.ets, T = STATS.terrain,
       A = STATS.access, C = STATS.cover, NB = STATS.neighbours,
       EV = STATS.environment, BL = STATS.blocks || [], CROP = STATS.crop,
       NARR = STATS.narrative || {};
+/* Farm listings carry no ETS, crop or stocked-forest figures; the forest-only
+   layers and tabs drop out and the wording turns to grazing. */
+const FARM = P.property_type === 'farm';
 
 /* Blocks: each gets its own boundary colour and a label. A single-block
    property keeps the traditional yellow. Palette chosen for legibility over
@@ -547,6 +566,13 @@ const boundarySwatch = BL.length > 1
 
 /* Layer definitions: key -> config.
    `on` = visible at first paint. `sw` = legend swatch colour. */
+/* Exotic forest sits under Forest & carbon on a forest listing and under Land
+   cover on a farm, where a woodlot is cover rather than the crop. */
+const EXOTIC_DEF =
+  {k: 'exotic_cover', n: 'Exotic forest (Topo50)', on: false, sw: '#ff2d95',
+   style: () => ({color: '#ff2d95', weight: 2, fillColor: '#ff2d95', fillOpacity: .45}),
+   pop: p => popup('Exotic forest (Topo50)', [kv('Species', p.species || '—')])};
+
 const DEFS = [
   {grp: 'Property'},
   /* Non-interactive: it sits in the top pane and spans the whole property, so
@@ -570,7 +596,30 @@ const DEFS = [
         html: `<div>${f.properties.owner}</div>`, iconSize: [0, 0]})}),
    style: () => ({})}] : []),
 
-  {grp: 'Forest & carbon'},
+  ...(FARM ? [] : [{grp: 'Forest & carbon'}]),
+  /* SHEET_LAYERS: layers digitised from vector PDF sheets (property.json
+     "sheets", scripts/digitise_sheet.py): one toggle per set from
+     STATS.sheets plus its marker layer. Fill-led, warm yellow by default, so
+     they read against the CAA age colours and the forested aerial. */
+  ...(STATS.sheets || []).filter(s => LAYERS[s.layer]).flatMap(s => {
+    const col = s.colour || '#ffe66d';
+    const when = s.date ? ' (' + s.date + ')' : '';
+    const defs = [{k: s.layer, n: s.kind + when, on: true, sw: col,
+      style: () => ({color: col, weight: 2.2, fillColor: col, fillOpacity: .35}),
+      pop: p => popup(s.kind + (p.block ? ' — ' + p.block : ''), [
+        kv('Area (digitised)', fmt(p.area_ha, 2) + ' ha'),
+        p.map_ha != null ? kv('Area on sheet', fmt(p.map_ha, 1) + ' ha') : '',
+        p.sheet_total_ha != null ? kv('Block total (sheet)', fmt(p.sheet_total_ha, 2) + ' ha') : '',
+        kv('Source', p.source || s.source || '—')])}];
+    if (s.markers && LAYERS[s.markers.layer]) defs.push({k: s.markers.layer, n: s.markers.kind + 's' + when,
+      on: false, sw: col, point: true,
+      mk: (f, ll) => L.circleMarker(ll, {radius: 4, color: '#1b1b1b', weight: 1.2,
+           fillColor: col, fillOpacity: .95, className: 'plotmk'}),
+      pop: p => popup(p.kind + ' ' + p.label + (p.block ? ' — ' + p.block : ''), [
+        kv('Source', p.source || s.source || '—'),
+        kv('Position', 'From the sheet symbol – approximate')])});
+    return defs;
+  }),
   /* Stand layers: any LAYERS key beginning "stand_" (data/stand_<code>.geojson)
      becomes its own toggle. Scrub / unplanted is grey; each stand gets its own colour. */
   ...Object.keys(LAYERS).filter(k => k.startsWith('stand_')).map((k, i) => {
@@ -626,9 +675,7 @@ const DEFS = [
    scattered polygons are fill-led (opacity ~.45, outline 2); large-area polygons
    are outline-led (opacity ~.14, outline 2.2); never an outline under 1.5 and no
    greens/browns for anything that must stand out on forested aerial. */
-  {k: 'exotic_cover', n: 'Exotic forest (Topo50)', on: false, sw: '#ff2d95',
-   style: () => ({color: '#ff2d95', weight: 2, fillColor: '#ff2d95', fillOpacity: .45}),
-   pop: p => popup('Exotic forest (Topo50)', [kv('Species', p.species || '—')])},
+  ...(FARM ? [] : [EXOTIC_DEF]),
 
   {k: 'cruise_plots', n: 'Cruise plots', on: false, sw: '#da77f2', point: true,
    mk: (f, ll) => L.circleMarker(ll, {radius: 4, color: '#fff', weight: 1.2,
@@ -652,6 +699,22 @@ const DEFS = [
    style: () => ({color: '#ffd43b', weight: 1.9, opacity: .95, dashArray: '6,4'}),
    pop: p => popup(p.name || 'Track', [kv('Type', p.track_type || '—'),
      kv('Use', p.track_use || '—'), kv('Status', p.status || '—')])},
+
+  /* Registered easement parcels (LINZ NZ Parcels, intent "Easement") in the
+     frame - the legal access across neighbouring land. On by default only
+     when the property actually has some. */
+  {k: 'easements', n: 'Registered easements', on: true, sw: '#b197fc',
+   style: () => ({color: '#b197fc', weight: 1.6, opacity: .95, dashArray: '4,3',
+                  fillColor: '#b197fc', fillOpacity: .28}),
+   pop: p => popup(p.appellation || 'Easement', [
+     kv('Nature', p.nature || p.parcel_intent || '—'),
+     p.benefit ? kv('Benefits', p.benefit) : '',
+     p.burdened ? kv('Burdens', p.burdened) : '',
+     kv('Survey', p.affected_surveys || '—'),
+     kv('Area', fmt(p.area_ha, 2) + ' ha'),
+     p.statutory_actions ? kv('Statutory actions', p.statutory_actions) : '',
+     kv('Source', p.comment ? "Vendor's GIS - " + p.comment : 'LINZ NZ Parcels'),
+     kv('Note', 'Confirm the instrument and its terms on the record of title')])},
 
   {grp: 'Terrain & water'},
   /* Contours start off on a multi-block sale: at the zoom that shows both
@@ -707,12 +770,13 @@ const DEFS = [
      kv('Spawning window', [p.SpawnFdate, p.SpawnTdate].filter(Boolean).join(' – ') || '—'),
      kv('Sensitivity', p.Sensitivity || '—')])},
 
-  {grp: 'Land cover & neighbours'},
-  {k: 'native_cover', n: 'Native bush', on: false, sw: '#00e676',
+  {grp: FARM ? 'Land cover' : 'Land cover & neighbours'},
+  {k: 'native_cover', n: 'Native bush', on: FARM, sw: '#00e676',
    style: () => ({color: '#00e676', weight: 2.2, fillColor: '#00e676', fillOpacity: .14})},
 
   {k: 'scrub_cover', n: 'Scrub (manuka / kanuka)', on: false, sw: '#ffd400',
    style: () => ({color: '#ffd400', weight: 2.2, fillColor: '#ffd400', fillOpacity: .14})},
+  ...(FARM ? [EXOTIC_DEF] : []),
 
   {k: 'protected_areas', n: 'DOC conservation land', on: true, sw: '#2f9e44',
    style: () => ({color: '#2f9e44', weight: 1.4, fillColor: '#2f9e44', fillOpacity: .16}),
@@ -721,6 +785,13 @@ const DEFS = [
      kv('Area', p.gis_area_ha ? fmt(p.gis_area_ha, 0) + ' ha' : '—')])},
 
   {grp: 'Reference'},
+  /* Hand-made points (data/points.geojson): forest entrance, emergency
+     location, gates ... Named pins, on by default. */
+  {k: 'points', n: 'Points of interest', on: true, sw: '#20c997', point: true,
+   mk: (f, ll) => L.circleMarker(ll, {radius: 7, color: '#ffffff', weight: 2,
+        fillColor: '#20c997', fillOpacity: .95}),
+   pop: p => popup(p.name || 'Point', [kv('Type', p.kind || '—'),
+     p.note ? kv('Note', p.note) : '', kv('Source', p.source || '—')])},
   {k: 'place_names', n: 'Place names', on: false, sw: '#dee2e6', point: true,
    mk: (f, ll) => L.marker(ll, {icon: L.divIcon({className: 'ctour-lbl',
         html: `<div style="white-space:nowrap;font-size:11px">${f.properties.name}</div>`,
@@ -754,6 +825,11 @@ const DEFS = [
        ? `<a class="btn" href="${p.href}" target="_blank" rel="noopener">Open photo &rarr;</a>`
        : (p.href ? '' : `<div class="note">${p.rel}</div>`)])},
 ];
+if (FARM) {
+  const forestOnly = d => d.k && (['ets_caa', 'ets_ineligible', 'cruise_plots', 'fish_spawning'].includes(d.k)
+                                  || d.k.startsWith('stand_'));
+  for (let i = DEFS.length - 1; i >= 0; i--) if (forestOnly(DEFS[i])) DEFS.splice(i, 1);
+}
 
 /* build layers */
 const built = {};
@@ -834,8 +910,9 @@ if (BL.length > 1) {
 const clabels = L.layerGroup();
 (LAYERS.contours ? LAYERS.contours.features : []).forEach(f => {
   if (f.properties.elevation % 100 !== 0) return;
+  if (!f.geometry || !f.geometry.coordinates) return;
   const cs = f.geometry.type === 'LineString' ? f.geometry.coordinates : (f.geometry.coordinates[0] || []);
-  if (cs.length < 3) return;
+  if (!cs || cs.length < 3) return;
   const c = cs[Math.floor(cs.length / 2)];
   clabels.addLayer(L.marker([c[1], c[0]], {interactive: false, icon: L.divIcon({
     className: 'ctour-lbl', html: f.properties.elevation, iconSize: [26, 11]})}));
@@ -1030,6 +1107,156 @@ function readout(lat, lon) {
 map.on('mousemove', e => readout(e.latlng.lat, e.latlng.lng));
 readout(P.centroid[0], P.centroid[1]);
 
+/* ===== your location =====
+   A tap-to-start "where am I" for phones and tablets out on the property.
+   The browser asks the viewer's permission first; the position is drawn on
+   this device only and is never sent anywhere. Browsers only offer location
+   to pages served over https (a hosted copy or the share link) - a file
+   opened from an email attachment will not get one. */
+const toastEl = document.getElementById('toast');
+let toastTimer = null;
+function toast(msg, ms = 6000) {
+  toastEl.innerHTML = msg;
+  toastEl.classList.add('on');
+  clearTimeout(toastTimer);
+  if (ms) toastTimer = setTimeout(() => toastEl.classList.remove('on'), ms);
+}
+toastEl.onclick = () => toastEl.classList.remove('on');
+
+const mePane = map.createPane('me');
+mePane.style.zIndex = 660;
+mePane.style.pointerEvents = 'none';
+const meAcc = L.circle([0, 0], {radius: 1, pane: 'me', interactive: false,
+  color: '#4dabf7', weight: 1, opacity: .7, fillColor: '#4dabf7', fillOpacity: .13});
+const meDot = L.circleMarker([0, 0], {radius: 7, pane: 'me', interactive: false,
+  color: '#ffffff', weight: 2.5, fillColor: '#1c7ed6', fillOpacity: 1});
+let locating = false, hadFix = false, locBtn = null, lastFix = null;
+
+function haversineKm(a, b) {
+  const R = 6371, rad = Math.PI / 180;
+  const dLat = (b.lat - a.lat) * rad, dLon = (b.lng - a.lng) * rad;
+  const h = Math.sin(dLat / 2) ** 2 +
+    Math.cos(a.lat * rad) * Math.cos(b.lat * rad) * Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+function stopLocating(msg) {
+  locating = false; hadFix = false;
+  map.stopLocate();
+  [meAcc, meDot].forEach(l => map.hasLayer(l) && map.removeLayer(l));
+  if (locBtn) locBtn.classList.remove('on', 'wait');
+  readout(P.centroid[0], P.centroid[1]);
+  if (msg) toast(msg);
+}
+
+function startLocating() {
+  if (!('geolocation' in navigator)) {
+    toast('This browser cannot share its location.');
+    return;
+  }
+  if (window.isSecureContext === false) {
+    toast('Location only works when the map is opened from its web link ' +
+          '(https), not from a file saved to the device.');
+    return;
+  }
+  locating = true; hadFix = false;
+  locBtn.classList.add('on', 'wait');
+  toast('Finding your location&hellip; allow location access if your browser asks.', 0);
+  map.locate({watch: true, setView: false, enableHighAccuracy: true,
+              maximumAge: 5000, timeout: 20000});
+}
+
+map.on('locationfound', e => {
+  if (!locating) return;
+  lastFix = e;
+  meAcc.setLatLng(e.latlng).setRadius(e.accuracy);
+  meDot.setLatLng(e.latlng);
+  if (!map.hasLayer(meAcc)) meAcc.addTo(map);
+  if (!map.hasLayer(meDot)) meDot.addTo(map);
+  locBtn.classList.remove('wait');
+
+  const [ex, ny] = toNZTM(e.latlng.lat, e.latlng.lng);
+  co.innerHTML = `<span class="me">You</span> <b>${e.latlng.lat.toFixed(5)}, ${e.latlng.lng.toFixed(5)}</b>`
+    + ` &nbsp;·&nbsp; &plusmn;${fmt(e.accuracy)} m &nbsp;·&nbsp; NZTM <b>${fmt(ex)}E ${fmt(ny)}N</b>`;
+
+  if (hadFix) return;            // after the first fix, follow quietly
+  hadFix = true;
+  const frame = L.latLngBounds([[P.bbox[1], P.bbox[0]], [P.bbox[3], P.bbox[2]]]);
+  const centre = L.latLng(P.centroid[0], P.centroid[1]);
+  if (frame.contains(e.latlng)) {
+    map.setView(e.latlng, Math.max(map.getZoom(), 16));
+    const inside = built.title_boundary && pointInTitle(e.latlng);
+    toast((inside ? 'You are <b>on the property</b>.' : 'You are near the property, outside the boundary.')
+      + ` Accuracy about &plusmn;${fmt(e.accuracy)} m &mdash; good enough to find your way, `
+      + 'not to locate a boundary peg. Tap the button again to stop.', 9000);
+  } else {
+    const km = haversineKm(e.latlng, centre);
+    if (km < 60) {
+      map.fitBounds(L.latLngBounds([e.latlng, centre]).pad(0.15));
+    }
+    toast(`You are about <b>${fmt(km, km < 10 ? 1 : 0)} km</b> from the property. `
+      + 'Your position will update as you travel. Tap the button again to stop.', 9000);
+  }
+});
+
+map.on('locationerror', e => {
+  if (!locating) return;
+  if (e.code === 1) {
+    stopLocating('Location access was declined. To use it, allow location for '
+      + 'this page in your browser or phone settings, then tap the button again.');
+  } else if (e.code === 3 && !hadFix) {
+    toast('Still waiting for a GPS fix &mdash; this can take longer under bush '
+      + 'or in a valley. It will appear as soon as there is one.', 8000);
+  } else if (!hadFix) {
+    stopLocating('Your location is not available right now. Check location '
+      + 'services are on, then try again.');
+  }
+});
+
+/* Point-in-polygon against the title boundary, so the first message can say
+   whether the viewer is actually on the land. Ray casting on lat/lng is fine
+   at property scale. */
+function pointInTitle(ll) {
+  const x = ll.lng, y = ll.lat;
+  let inside = false;
+  const test = ring => {
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const [xi, yi] = ring[i], [xj, yj] = ring[j];
+      if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) inside = !inside;
+    }
+  };
+  (LAYERS.title_boundary.features || []).forEach(f => {
+    const g = f.geometry; if (!g) return;
+    const polys = g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : [];
+    polys.forEach(rings => rings.forEach(test));
+  });
+  return inside;
+}
+
+const LocCtl = L.Control.extend({
+  options: {position: 'topleft'},
+  onAdd() {
+    const a = L.DomUtil.create('a', 'locbtn');
+    a.href = '#'; a.title = 'Show my location'; a.setAttribute('role', 'button');
+    a.setAttribute('aria-label', 'Show my location');
+    a.innerHTML = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/>'
+      + '<path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="8"/></svg>';
+    locBtn = a;
+    const d = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+    d.appendChild(a);
+    L.DomEvent.disableClickPropagation(d);
+    L.DomEvent.on(a, 'click', e => {
+      L.DomEvent.stop(e);
+      if (!locating) startLocating();
+      else if (lastFix && hadFix && !map.getBounds().contains(lastFix.latlng)) {
+        map.setView(lastFix.latlng, Math.max(map.getZoom(), 16));   // bring the dot back into view first
+      } else stopLocating('Location off.');
+    });
+    return d;
+  },
+});
+map.addControl(new LocCtl());
+
 const toggleDash = () => {
   document.getElementById('dash').classList.toggle('collapsed');
   setTimeout(() => map.invalidateSize(), 230);
@@ -1089,9 +1316,10 @@ document.getElementById('hdrsub').textContent =
 const hasRates = !!R;
 const hasCaas = !!(E && E.caas && E.caas.length);
 const TABS = [['overview', 'Overview']]
-  .concat(CROP ? [['crop', 'Crop']] : [])
+  .concat(CROP && !FARM ? [['crop', 'Crop']] : [])
   .concat(hasRates ? [['rates', 'Rates']] : [])
-  .concat([['ets', 'ETS'], ['terrain', 'Land'], ['docs', 'Docs'], ['data', 'Sources']]);
+  .concat(FARM ? [] : [['ets', 'ETS']])
+  .concat([['terrain', 'Land'], ['docs', 'Docs'], ['data', 'Sources']]);
 const tabbar = document.getElementById('tabs');
 TABS.forEach(([id, label], i) => {
   const b = el(`<button${i === 0 ? ' class="on"' : ''}>${label}</button>`);
@@ -1157,15 +1385,16 @@ document.getElementById('pane-overview').innerHTML = `
 
   <div class="card">
     <h3>Land use split</h3>
-    ${[['Net stocked (stated)', C.net_stocked_pine_ha, '#f59f00'],
+    ${[FARM ? ['Effective grazing (stated)', C.effective_area_ha, '#94d82d']
+            : ['Net stocked (stated)', C.net_stocked_pine_ha, '#f59f00'],
        ['Exotic forest (Topo50)', C.exotic_ha_on_property, '#2b8a8a'],
        ['Native bush (Topo50)', C.native_ha_on_property, '#1a7f37'],
        ['Scrub — manuka / kanuka', C.scrub_ha_on_property, '#8a9a2b']]
       .filter(([, v]) => v != null && v > 0)
       .map(([n, v, c]) => barrow(n, v, P.title_area_ha_im, c)).join('')}
     <p class="note">${NARR.cover_note || 'Exotic, native and scrub areas are LINZ Topo50 ' +
-      'vegetation polygons clipped to the title — indicative, not a survey. The net stocked ' +
-      'figure is as stated by the vendor.'}</p>
+      'vegetation polygons clipped to the title — indicative, not a survey. The ' +
+      (FARM ? 'effective grazing' : 'net stocked') + ' figure is as stated by the vendor.'}</p>
   </div>
 
   <div class="card">
@@ -1184,7 +1413,7 @@ document.getElementById('pane-overview').innerHTML = `
   </div>` : ''}`;
 
 /* --- crop (forestry right / tree crop listings) --- */
-if (CROP) {
+if (CROP && !FARM) {
   const ac = CROP.age_classes || [];
   const totalCrop = ac.reduce((s, r) => s + (r.ha || 0), 0);
   const blocksIn = [...new Set(ac.map(r => r.block).filter(Boolean))];
@@ -1255,9 +1484,10 @@ if (CROP) {
 if (hasRates) {
   const rateRows = [
     ['Per hectare of title', money(R.rates_per_ha_title), fmt(P.title_area_ha_im, 2) + ' ha'],
+    ['Per hectare effective', money(R.rates_per_ha_effective), fmt(C.effective_area_ha, 1) + ' ha'],
     ['Per hectare net stocked', money(R.rates_per_ha_stocked), fmt(C.net_stocked_pine_ha, 1) + ' ha'],
-    ['Per hectare ETS registered', money(R.rates_per_ha_registered), fmt(E.registered_ha, 2) + ' ha'],
-    ['Per NZU transferring', money(R.rates_per_nzu, 3), fmt(E.nzu_transferring) + ' NZU'],
+    ['Per hectare ETS registered', money(R.rates_per_ha_registered), fmt(E ? E.registered_ha : null, 2) + ' ha'],
+    ['Per NZU transferring', money(R.rates_per_nzu, 3), fmt(E ? E.nzu_transferring : null) + ' NZU'],
   ].filter(r => r[1] !== '—');
   document.getElementById('pane-rates').innerHTML = `
     <div class="card">
@@ -1311,7 +1541,7 @@ if (hasRates) {
 }
 
 /* --- ETS --- */
-document.getElementById('pane-ets').innerHTML = hasCaas ? `
+if (E) document.getElementById('pane-ets').innerHTML = hasCaas ? `
   <div class="card">
     <h3>Carbon position</h3>
     <div class="big">${fmt(E.nzu_transferring)}<small> NZU on settlement</small></div>
@@ -1360,10 +1590,83 @@ document.getElementById('pane-ets').innerHTML = hasCaas ? `
   </div>` : ''}` : `
   <div class="card">
     <h3>ETS position</h3>
-    <div class="big">None<small> registered</small></div>
+    <div class="big">${E.headline ? E.headline.value : 'None'}<small>${E.headline ? E.headline.label : ' registered'}</small></div>
     <p class="note" style="margin-top:8px">${E.status ||
       'No ETS registration forms part of this sale. ETS status of the land to be confirmed.'}</p>
+    ${E.headline && E.participant ? `<dl style="margin-top:9px">
+      ${kv('Participant', E.participant)}
+      ${kv('Accounting', E.accounting || '—')}
+      ${kv('Activity', E.activity || '—')}
+      ${kv('Carbon tables', E.fma ? 'Participant-specific FMA' : 'Regional lookup')}
+    </dl>` : ''}
   </div>`;
+
+/* Forward NZU flow from the regional default tables (stats.ets.forecast,
+   scripts/carbon_tables.py). Stock change: a year's units are the increase
+   in table carbon stock; the tables stop at age 50. */
+if (E && E.forecast) {
+  const F = E.forecast, rows = F.rows || [];
+  const maxNzu = Math.max(1, ...rows.map(r => r.nzu));
+  const priced = v => F.price_nzd ? ` <span style="color:var(--ink3)">(${money(v * F.price_nzd, 0)})</span>` : '';
+  const nextN = rows.slice(0, 10);
+  document.getElementById('pane-ets').insertAdjacentHTML('beforeend', `
+  <div class="card">
+    <h3>Forward NZU flow — regional default tables</h3>
+    <div class="big">~${fmt(F.first5_avg)}<small> NZU / year, ${F.from_year}–${F.from_year + 4}${priced(F.first5_avg)}</small></div>
+    <dl style="margin-top:9px">
+      ${kv('Look-up region', F.region)}
+      ${kv('Area modelled', fmt(F.area_ha, 2) + ' ha')}
+      ${kv('Age at ' + F.from_year, F.age_classes.map(c => `${c.planted} → ${c.age_at_start} yr`).join(', '))}
+      ${kv('Table stock, end ' + (F.from_year - 1), fmt(F.stock_at_start_t) + ' t CO₂')}
+      ${kv(`Units ${F.from_year}–${F.to_year}`, fmt(F.total) + ' NZU' + priced(F.total))}
+      ${F.price_nzd ? kv('Indicative price', money(F.price_nzd, 2) + ' / NZU' + (F.price_note ? ` · ${F.price_note}` : '')) : ''}
+    </dl>
+    ${F.assumption ? `<p class="note">${F.assumption}</p>` : ''}
+    <table class="mini sched" style="margin-top:8px">
+      <thead><tr><th>Year</th><th>Age</th><th>t/ha</th><th>NZU</th><th>Cum.</th><th></th></tr></thead>
+      <tbody>${nextN.map(r => `<tr><td>${r.year}</td><td>${r.age}</td><td>${fmt(r.stock_t_ha)}</td>
+        <td>${fmt(r.nzu)}</td><td>${fmt(r.cumulative)}</td>
+        <td class="bar" style="width:28%"><div class="bar" style="margin:0"><i style="width:${r.nzu / maxNzu * 100}%;background:#40c057"></i></div></td></tr>`).join('')}
+        ${rows.length > nextN.length ? `<tr><td colspan="6" style="color:var(--ink3)">… declining to ${fmt(rows[rows.length - 1].nzu)} NZU in ${rows[rows.length - 1].year} (age ${rows[rows.length - 1].age}); ${fmt(F.total)} NZU in total to ${F.to_year}</td></tr>` : ''}
+      </tbody>
+    </table>
+    <p class="note">${F.source}. Each year's units are the increase in table carbon stock over the year under stock-change accounting; the tables stop at age 50. Default tables apply to post-1989 forest under 100 ha. Indicative only — MPI's emissions return governs.</p>
+  </div>
+
+  <div class="card">
+    <h3>Harvest or deregistration liability</h3>
+    <div class="big">${fmt(F.liability_units)}<small> NZU to surrender${priced(F.liability_units)}</small></div>
+    <dl style="margin-top:9px">
+      ${F.earned_to_date != null ? kv('Units received ' + (F.earned_period || 'to date'), fmt(F.earned_to_date) + ' NZU') : ''}
+      ${F.unclaimed_estimate != null ? kv('Est. accrued ' + F.unclaimed_period, fmt(F.unclaimed_estimate) + ' NZU') : ''}
+    </dl>
+    <p class="note">Under stock-change accounting, clear-felling or leaving the scheme means surrendering the carbon-stock decrease, capped at the units ever received for the area. Every unit received so far accrues to that cap, and each forward year's units add to it. None transfer with this sale, so a purchaser who harvests must buy the balance in; a purchaser who holds the crop earns the forward flow above.</p>
+  </div>`);
+}
+
+/* SHEET_LAYERS: digitised against printed area per block, one card per
+   sheet set (STATS.sheets from build_stats.py). */
+if (E && (STATS.sheets || []).length) document.getElementById('pane-ets').insertAdjacentHTML('beforeend',
+  STATS.sheets.map(s => {
+    const by = s.by_block || {}, sheet = s.sheet_by_block || {}, mk = s.markers;
+    const blocks = Object.keys(Object.assign({}, by, sheet)).sort();
+    const sheetTot = Object.values(sheet).reduce((a, v) => a + (v || 0), 0);
+    return `<div class="card">
+    <h3>${s.kind}${s.date ? ' · ' + s.date : ''}</h3>
+    <table class="mini">
+      <thead><tr><th>Block</th><th>Digitised</th><th>On the sheet</th>${mk ? `<th>${mk.kind}s</th>` : ''}</tr></thead>
+      <tbody>${blocks.map(k => `<tr>
+        <td><span class="pill" style="background:${blockColour(k)}33;color:${blockColour(k)}">${k}</span></td>
+        <td>${by[k] != null ? fmt(by[k], 1) + ' ha' : '—'}</td>
+        <td>${sheet[k] != null ? fmt(sheet[k], 2) + ' ha' : '—'}</td>
+        ${mk ? `<td>${(mk.by_block || {})[k] || '—'}</td>` : ''}</tr>`).join('')}
+      </tbody>
+      <tfoot><tr><td>Total</td><td>${fmt(s.ha, 1)} ha</td>
+        <td>${sheetTot ? fmt(sheetTot, 2) + ' ha' : '—'}</td>${mk ? `<td>${fmt(mk.n)}</td>` : ''}</tr></tfoot>
+    </table>
+    <p class="note">${s.note || ''}</p>
+  </div>`;
+  }).join(''));
 
 /* --- land --- */
 const rangeTxt = T.min_elevation_m != null
@@ -1392,17 +1695,17 @@ document.getElementById('pane-terrain').innerHTML = `
     <div class="warn">${A.note}</div>
     <p class="note">${NARR.access_note || 'Topo50 records ' + fmt(A.track_km_on_property, 2) +
       ' km of track and ' + fmt(A.formed_road_km_on_property, 2) + ' km of formed road on the title. ' +
-      'Internal forestry roading is usually more extensive than the national topo layer records.'}</p>
+      (FARM ? 'Farm races and tracks are usually more extensive than the national topo layer records.'
+            : 'Internal forestry roading is usually more extensive than the national topo layer records.')}</p>
   </div>
 
   ${!EV || !EV.esc.length ? '' : `
   <div class="card">
     <h3>Erosion susceptibility — NES-CF</h3>
     <div class="big">${fmt(EV.esc_high_ha, 1)}<small> ha high or very high</small></div>
-    <p class="note" style="margin-top:6px">The ESC sets what a purchaser can do
-    without resource consent under the National Environmental Standards for
-    Commercial Forestry. Harvesting, earthworks and replanting on the orange
-    and red classes carry the heavier conditions.</p>
+    <p class="note" style="margin-top:6px">${FARM
+      ? 'Relevant if any of the land is planted: the ESC sets what can be done without resource consent under the National Environmental Standards for Commercial Forestry, with heavier conditions on the orange and red classes.'
+      : 'The ESC sets what a purchaser can do without resource consent under the National Environmental Standards for Commercial Forestry. Harvesting, earthworks and replanting on the orange and red classes carry the heavier conditions.'}</p>
     ${EV.esc.map(e => `<div class="barrow" style="margin-top:9px">
       <div class="lbl"><span>${e.key}</span><b>${fmt(e.ha, 1)} ha · ${fmt(e.pct, 1)}%</b></div>
       <div class="bar"><i style="width:${e.pct}%;background:${ESC_COLOUR[e.key] || '#868e96'}"></i></div>
@@ -1431,11 +1734,11 @@ document.getElementById('pane-terrain').innerHTML = `
     ${(EV.luc_units || []).length ? `<p class="note">${EV.luc_units
       .map(u => `${u.key} — ${fmt(u.ha, 0)} ha`).join('<br>')}</p>` : ''}
     <p class="note">${EV.luc_source}. Higher class numbers mean greater physical
-    limitation — 7 and 8 are steep or severely limited land, typically the
-    reason a block is in trees rather than pasture.</p>
+    limitation — ${FARM ? 'classes 1 to 4 suit cropping, 5 to 7 pastoral or forestry use, and 8 is best left in cover.'
+      : '7 and 8 are steep or severely limited land, typically the reason a block is in trees rather than pasture.'}</p>
   </div>` }
 
-  ${!EV || !EV.fish_spawning_reaches ? '' : `
+  ${!EV || FARM || !EV.fish_spawning_reaches ? '' : `
   <div class="card">
     <h3>Fish spawning — NES-CF</h3>
     <dl>${kv('Indicator reaches in frame', fmt(EV.fish_spawning_reaches))}</dl>
@@ -1572,7 +1875,7 @@ document.getElementById('pane-data').innerHTML = `
     data and cut a new version of this map:</p>
     <p class="note" style="font-family:ui-monospace,Consolas,monospace;color:var(--ink2)">
     python scripts/release.py --refresh --note "..."</p>
-    <p class="note">Built 23 September 2026.</p>
+    <p class="note">Built 18 November 2026.</p>
   </div>`;
 </script>
 </body>
