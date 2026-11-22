@@ -1,0 +1,59 @@
+Forest,Compt,Stand,StandName,Estab,Crops,Patch Nos,Job No.,Duplicate,Operation,Event Start,*,Event Finish,Area,Treated,Cls,Type,Target,Crew,Supervisor,ManDays,Latitude,Longitude,Northing,Easting,Detail,PlannedPeriod,,PlannedCost,,Cost,User1,User2,Note
+MAGS,1,1,MAGS-1-01,2024,P.RAD2024,,JN113726,,Planting,10/06/2024,,21/06/2024,79.08,79.08,PLNT, -,-,Blinkhorne & Carroll Forestry Ltd,Scott McIntosh,,-39°19.716',174°37.856',5645488,1740573,P.RAD Init SPH:1111 Nursery: Stand Nursery Rotorua Ltd,,$/ha,814,,,,,
+MAGS,1,1,MAGS-1-01,2024,P.RAD2024,,JN114663,,Assessment,10/06/2024,,21/06/2024,79.08,79.08,ESQC,,-,,,,-39°19.716',174°37.856',5645488,1740573,Method:   SPH:1109,,,,,,,,[11/04/2025] Imported from H:\InventoryExport110425.csv
+MAGS,1,1,MAGS-1-01,2024,P.RAD2024,,JN129923,,Crop Protection,11/09/2024,,15/09/2024,85.73,85.73,RELC,Other,-,Blinkhorne & Carroll Forestry Ltd,Scott McIntosh,,-39°20.294',174°38.426',5644406,1741373,"Method: Other 
+Blue Marker Dye: 0.30 Ltr/ha
+Valzine 500: 2.64 Ltr/ha",,$/ha,267,,,,,
+MAGS,1,1,MAGS-1-01,2024,P.RAD2024,,JN128119,,Crop Protection,25/11/2024,,25/11/2024,125.83,125.83,RELC,Aerial,-,Mid West Helicopters (NZ) Ltd,Scott McIntosh,,-39°20.395',174°38.477',5644217,1741443,Method: Aerial ,,,,,,,,
+MAGS,1,1,MAGS-1-01,2024,P.RAD2024,,JN131483,,Assessment,4/03/2025,,4/03/2025,79.08,79.08,SURV,,-,,Scott McIntosh,,-39°20.129',174°38.089',5644718,1740894,Method:Field Plotting   SVLAB:93.0  SVLDD:0.2  SVLMS:6.8,,,,,,,,[30/05/2025] Imported from H:\InventoryExport300525.csv
+MAGS,1,2,MAGS-1-02,2024,P.RAD2024,,JN113727,,Planting,10/06/2024,,21/06/2024,91.2,91.2,PLNT, -,-,Blinkhorne & Carroll Forestry Ltd,Scott McIntosh,,-39°19.686',174°37.860',5645544,1740580,P.RAD Nursery: Stand Nursery Rotorua Ltd,,$/ha,814,,,,,
+MAGS,1,2,MAGS-1-02,2024,P.RAD2024,,JN114664,,Assessment,15/06/2024,,15/06/2024,91.2,91.2,ESQC,,-,,,,-39°19.686',174°37.860',5645544,1740580,Method:   SPH:1112,,,,,,,,[11/04/2025] Imported from H:\InventoryExport110425.csv
+MAGS,1,2,MAGS-1-02,2024,P.RAD2024,,JN129923,T,Crop Protection,11/09/2024,,15/09/2024,85.73,85.73,RELC,Other,-,Blinkhorne & Carroll Forestry Ltd,Scott McIntosh,,-39°20.294',174°38.426',5644406,1741373,"Method: Other 
+Blue Marker Dye: 0.30 Ltr/ha
+Valzine 500: 2.64 Ltr/ha",,$/ha,267,,,,,
+MAGS,1,2,MAGS-1-02,2024,P.RAD2024,,JN128119,T,Crop Protection,25/11/2024,,25/11/2024,125.83,125.83,RELC,Aerial,-,Mid West Helicopters (NZ) Ltd,Scott McIntosh,,-39°20.395',174°38.477',5644217,1741443,Method: Aerial ,,,,,,,,
+MAGS,1,2,MAGS-1-02,2024,P.RAD2024,,JN131484,,Assessment,16/03/2025,,16/03/2025,91.2,91.2,SURV,,-,,Scott McIntosh,,-39°20.344',174°38.478',5644311,1741446,Method:Field Plotting   SVLAB:94.7  SVLDD:0.5  SVLMS:4.9,,,,,,,,[30/05/2025] Imported from H:\InventoryExport300525.csv
+MAGS,1,3,MAGS-1-03,2023,P.RAD2023,,JN113728,,Planting,18/09/2023,,28/09/2023,95.7,95.7,PLNT, -,-,Daniel  Hodgson T/A Hodgson Silviculture,Scott McIntosh,,-39°20.175',174°39.100',5644608,1742345,P.RAD Nursery: Murray's (Woodville),,,,,,,,
+MAGS,1,3,MAGS-1-03,2023,P.RAD2023,,JN114667,,Assessment,18/09/2023,,25/09/2023,95.7,95.7,ESQC,,-,,,,-39°20.175',174°39.100',5644608,1742345,Method:   SPH:1115,,,,,,,,[1/07/2024] Imported from I:\BC\LandInfo\Geomaster_Dev_dataload\InvUploadtoGM\All_Import_Assesment_270624.csv
+MAGS,1,3,MAGS-1-03,2023,P.RAD2023,,JN115167,,Crop Protection,5/11/2023,,8/11/2023,49.68,49.68,RELC,Other,-,Daniel  Hodgson T/A Hodgson Silviculture,Scott McIntosh,,-39°20.172',174°38.387',5644632,1741321,"Method: Other 
+Blue Marker Dye: 0.20 Ltr/ha
+Valzine 500: 1.76 Ltr/ha
+Water: 18.00 Ltr/ha",,$/ha,330,,,,,
+MAGS,1,3,MAGS-1-03,2023,P.RAD2023,,JN115164,,Crop Protection,16/11/2023,,16/11/2023,87.32,87.32,RELC,Aerial,-,Mid West Helicopters (NZ) Ltd,Scott McIntosh,,-39°20.255',174°39.022',5644462,1742231,"Method: Aerial 
+Valzine 500: 16.00 Ltr/ha
+Water: 150.00 Ltr/ha",,,,,,,,
+MAGS,1,3,MAGS-1-03,2023,P.RAD2023,,JN119698,,Assessment,1/02/2024,,1/02/2024,95.7,95.7,SURV,,-,,Scott McIntosh,,-39°20.175',174°39.100',5644608,1742345,Method:Field Plotting   SVLAB:85.5  SVLDD:9.7  SVLMS:4.5  SVLWD:0.3,,,,,,,,[1/07/2024] Imported from I:\BC\LandInfo\Geomaster_Dev_dataload\InvUploadtoGM\All_Import_Assesment_270624.csv
+MAGS,1,3,MAGS-1-03,2023,P.RAD2023,,JN128584,,Blanking,13/09/2024,,13/09/2024,18.39,18.39,BLNK, -,-,Blinkhorne & Carroll Forestry Ltd,Scott McIntosh,,-39°20.175',174°39.100',5644608,1742345,5 Patches,,,,,,,,"Crew planted 5.0 x 5.0 to top up the areas blanked by 400 spha, to increase the total NSA to approx 1000 spha once the existing trees are accounted for."
+MAGS,1,3,MAGS-1-03,2023,P.RAD2023,,JN128585,,Assessment,13/09/2024,,13/09/2024,18.39,18.39,,,-,,,,-39°20.315',174°38.634',5644362,1741671,,,,,,,,,
+MAGS,1,3,MAGS-1-03,2023,P.RAD2023,,JN128119,T,Crop Protection,25/11/2024,,25/11/2024,125.83,125.83,RELC,Aerial,-,Mid West Helicopters (NZ) Ltd,Scott McIntosh,,-39°20.395',174°38.477',5644217,1741443,Method: Aerial ,,,,,,,,
+MAGS,1,3,MAGS-1-03,2023,P.RAD2023,,JN131485,,Assessment,27/03/2025,,27/03/2025,95.7,95.7,SURV,,-,,Scott McIntosh,,-39°20.044',174°38.323',5644870,1741233,Method:Field Plotting   SVLAB:89.2  SVLDD:0.8  SVLMS:10.1,,,,,,,,[30/05/2025] Imported from H:\InventoryExport300525.csv
+MAGS,1,3,MAGS-1-03,2023,P.RAD2023,,JN139697,,Blanking,22/10/2025,,23/10/2025,95.7,95.7,BLNK, -,-,Blinkhorne & Carroll Forestry Ltd,Scott McIntosh,,-39°20.175',174°39.100',5644608,1742345,11 Patches,,,,,,,,Banked 2000x p.rad seedlings on sloped area near watertank.
+MAGS,1,3,MAGS-1-03,2023,P.RAD2023,,JN139698,,Crop Protection,5/11/2025,,6/11/2025,95.7,95.7,RELC,Other,-,Blinkhorne & Carroll Forestry Ltd,Scott McIntosh,,-39°20.175',174°39.100',5644608,1742345,"Method: Other 
+Marker Dye: 0.20 Ltr/20L
+Terbuthylazine: 2.00 Ltr/20L
+Water: 17.50 Ltr/20L
+Steed 520: 0.08 Ltr/20L",,,,,,,,
+MAGS,1,4,MAGS-1-04,2023,P.RAD2023,,JN113729,,Planting,18/09/2023,,28/09/2023,45.13,45.13,PLNT, -,-,Daniel  Hodgson T/A Hodgson Silviculture,Scott McIntosh,,-39°20.013',174°39.208',5644905,1742506,P.RAD Nursery: Stand Nursery Waiuku Limited,,,,,,,,
+MAGS,1,4,MAGS-1-04,2023,P.RAD2023,,JN114668,,Assessment,18/09/2023,,25/09/2023,45.13,45.13,ESQC,,-,,,,-39°20.013',174°39.208',5644905,1742506,Method:   SPH:1084,,,,,,,,[1/07/2024] Imported from I:\BC\LandInfo\Geomaster_Dev_dataload\InvUploadtoGM\All_Import_Assesment_270624.csv
+MAGS,1,4,MAGS-1-04,2023,P.RAD2023,,JN115167,T,Crop Protection,5/11/2023,,8/11/2023,49.68,49.68,RELC,Other,-,Daniel  Hodgson T/A Hodgson Silviculture,Scott McIntosh,,-39°20.172',174°38.387',5644632,1741321,"Method: Other 
+Blue Marker Dye: 0.20 Ltr/ha
+Valzine 500: 1.76 Ltr/ha
+Water: 18.00 Ltr/ha",,$/ha,330,,,,,
+MAGS,1,4,MAGS-1-04,2023,P.RAD2023,,JN115164,T,Crop Protection,16/11/2023,,16/11/2023,87.32,87.32,RELC,Aerial,-,Mid West Helicopters (NZ) Ltd,Scott McIntosh,,-39°20.255',174°39.022',5644462,1742231,"Method: Aerial 
+Valzine 500: 16.00 Ltr/ha
+Water: 150.00 Ltr/ha",,,,,,,,
+MAGS,1,4,MAGS-1-04,2023,P.RAD2023,,JN119697,,Assessment,1/02/2024,,1/02/2024,45.13,45.13,SURV,,-,,Scott McIntosh,,-39°20.013',174°39.208',5644905,1742506,Method:Field Plotting   SVLAB:94.4  SVLDD:3.0  SVLMS:2.6,,,,,,,,[1/07/2024] Imported from I:\BC\LandInfo\Geomaster_Dev_dataload\InvUploadtoGM\All_Import_Assesment_270624.csv
+MAGS,1,4,MAGS-1-04,2023,P.RAD2023,,JN131789,,Assessment,25/03/2025,,25/03/2025,45.13,45.13,SURV,,-,,Scott McIntosh,,-39°20.013',174°39.208',5644905,1742506,Method:Field Plotting   SVLAB:91.5  SVLDD:1.3  SVLMS:7.2,,,,,,,,[30/05/2025] Imported from H:\InventoryExport300525.csv
+MAGS,1,5,MAGS-1-05,2025,CASEC2025,,JN139695,,Planting,22/10/2025,,23/10/2025,4.65,4.65,PLNT, -,-,Blinkhorne & Carroll Forestry Ltd,Scott McIntosh,,-39°19.467',174°39.432',5645908,1742847,CASEC Init SPH:1000 Nursery: Stand Nursery Waiuku Limited,,,,,,,,
+MAGS,1,5,MAGS-1-05,2025,CASEC2025,,JN139696,,Crop Protection,5/11/2025,,6/11/2025,4.65,4.65,, -,-,Blinkhorne & Carroll Forestry Ltd,Scott McIntosh,,-39°19.467',174°39.432',5645908,1742847,"
+Marker Dye: 0.20 Ltr/20L
+Terbuthylazine: 2.00 Ltr/20L
+Water: 17.50 Ltr/20L
+Steed 520: 0.08 Ltr/20L",,,,,,,,
+STHW,1,2,STHW-1-02,2024,P.RAD2024,,JN127635,,Planting,9/09/2024,,20/09/2024,70.12,70.12,PLNT, -,-,Blinkhorne & Carroll Forestry Ltd,Scott McIntosh,,-39°20.661',174°35.461',5643803,1737103,P.RAD Init SPH:1000 Nursery: Stand Nursery Rotorua Ltd,,$/ha,740,,,,,
+STHW,1,2,STHW-1-02,2024,P.RAD2024,,JN129933,,Assessment,19/09/2024,,19/09/2024,70.12,70.12,ESQC,,-,,,,-39°20.661',174°35.461',5643803,1737103,Method:   SPH:1013,,,,,,,,[30/05/2025] Imported from H:\InventoryExport300525.csv
+STHW,1,2,STHW-1-02,2024,P.RAD2024,,JN130002,,Crop Protection,14/10/2024,,18/10/2024,70.12,70.12,RELC, -,-,Blinkhorne & Carroll Forestry Ltd,Scott McIntosh,,-39°20.661',174°35.461',5643803,1737103,"
+Blue Marker Dye: 0.30 Ltr/ha
+Terbuthylazine: 2.64 Ltr/ha
+Steed 520: 1.00 Ltr/ha",,$/ha,240,,,,,
+STHW,1,2,STHW-1-02,2024,P.RAD2024,,JN131438,,Assessment,25/02/2025,,25/02/2025,70.12,70.12,SURV,,-,,Scott McIntosh,,-39°20.410',174°35.323',5644270,1736913,Method:Field Plotting   SVLAB:97.6  SVLDD:1.2  SVLMS:1.2,,,,,,,,[30/05/2025] Imported from H:\InventoryExport300525.csv
