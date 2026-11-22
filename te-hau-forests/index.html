@@ -701,10 +701,11 @@ const DEFS = [
      kv('Use', p.track_use || '—'), kv('Status', p.status || '—')])},
 
   /* Tracks recorded by GPS on a site visit (data/gps_tracks.geojson from
-     scripts/gps_tracks.py). Solid coral so they read apart from the dashed
-     yellow topo tracks and the white formed roads; absent, nothing shows. */
-  {k: 'gps_tracks', n: 'GPS-recorded tracks', on: true, sw: '#ff6b6b',
-   style: () => ({color: '#ff6b6b', weight: 3.2, opacity: .95}),
+     scripts/gps_tracks.py). Solid aqua: nothing else on the map is that hue,
+     and coral was lost against a pink block boundary and the orange legal
+     roads on Te Hau (Nov 2026); absent, nothing shows. */
+  {k: 'gps_tracks', n: 'GPS-recorded tracks', on: true, sw: '#00e0ff',
+   style: () => ({color: '#00e0ff', weight: 3.4, opacity: .95}),
    pop: p => popup(p.name || 'GPS track', [
      kv('Length', p.length_km != null ? fmt(p.length_km, 2) + ' km' : '—'),
      p.elev_min_m != null ? kv('Elevation', p.elev_min_m + ' – ' + p.elev_max_m + ' m') : '',
